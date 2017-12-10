@@ -1,8 +1,6 @@
 package remotecontrolserver;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
@@ -13,12 +11,14 @@ public class RemoteControlServer {
     public interface ClientConnectionListener {
         void onConnect(Socket client);
         void onDisconnect();
+        void close() throws IOException;
     }
 
     private List<ClientConnectionListener> clientConnectionListeners = new ArrayList<>();
     private ServerSocket server;
     private List<Socket> clients = new ArrayList<>();
     private int port = 0;
+    private boolean waitConnection = true;
 
     public RemoteControlServer(int port) {
         this.port = port;
@@ -38,19 +38,33 @@ public class RemoteControlServer {
         thread.start();
     }
 
-    private void waitForConnection() {
+    public void stop() {
         try {
-            if(server != null) {
-                Socket client = server.accept();
-                synchronized (this.clients) {
-                    this.clients.add(client);
-                }
-                for(ClientConnectionListener ccl : clientConnectionListeners) {
-                    ccl.onConnect(client);
-                }
+            for(ClientConnectionListener ccl : clientConnectionListeners) {
+                ccl.close();
             }
+            server.close();
         } catch (IOException e) {
             e.printStackTrace();
+        }
+
+    }
+
+    private void waitForConnection() {
+        while(waitConnection) {
+            try {
+                if(server != null) {
+                    Socket client = server.accept();
+                    synchronized (this.clients) {
+                        this.clients.add(client);
+                    }
+                    for(ClientConnectionListener ccl : clientConnectionListeners) {
+                        ccl.onConnect(client);
+                    }
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 }

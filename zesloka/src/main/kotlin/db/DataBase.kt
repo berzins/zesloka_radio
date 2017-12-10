@@ -1,6 +1,6 @@
 package db
 
-class DataBase {
+class DataBase  {
     companion object {
         fun getConnection() : DBConecton? {
             val conData = DBConecton.DBConnectionData(

@@ -1,8 +1,15 @@
+package executor;
+
+import remotecontrolserver.ClientConnection;
+
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.util.HashMap;
+import java.util.Map;
 
 public class RemoteCommandExecutor {
 
+    private static final Map<String, Command> commands = new HashMap<>();
     private Robot robot;
 
     private static RemoteCommandExecutor instance;
@@ -47,13 +54,18 @@ public class RemoteCommandExecutor {
         STOP("stop");
 
         String val;
+
         Command(String val) {
             this.val = val;
+            commands.put(val, this);
         }
 
-        String getValue() {return this.val;}
-    }
+        public String getValue() {return this.val;}
 
+        public static Command getCommand(String val) {
+            return commands.get(val);
+        }
+    }
 
 
 }

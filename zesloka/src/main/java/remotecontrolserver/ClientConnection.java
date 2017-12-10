@@ -1,16 +1,39 @@
 package remotecontrolserver;
 
+import executor.RemoteCommandExecutor;
+import sun.plugin2.message.Message;
+
 import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.Socket;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ClientConnection implements RemoteControlServer.ClientConnectionListener {
 
     BufferedReader input;
     Socket client;
+    private List<MessageListener> msgListeners =  new ArrayList<>();
+
+    public interface MessageListener {
+        void onMessage(RemoteCommandExecutor.Command cmd);
+    }
+
+    public void addMsgListener(MessageListener msgList) {
+        this.msgListeners.add(msgList);
+    }
 
     @Override
     public void onConnect(Socket client) {
         this.client = client;
+        try {
+            this.input = new BufferedReader(new InputStreamReader(client.getInputStream()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Thread thread = new Thread(() -> waitForMsg());
+        thread.start();
     }
 
     @Override
@@ -18,7 +41,20 @@ public class ClientConnection implements RemoteControlServer.ClientConnectionLis
         //TODO: implement this
     }
 
-    private void dispatchMsg() {
+    @Override
+    public void close() throws IOException {
+        input.close();
+        client.close();
+    }
 
+    public void waitForMsg() {
+        try {
+            String cmd = input.readLine();
+            for(MessageListener ml : msgListeners) {
+                ml.onMessage(RemoteCommandExecutor.Command.getCommand(cmd));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
