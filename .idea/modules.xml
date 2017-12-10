@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zesloka.iml" filepath="$PROJECT_DIR$/.idea/modules/zesloka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zesloka_main.iml" filepath="$PROJECT_DIR$/.idea/modules/zesloka_main.iml" group="zesloka" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/zesloka_radio.iml" filepath="$PROJECT_DIR$/.idea/zesloka_radio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zesloka_test.iml" filepath="$PROJECT_DIR$/.idea/modules/zesloka_test.iml" group="zesloka" />
+    </modules>
+  </component>
+</project>
