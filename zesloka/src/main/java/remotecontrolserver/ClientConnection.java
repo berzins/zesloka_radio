@@ -15,6 +15,7 @@ public class ClientConnection implements RemoteControlServer.ClientConnectionLis
     BufferedReader input;
     Socket client;
     private List<MessageListener> msgListeners =  new ArrayList<>();
+    private boolean isActive = true;
 
     public interface MessageListener {
         void onMessage(RemoteCommandExecutor.Command cmd);
@@ -43,16 +44,22 @@ public class ClientConnection implements RemoteControlServer.ClientConnectionLis
 
     @Override
     public void close() throws IOException {
+        isActive = false;
         input.close();
         client.close();
     }
 
     public void waitForMsg() {
         try {
-            String cmd = input.readLine();
-            for(MessageListener ml : msgListeners) {
-                ml.onMessage(RemoteCommandExecutor.Command.getCommand(cmd));
+            while(true) {
+                String cmd = input.readLine();
+                if(isActive) {
+                    for(MessageListener ml : msgListeners) {
+                        ml.onMessage(RemoteCommandExecutor.Command.getCommand(cmd));
+                    }
+                }
             }
+
         } catch (IOException e) {
             e.printStackTrace();
         }

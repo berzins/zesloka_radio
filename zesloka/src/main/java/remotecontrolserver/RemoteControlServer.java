@@ -34,6 +34,7 @@ public class RemoteControlServer {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        System.out.println("Server has started");
         Thread thread = new Thread(() -> waitForConnection());
         thread.start();
     }
@@ -54,7 +55,9 @@ public class RemoteControlServer {
         while(waitConnection) {
             try {
                 if(server != null) {
+                    System.out.println("Waiting for connection...");
                     Socket client = server.accept();
+                    System.out.println("Connection form " + client.getInetAddress().toString() + " accepted.");
                     synchronized (this.clients) {
                         this.clients.add(client);
                     }

@@ -23,24 +23,25 @@ public class RemoteCommandExecutor {
     }
 
     public static RemoteCommandExecutor getInstance() {
-        synchronized (instance) {
             if(instance == null) {
                 instance = new RemoteCommandExecutor();
             }
             return instance;
-        }
+
     }
 
     public void processCommand(Command cmd) {
         switch (cmd) {
             case PLAY:
-                robot.keyPress(KeyEvent.VK_ESCAPE);
-                robot.keyRelease(KeyEvent.VK_ESCAPE);
+                robot.keyPress(KeyEvent.VK_SPACE);
+                robot.keyRelease(KeyEvent.VK_SPACE);
+                break;
             case STOP:
                 robot.keyPress(KeyEvent.CTRL_MASK);
                 robot.keyPress(KeyEvent.VK_X);
                 robot.keyPress(KeyEvent.CTRL_MASK);
                 robot.keyPress(KeyEvent.VK_X);
+                break;
                 default:
                     // no action
         }
@@ -64,6 +65,11 @@ public class RemoteCommandExecutor {
 
         public static Command getCommand(String val) {
             return commands.get(val);
+        }
+
+        @Override
+        public String toString() {
+            return this.getValue();
         }
     }
 
