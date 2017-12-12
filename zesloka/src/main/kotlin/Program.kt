@@ -4,9 +4,9 @@ import remotecontrolserver.RemoteControlServer
 import executor.*
 
 fun main(args: Array<String>) {
-    val rce = RemoteCommandExecutor.getInstance()
+    val rce = RemoteCommandExecutorManager.getInstance()
     class SuperDuperMsgListener : ClientConnection.MessageListener {
-        override fun onMessage(cmd: RemoteCommandExecutor.Command?) {
+        override fun onMessage(cmd: String) {
             println("msg received : " + cmd.toString())
             rce.processCommand(cmd)
         }

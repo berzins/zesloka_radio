@@ -1,7 +1,7 @@
 package remotecontrolserver;
 
-import executor.RemoteCommandExecutor;
-import sun.plugin2.message.Message;
+import executor.Command;
+import executor.RemoteCommandExecutorManager;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,7 +18,7 @@ public class ClientConnection implements RemoteControlServer.ClientConnectionLis
     private boolean isActive = true;
 
     public interface MessageListener {
-        void onMessage(RemoteCommandExecutor.Command cmd);
+        void onMessage(String cmd);
     }
 
     public void addMsgListener(MessageListener msgList) {
@@ -55,7 +55,7 @@ public class ClientConnection implements RemoteControlServer.ClientConnectionLis
                 String cmd = input.readLine();
                 if(isActive) {
                     for(MessageListener ml : msgListeners) {
-                        ml.onMessage(RemoteCommandExecutor.Command.getCommand(cmd));
+                        ml.onMessage(cmd);
                     }
                 }
             }

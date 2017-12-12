@@ -1,7 +1,7 @@
 package executor;
 
-import executor.command.KeyCommandExecutor;
-import executor.command.KeyCommandExecutorFactory;
+import executor.command.RobotCommandExecutor;
+import executor.command.RobotCommandExecutorFactory;
 
 import java.awt.*;
 import java.util.HashMap;
@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class RemoteCommandExecutorManager {
 
-    private static final Map<String, KeyCommand> commands = new HashMap<>();
+    private static final Map<String, Command> commands = new HashMap<>();
     private Robot robot;
 
     private static RemoteCommandExecutorManager instance;
@@ -34,33 +34,30 @@ public class RemoteCommandExecutorManager {
         return this.robot;
     }
 
-    public void processCommand(KeyCommand cmd) {
-        KeyCommandExecutor executor = KeyCommandExecutorFactory.getCommandExecutor(cmd);
+    public void processCommand(String cmd) {
+        RobotCommandExecutor executor = RobotCommandExecutorFactory.getCommandExecutor(
+                this.parseCommand(cmd), this.parseParams(cmd)
+        );
         executor.execute();
     }
 
-    public enum KeyCommand {
-
-        PLAY("play"),
-        NEXT("next"),
-        STOP("stop");
-
-        String val;
-
-        KeyCommand(String val) {
-            this.val = val;
-            commands.put(val, this);
+    private String parseCommand(String cmd) {
+        if(cmd.contains("|")) {
+            String[] c = cmd.split("\\|");
+            return c[0];
         }
-
-        public String getValue() {return this.val;}
-
-        public static KeyCommand getCommand(String val) {
-            return commands.get(val);
-        }
-
-        @Override
-        public String toString() {
-            return this.getValue();
-        }
+        return cmd;
     }
+
+    private String parseParams(String cmd) {
+        if(cmd.contains("|")) {
+            int from = cmd.indexOf("|") + 1;
+            int length = cmd.length();
+            String p = cmd.substring(from,length);
+            return p;
+        }
+        return null;
+    }
+
+
 }

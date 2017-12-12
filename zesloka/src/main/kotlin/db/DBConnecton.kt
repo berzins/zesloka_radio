@@ -12,8 +12,7 @@ class DBConecton() {
             try {
                 Class.forName("com.mysql.jdbc.Driver").newInstance()
                 val con = DriverManager.getConnection(dbConProp.url, dbConProp.login, dbConProp.password)
-                dbCon =  DBConecton(con)
-            } catch (ex: SQLException) {
+                dbCon =  DBConecton(con)            } catch (ex: SQLException) {
                 println("SQL EXCEPTION")
                 ex.printStackTrace()
             } catch (ex: Exception) {
