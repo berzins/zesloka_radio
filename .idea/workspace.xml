@@ -1,37 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="zesloka_radio:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="7630b0e5-acbe-45bf-856e-ec70c071a28a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/RobotCommandExecutor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/RobotCommandExecutorFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotKeyPressCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotKeyReleaseCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotMouseMoveCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotMousePressCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotMouseReleaseCommand.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/RemoteCommandExecutor$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/RemoteCommandExecutor$Command.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/RemoteCommandExecutor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/KeyCommandExecutor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/KeyCommandExecutorFactory.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/ProgramKt$main$SuperDuperMsgListener.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/ProgramKt$main$SuperDuperMsgListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/ProgramKt.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/ProgramKt.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/db/DBConecton$Companion.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/db/DBConecton$Companion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/db/DBConecton$DBConnectionData$Companion.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/db/DBConecton$DBConnectionData$Companion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/db/DBConecton$DBConnectionData.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/db/DBConecton$DBConnectionData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/db/DBConecton.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/db/DBConecton.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/remotecontrolserver/ClientConnection$MessageListener.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/remotecontrolserver/ClientConnection$MessageListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/remotecontrolserver/ClientConnection.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/remotecontrolserver/ClientConnection.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_1_4_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_1_4_3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/zesloka_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/zesloka_main.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/KeyAction.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/Command.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/Command.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/RemoteCommandExecutorManager.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/RemoteCommandExecutorManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/KeyAction.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/KeyAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/remotecontrolserver/ClientConnection.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/remotecontrolserver/ClientConnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/kotlin/Program.kt" afterPath="$PROJECT_DIR$/zesloka/src/main/kotlin/Program.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/kotlin/db/DBConnecton.kt" afterPath="$PROJECT_DIR$/zesloka/src/main/kotlin/db/DBConnecton.kt" />
     </list>
     <ignored path="$PROJECT_DIR$/zesloka/.gradle/" />
     <ignored path="$PROJECT_DIR$/zesloka/build/" />
@@ -73,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotCommand.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="192">
-              <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+              <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
               <folding>
                 <element signature="e#162#163#0" expanded="true" />
                 <element signature="e#196#197#0" expanded="true" />
@@ -82,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClientConnection.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/remotecontrolserver/ClientConnection.java">
+      <file leaf-file-name="Command.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/Command.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+            <state relative-caret-position="360">
+              <caret line="15" column="50" lean-forward="false" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -94,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KeyAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/KeyAction.java">
+      <file leaf-file-name="DataBase.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/zesloka/src/main/kotlin/db/DataBase.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+            <state relative-caret-position="336">
+              <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -108,7 +85,7 @@
         <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotMouseMoveCommand.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="33" column="37" lean-forward="true" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+              <caret line="33" column="37" lean-forward="false" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#293#294#0" expanded="true" />
@@ -139,7 +116,7 @@
         <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotKeyPressCommand.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
                 <element signature="e#193#194#0" expanded="true" />
                 <element signature="e#221#222#0" expanded="true" />
@@ -148,11 +125,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RobotCommandExecutorFactory.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RobotCommandExecutorFactory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/RobotCommandExecutorFactory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="364">
-              <caret line="63" column="9" lean-forward="true" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
+              <caret line="63" column="9" lean-forward="false" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1809#1810#0" expanded="true" />
@@ -608,77 +585,6 @@
               <item name="zesloka" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="zesloka_radio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zesloka_radio" type="462c0819:PsiDirectoryNode" />
-              <item name="zesloka" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="zesloka_radio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zesloka_radio" type="462c0819:PsiDirectoryNode" />
-              <item name="zesloka" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zesloka_radio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zesloka_radio" type="462c0819:PsiDirectoryNode" />
-              <item name="zesloka" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="executor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zesloka_radio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zesloka_radio" type="462c0819:PsiDirectoryNode" />
-              <item name="zesloka" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="executor" type="462c0819:PsiDirectoryNode" />
-              <item name="command" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zesloka_radio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zesloka_radio" type="462c0819:PsiDirectoryNode" />
-              <item name="zesloka" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="executor" type="462c0819:PsiDirectoryNode" />
-              <item name="command" type="462c0819:PsiDirectoryNode" />
-              <item name="robotcommands" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zesloka_radio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zesloka_radio" type="462c0819:PsiDirectoryNode" />
-              <item name="zesloka" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="remotecontrolserver" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zesloka_radio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zesloka_radio" type="462c0819:PsiDirectoryNode" />
-              <item name="zesloka" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zesloka_radio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zesloka_radio" type="462c0819:PsiDirectoryNode" />
-              <item name="zesloka" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -689,7 +595,7 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="D:/ProgrammingProjects/Libraries/mysql-connector-java-5.1.45/mysql-connector-java-5.1.45-bin.jar!/" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.39430147" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
@@ -836,7 +742,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32801822" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32801822" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -846,7 +752,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38268793" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38268793" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -952,9 +858,9 @@
         <state relative-caret-position="693">
           <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#242#243#0" expanded="true" />
-            <element signature="e#286#287#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#242#243#0" expanded="false" />
+            <element signature="e#286#287#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1031,14 +937,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/zesloka/src/main/kotlin/remotecontrolserver/RemoteControlServer.kt" />
-    <entry file="file://$PROJECT_DIR$/zesloka/src/main/kotlin/db/DataBase.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zesloka/src/main/kotlin/db/DBConnecton.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-9">
@@ -1080,19 +978,9 @@
         <state relative-caret-position="192">
           <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#242#243#0" expanded="true" />
-            <element signature="e#286#287#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/Command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="50" lean-forward="true" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#242#243#0" expanded="false" />
+            <element signature="e#286#287#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1110,7 +998,7 @@
     <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
-          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
           <folding>
             <element signature="e#162#163#0" expanded="true" />
             <element signature="e#196#197#0" expanded="true" />
@@ -1118,18 +1006,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/KeyAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotMouseMoveCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="33" column="37" lean-forward="true" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+          <caret line="33" column="37" lean-forward="false" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#293#294#0" expanded="true" />
@@ -1155,7 +1035,7 @@
     <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotKeyPressCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="e#193#194#0" expanded="true" />
             <element signature="e#221#222#0" expanded="true" />
@@ -1196,12 +1076,38 @@
     <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/RobotCommandExecutorFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
-          <caret line="63" column="9" lean-forward="true" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
+          <caret line="63" column="9" lean-forward="false" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1809#1810#0" expanded="true" />
             <element signature="e#1888#1889#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/KeyAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="50" lean-forward="false" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/kotlin/db/DataBase.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1211,10 +1117,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>zesloka_radio:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.39430147" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
