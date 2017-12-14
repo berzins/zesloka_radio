@@ -1,20 +1,27 @@
 package executor.command.robotcommands;
 
-public abstract class RobotCommand {
-    Integer event;
-    Integer timeout = 0;
+import executor.command.Command;
 
-    public RobotCommand(Integer event) {
+import java.io.Serializable;
+
+public abstract class RobotCommand extends Command implements Serializable {
+
+    public static String ROBOT_CMD_KEY_PRESS = "robot_cmd_key_press";
+    public static String ROBOT_CMD_KEY_RELEASE = "robot_cmd_key_release";
+    public static String ROBOT_CMD_MOUSE_MOVE = "robot_cmd_mouse_move";
+    public static String ROBOT_CMD_MOUSE_PRESS = "robot_cmd_mouse_press";
+    public static String ROBOT_CMD_MOUSE_RELEASE = "robot_cmd_mouse_release";
+
+    Integer event;
+
+
+    public RobotCommand(String name, String key, Integer event) {
+        super(name, key);
         this.event = event;
     }
 
-    public void execute() {
-        if(timeout > 0) {
-            try {
-                Thread.sleep(timeout);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
+    @Override
+    public void execute(String params) {
+        super.execute(params);
     }
 }

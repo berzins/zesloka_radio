@@ -2,13 +2,15 @@ import db.DataBase
 import remotecontrolserver.ClientConnection
 import remotecontrolserver.RemoteControlServer
 import executor.*
+import executor.command.Command
+import executor.command.CommandProcessorManager
 
 fun main(args: Array<String>) {
-    val rce = RemoteCommandExecutorManager.getInstance()
+    val cmdProcessor = getCommandProcessor()
     class SuperDuperMsgListener : ClientConnection.MessageListener {
         override fun onMessage(cmd: String) {
-            println("msg received : " + cmd.toString())
-            rce.processCommand(cmd)
+            println("msg received : " + cmd)
+            cmdProcessor.processCommand(cmd)
         }
     }
     val dbConnection = DataBase.getConnection()
@@ -17,4 +19,11 @@ fun main(args: Array<String>) {
     val server = RemoteControlServer(8743)
     server.addClientConnectionListener(clientConnection)
     server.start()
+}
+
+fun getCommandProcessor() :  Command.CommandProcessor {
+    Command.initDefaultCommands();
+    val processor = CommandProcessorManager.getInstance()
+    processor.add(RemoteCommandExecutor.getInstance())
+    return processor
 }
