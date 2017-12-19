@@ -12,7 +12,8 @@ public class RecorderStop extends RecorderCommand {
     }
 
     @Override
-    public void execute(String params) {
+    public void execute() {
+        super.execute();
         CommandRecorderManager.getInstance().
                 getRecorder(getSessionId(params), true).stop();
     }

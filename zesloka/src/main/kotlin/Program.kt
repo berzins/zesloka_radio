@@ -4,6 +4,7 @@ import remotecontrolserver.RemoteControlServer
 import executor.*
 import executor.command.Command
 import executor.command.CommandProcessorManager
+import executor.command.CommandRecorderManager
 
 fun main(args: Array<String>) {
     val cmdProcessor = getCommandProcessor()
@@ -19,10 +20,15 @@ fun main(args: Array<String>) {
     val server = RemoteControlServer(8743)
     server.addClientConnectionListener(clientConnection)
     server.start()
+
+    while(true) {
+        print("zesloka.tk >")
+        cmdProcessor.processCommand(readLine())
+    }
 }
 
 fun getCommandProcessor() :  Command.CommandProcessor {
-    Command.initDefaultCommands();
+    Command.initDefaultCommands()
     val processor = CommandProcessorManager.getInstance()
     processor.add(RemoteCommandExecutor.getInstance())
     return processor

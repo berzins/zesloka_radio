@@ -13,8 +13,8 @@ public class RobotMouseMoveCommand extends RobotCommand{
     }
 
     @Override
-    public void execute(String params) {
-        super.execute(params);
+    public void execute() {
+        super.execute();
         pos[0] = parseX(params);
         pos[1] = parseY(params);
         if(validateParams(this.pos)) {

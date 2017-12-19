@@ -1,6 +1,7 @@
 package executor.command;
 
 import executor.command.robotcommands.*;
+import executor.command.testcommands.TestCommand;
 import executor.command.utilcommands.recorder.*;
 import utilities.Storage;
 import utilities.Util;
@@ -8,10 +9,8 @@ import utilities.Util;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 /**
  * Represents class what can perform previously defined action.
@@ -21,8 +20,9 @@ public abstract class Command implements Serializable {
 
     protected String key;
     protected String name;
+    protected String params;
     protected Long timeout = 0L;
-    final protected List<Command> commands;
+    protected  Command nextCommand;
 
     /**
      * @param name Command string representation
@@ -31,7 +31,7 @@ public abstract class Command implements Serializable {
     public Command(String name, String key) {
         this.key = key;
         this.name = name;
-        commands = new ArrayList<>();
+        this.params = "";
         init();
     }
 
@@ -42,7 +42,7 @@ public abstract class Command implements Serializable {
      * Method can have blocking behaviour so it should be executed in separate thread
      *
      */
-    public void execute(final String params) {
+    public void execute() {
         if(timeout > 0) {
             try {
                 Thread.sleep(timeout);
@@ -50,13 +50,31 @@ public abstract class Command implements Serializable {
                 e.printStackTrace();
             }
         }
-        for(Command cmd : commands) {
-            cmd.executeAsync(params);
+        if(nextCommand != null) {
+            nextCommand.executeAsync();
         }
+
+
+        String time = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(new Date()).toString();
+        System.out.println(time + ": executing " + this.getName() + ".." );
+
     }
 
-    public final void executeAsync(final String params) {
-        new Thread(() -> Command.this.execute(params)).start();
+    public final void executeAsync() {
+        new Thread(() -> Command.this.execute()).start();
+    }
+
+
+    /**
+     * add Command to this roots last command in execution chain
+     * @param cmd
+     */
+    public void add(Command cmd) {
+        if(this.nextCommand == null) {
+            this.nextCommand = Util.serializedCopy(cmd);
+        } else {
+            this.nextCommand.add(cmd);
+        }
     }
 
     /**
@@ -74,19 +92,25 @@ public abstract class Command implements Serializable {
     }
 
     /**
-     * List reference to internal sub commands
+     * Set Command operation parameters.. if not set.. default is empty str
      */
-    final public List<Command> getCommands() {
-        return this.commands;
+    public Command setParams(String params) {
+        this.params = params;
+        return this;
     }
 
     /**
-     * Sets timeout before command execution call.
+     * Command parameters
+     */
+    public String getParams() { return this.params; }
+
+    /**
+     * Sets timeout before command execution.
      */
     final public void setTimeout(Long timeout) {
         this.timeout = timeout;
     }
-
+    final public Long getTimeout(){return this.timeout; }
 
     // -------------  INTERFACES ----------------
 
@@ -165,31 +189,31 @@ public abstract class Command implements Serializable {
 
         initCommand(new Command("mouse move", CMD_MOUSE_MOVE) {
             @Override protected void init() {
-                this.commands.add(new RobotMouseMoveCommand());
+                this.add(new RobotMouseMoveCommand());
             }
         });
         initCommand(new Command("mouse click 1", CMD_MOUSE_CLICK_1) {
             @Override protected void init() {
-                this.commands.add(new RobotMousePressCommand(InputEvent.BUTTON1_DOWN_MASK));
-                this.commands.add(new RobotMouseReleaseCommand(InputEvent.BUTTON1_MASK));
+                this.add(new RobotMousePressCommand(InputEvent.BUTTON1_DOWN_MASK));
+                this.add(new RobotMouseReleaseCommand(InputEvent.BUTTON1_MASK));
             }
         });
         initCommand(new Command("mouse click 2", CMD_MOUSE_CLICK_2) {
             @Override protected void init() {
-                this.commands.add(new RobotMousePressCommand(InputEvent.BUTTON2_DOWN_MASK));
-                this.commands.add(new RobotMouseReleaseCommand(InputEvent.BUTTON2_MASK));
+                this.add(new RobotMousePressCommand(InputEvent.BUTTON2_DOWN_MASK));
+                this.add(new RobotMouseReleaseCommand(InputEvent.BUTTON2_MASK));
             }
         });
         initCommand(new Command("mouse click 3", CMD_MOUSE_CLICK_3) {
             @Override protected void init() {
-                this.commands.add(new RobotMousePressCommand(InputEvent.BUTTON3_DOWN_MASK));
-                this.commands.add(new RobotMouseReleaseCommand(InputEvent.BUTTON3_MASK));
+                this.add(new RobotMousePressCommand(InputEvent.BUTTON3_DOWN_MASK));
+                this.add(new RobotMouseReleaseCommand(InputEvent.BUTTON3_MASK));
             }
         });
         initCommand(new Command("radio play", CMD_RADIO_PLAY) {
             @Override protected void init() {
-                this.commands.add(new RobotKeyPressCommand(KeyEvent.VK_ESCAPE));
-                this.commands.add(new RobotKeyReleaseCommand(KeyEvent.VK_ESCAPE));
+                this.add(new RobotKeyPressCommand(KeyEvent.VK_ESCAPE));
+                this.add(new RobotKeyReleaseCommand(KeyEvent.VK_ESCAPE));
             }
         });
         initCommand(new RecorderReset("recorder reset", "cmd_recorder_reset"));
@@ -197,6 +221,7 @@ public abstract class Command implements Serializable {
         initCommand(new RecorderStart("recorder start", "cmd_recorder_start"));
         initCommand(new RecorderStop("recorder stop", "cmd_recorder_stop"));
         initCommand(new RecorderStore("recorder store", "cmd_recorder_store"));
+        initCommand(new TestCommand("test command", "cmd_test"));
     }
 
     public static Command getCommand(String key) {

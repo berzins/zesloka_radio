@@ -10,8 +10,8 @@ public class RobotMousePressCommand extends  RobotCommand {
     }
 
     @Override
-    public void execute(String params) {
-        super.execute(params);
+    public void execute() {
+        super.execute();
         RemoteCommandExecutor.getInstance().getRobot().mousePress(this.event);
     }
 }

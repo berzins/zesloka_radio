@@ -2,7 +2,6 @@
   <library name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.1.4-3">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.1.4-3/7f07ece855a7d40d5ef430218593e92282ae2a74/kotlin-stdlib-1.1.4-3.jar!/" />
-      <root url="jar://D:/ProgrammingProjects/Libraries/mysql-connector-java-5.1.45/mysql-connector-java-5.1.45-bin.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

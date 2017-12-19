@@ -38,7 +38,7 @@ public class RemoteCommandExecutor implements Command.CommandProcessor {
     @Override
     public void processCommand(String cmd) {
         Command c = Command.getCommand(Command.parseCommand(cmd));
-        c.executeAsync(Command.parseParams(cmd));
+        c.setParams(Command.parseParams(cmd)).executeAsync();
     }
 
 }
