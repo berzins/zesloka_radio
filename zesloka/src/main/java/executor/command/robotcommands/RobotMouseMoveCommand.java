@@ -1,6 +1,7 @@
 package executor.command.robotcommands;
 
 import executor.RemoteCommandExecutor;
+import executor.command.Command;
 
 import java.awt.*;
 
@@ -31,6 +32,7 @@ public class RobotMouseMoveCommand extends RobotCommand{
     public static Float parseY(String params) {
         return parseParam(params, 1);
     }
+
 
     private static Float parseParam(String params, int index) {
         if(params.contains(",")) {

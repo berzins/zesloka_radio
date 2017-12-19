@@ -4,12 +4,14 @@ import executor.command.robotcommands.*;
 import executor.command.testcommands.TestCommand;
 import executor.command.utilcommands.recorder.*;
 import utilities.Storage;
+import utilities.TimeUtils;
 import utilities.Util;
 
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.*;
 
 /**
@@ -53,10 +55,7 @@ public abstract class Command implements Serializable {
         if(nextCommand != null) {
             nextCommand.executeAsync();
         }
-
-
-        String time = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(new Date()).toString();
-        System.out.println(time + ": executing " + this.getName() + ".." );
+        System.out.println(TimeUtils.getCurrentTimeString() + ": executing " + this.getKey() + " after " + this.getTimeout() + " mils");
 
     }
 
@@ -189,7 +188,12 @@ public abstract class Command implements Serializable {
 
         initCommand(new Command("mouse move", CMD_MOUSE_MOVE) {
             @Override protected void init() {
-                this.add(new RobotMouseMoveCommand());
+                this.add(new RobotMouseMoveCommand() {});
+            }
+            @Override public Command setParams(String params) {
+                super.setParams(params);
+                this.nextCommand.setParams(params);
+                return this;
             }
         });
         initCommand(new Command("mouse click 1", CMD_MOUSE_CLICK_1) {
@@ -226,7 +230,7 @@ public abstract class Command implements Serializable {
 
     public static Command getCommand(String key) {
         Command c = initializedCommands.get(key);
-        return c != null? c : new Command("none", CMD_NONE) {};
+        return c != null? Util.serializedCopy(c) : new Command("none", CMD_NONE) {};
     }
 }
 

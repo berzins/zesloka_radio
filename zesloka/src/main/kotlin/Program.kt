@@ -5,6 +5,7 @@ import executor.*
 import executor.command.Command
 import executor.command.CommandProcessorManager
 import executor.command.CommandRecorderManager
+import utilities.TimeUtils
 
 fun main(args: Array<String>) {
     val cmdProcessor = getCommandProcessor()
@@ -22,8 +23,8 @@ fun main(args: Array<String>) {
     server.start()
 
     while(true) {
-        print("zesloka.tk >")
         cmdProcessor.processCommand(readLine())
+        println(TimeUtils.getCurrentTimeString())
     }
 }
 

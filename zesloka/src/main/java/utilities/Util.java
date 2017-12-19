@@ -63,4 +63,12 @@ public class Util {
     }
 
 
+    public interface Executable {
+        void execute();
+    }
+    public static final void executeInMainThread() {
+
+    }
+
+
 }
