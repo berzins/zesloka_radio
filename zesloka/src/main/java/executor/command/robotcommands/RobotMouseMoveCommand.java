@@ -2,10 +2,11 @@ package executor.command.robotcommands;
 
 import executor.RemoteCommandExecutor;
 import executor.command.Command;
+import executor.command.parameters.CommandParams;
 
 import java.awt.*;
 
-public class RobotMouseMoveCommand extends RobotCommand{
+public class RobotMouseMoveCommand extends RobotCommand {
 
     private Float [] pos = new Float [2];
 
@@ -19,7 +20,7 @@ public class RobotMouseMoveCommand extends RobotCommand{
         pos[0] = parseX(params);
         pos[1] = parseY(params);
         if(validateParams(this.pos)) {
-            int x = MouseInfo.getPointerInfo().getLocation().x + Math.round(pos[0]);
+            int x = MouseInfo.getPointerInfo().getLocation().x + Math.round(CommandParams.);
             int y = MouseInfo.getPointerInfo().getLocation().y + Math.round(pos[1]);
             RemoteCommandExecutor.getInstance().getRobot().mouseMove(x, y);
         }

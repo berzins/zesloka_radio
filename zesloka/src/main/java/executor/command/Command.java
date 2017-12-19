@@ -19,12 +19,12 @@ import java.util.*;
  */
 public abstract class Command implements Serializable {
 
-
     protected String key;
     protected String name;
-    protected String params;
-    protected Long timeout = 0L;
-    protected  Command nextCommand;
+    protected final List<String> paramKeys;
+    protected Map<String, String> params; // param_key, param_value;
+    private Long timeout = 0L;
+    private Command nextCommand;
 
     /**
      * @param name Command string representation
@@ -33,7 +33,8 @@ public abstract class Command implements Serializable {
     public Command(String name, String key) {
         this.key = key;
         this.name = name;
-        this.params = "";
+        this.paramKeys = new ArrayList<>();
+        this.params = new HashMap<>();
         init();
     }
 
@@ -42,7 +43,6 @@ public abstract class Command implements Serializable {
     /**
      * Executes all sub command structure.
      * Method can have blocking behaviour so it should be executed in separate thread
-     *
      */
     public void execute() {
         if(timeout > 0) {
@@ -91,17 +91,34 @@ public abstract class Command implements Serializable {
     }
 
     /**
-     * Set Command operation parameters.. if not set.. default is empty str
+     * Set Command operation parameters.. if not set.. default is empty
      */
-    public Command setParams(String params) {
-        this.params = params;
+    public final Command setParams(Map<String, String> params) { //  <  param_key , param_value >
+        this.params =  params;
+        if(this.nextCommand != null) {
+            this.nextCommand.setParams(params);
+        }
         return this;
     }
 
     /**
-     * Command parameters
+     * Command and subCommand parameters
      */
-    public String getParams() { return this.params; }
+    public Map<String, String> getParams() {
+
+        return (this.params);
+    }
+
+    public List<String> getParamKeys() {
+        List<String> pk;
+        if(this.nextCommand!=null) {
+            pk = this.nextCommand.getParamKeys();
+        } else {
+            pk = this.paramKeys;
+        }
+        pk.addAll(this.paramKeys);
+        return pk;
+    }
 
     /**
      * Sets timeout before command execution.
@@ -126,9 +143,9 @@ public abstract class Command implements Serializable {
     /**
      * Extracts command identifier from incoming command string.
      */
-    public static String parseCommand(String cmd) {
-        if(cmd.contains("|")) {
-            String[] c = cmd.split("\\|");
+    public static String getRootCommand(String cmd) {
+        if(cmd.contains("?")) {
+            String[] c = cmd.split("\\?");
             return c[0];
         }
         return cmd;
@@ -137,15 +154,20 @@ public abstract class Command implements Serializable {
     /**
      * Extracts command parameters from incoming command string.
      */
-    public static String parseParams(String cmd) {
-        if(cmd.contains("|")) {
-            int from = cmd.indexOf("|") + 1;
-            int length = cmd.length();
-            String p = cmd.substring(from,length);
-            return p;
+    public static Map<String,String> parseParams(String cmd) {
+        Map<String,String> ret = new HashMap<>();
+        if(cmd.contains("?")) {
+            String paramStr = cmd.split("\\?")[1];
+            String[] params = paramStr.split("\\&");
+
+            for(String p :  params) {
+                String[] pair = p.split("\\=");
+                ret.put(pair[0], pair[1]);
+            }
         }
         return null;
     }
+
 
 
 
@@ -189,11 +211,6 @@ public abstract class Command implements Serializable {
         initCommand(new Command("mouse move", CMD_MOUSE_MOVE) {
             @Override protected void init() {
                 this.add(new RobotMouseMoveCommand() {});
-            }
-            @Override public Command setParams(String params) {
-                super.setParams(params);
-                this.nextCommand.setParams(params);
-                return this;
             }
         });
         initCommand(new Command("mouse click 1", CMD_MOUSE_CLICK_1) {

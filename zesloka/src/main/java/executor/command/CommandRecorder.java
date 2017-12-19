@@ -15,7 +15,7 @@ public class CommandRecorder  implements Command.CommandProcessor{
     public void processCommand(String cmd) {
         if(cmd.contains("recorder")) return;
         if(isRecording) {
-            Command c = Command.getCommand(Command.parseCommand(cmd));
+            Command c = Command.getCommand(Command.getRootCommand(cmd));
             c.setTimeout(getTimeout());
             c.setParams(Command.parseParams(cmd));
             record.add(c);

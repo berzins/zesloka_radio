@@ -5,8 +5,10 @@ import executor.RemoteCommandExecutor;
 public class RobotKeyPressCommand extends RobotCommand {
 
 
-    public RobotKeyPressCommand(Integer event) {
+    public RobotKeyPressCommand(Integer event)
+    {
         super("robot key press", ROBOT_CMD_KEY_PRESS, event);
+
     }
 
     @Override
