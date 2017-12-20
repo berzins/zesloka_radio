@@ -3,6 +3,7 @@ package executor.command;
 import executor.command.parameters.CommandParams;
 import executor.command.robotcommands.*;
 import executor.command.testcommands.TestCommand;
+import executor.command.utilcommands.GetParamsCommand;
 import executor.command.utilcommands.recorder.*;
 import utilities.Storage;
 import utilities.TimeUtils;
@@ -18,12 +19,18 @@ import java.util.*;
  */
 public abstract class Command implements Serializable {
 
+    private static final long serialVersionUID = 1L;
+
+    protected static final String CMD_NAME = "cmd_name";
+    protected static final String CMD_KEY = "cmd_key";
+
     protected String key;
     protected String name;
     protected final List<String> paramKeys;
     protected CommandParams params;
     private Long timeout = 0L;
     private Command nextCommand;
+    private boolean finall;
 
     /**
      * @param name Command string representation
@@ -92,7 +99,8 @@ public abstract class Command implements Serializable {
     /**
      * Set Command operation parameters.. if not set.. default is empty
      */
-    public final Command setParams(CommandParams params) { //  <  param_key , param_value >
+    public final Command setParams(CommandParams params) {
+        if(this.isFinal()) return this;
         this.params =  params;
         if(this.nextCommand != null) {
             this.nextCommand.setParams(params);
@@ -120,6 +128,20 @@ public abstract class Command implements Serializable {
             pk = this.paramKeys;
         }
         return pk;
+    }
+
+    /**
+     * Determines if this command params can be changed
+     */
+    protected void setFinal(boolean b) {
+        this.finall = b;
+    }
+
+    /**
+     * Determines if this command params can be changed
+     */
+    protected boolean isFinal(){
+        return this.finall;
     }
 
 
@@ -266,9 +288,10 @@ public abstract class Command implements Serializable {
         initCommand(new RecorderStop("recorder stop", "cmd_recorder_stop"));
         initCommand(new RecorderStore("recorder store", "cmd_recorder_store"));
         initCommand(new TestCommand("test command", "cmd_test"));
+        initCommand(new GetParamsCommand("get parameters", "cmd_get_param_key"));
     }
 
-    public void initUserCommands() {
+    public static void initUserCommands() {
         List<Command> cmds = Util.readFromFile(Storage.FILE_PATH_COMMANDS);
         if(cmds != null) {
             for(Command c : cmds) {
@@ -276,6 +299,7 @@ public abstract class Command implements Serializable {
             }
         }
     }
+
 
     public static Command getCommand(String key) {
         Command c = initializedCommands.get(key);
