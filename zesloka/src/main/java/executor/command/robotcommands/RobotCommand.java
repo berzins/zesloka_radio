@@ -12,6 +12,10 @@ public abstract class RobotCommand extends Command implements Serializable {
     public static String ROBOT_CMD_MOUSE_PRESS = "robot_cmd_mouse_press";
     public static String ROBOT_CMD_MOUSE_RELEASE = "robot_cmd_mouse_release";
 
+
+    protected static final String X = "x";
+    protected static final String Y = "y";
+
     Integer event;
 
 

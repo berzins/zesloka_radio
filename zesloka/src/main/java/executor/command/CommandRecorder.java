@@ -1,5 +1,7 @@
 package executor.command;
 
+import executor.command.parameters.CommandParams;
+
 import java.time.Duration;
 import java.time.Instant;
 
@@ -15,34 +17,47 @@ public class CommandRecorder  implements Command.CommandProcessor{
     public void processCommand(String cmd) {
         if(cmd.contains("recorder")) return;
         if(isRecording) {
-            Command c = Command.getCommand(Command.parseCommand(cmd));
+            Command c = Command.getCommand(Command.getRootCommand(cmd));
             c.setTimeout(getTimeout());
-            record.add(Command.getCommand(Command.parseCommand(cmd)).setParams(Command.parseParams(cmd)));
+            c.setParams(new CommandParams(cmd));
+            record.add(c);
         }
     }
 
     public void set(String name, String key) {
-        this.record = new EmptyCommand(name, key);
+        synchronized (this) {
+            this.record = new EmptyCommand(name, key);
+        }
     }
 
     public void reset() {
-        this.set(record.getName(), record.getKey());
+        synchronized (this) {
+            this.set(record.getName(), record.getKey());
+        }
     }
 
     public void start() {
-        CommandProcessorManager.getInstance().add(this); // add self to listen for incoming commands
-        start = Instant.now();
-        isRecording = true;
+        synchronized (this) {
+            CommandProcessorManager.getInstance().add(this); // add self to listen for incoming commands
+            start = Instant.now();
+            isRecording = true;
+        }
     }
 
     public void stop() {
-        CommandProcessorManager.getInstance().remove(this);
-        isRecording = false;
+        synchronized (this) {
+            if(isRecording) {
+                CommandProcessorManager.getInstance().remove(this);
+                isRecording = false;
+            }
+        }
     }
 
     public Command save() {
-        Command.saveCommand(record);
-        return record;
+        synchronized (this) {
+            Command.saveCommand(record);
+            return record;
+        }
     }
 
     public boolean isRecording() {
@@ -50,10 +65,11 @@ public class CommandRecorder  implements Command.CommandProcessor{
     }
 
     public Long getTimeout() {
-        Instant end = Instant.now();
-        Duration to = Duration.between(start, end);
-        start = end;
-        return to.toMillis();
+        synchronized (this) {
+            Instant end = Instant.now();
+            Duration to = Duration.between(start, end);
+            start = end;
+            return to.toMillis();
+        }
     }
-
 }

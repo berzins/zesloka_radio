@@ -1,6 +1,7 @@
 package executor.command.testcommands;
 
 import executor.command.Command;
+import utilities.TimeUtils;
 
 public class TestCommand extends Command {
 
@@ -15,6 +16,7 @@ public class TestCommand extends Command {
     @Override
     public void execute() {
         super.execute();
-        System.out.println("executing '" + this.getName() + "' command with params : " + params);
+        System.out.println(TimeUtils.getCurrentTimeString() +
+                ": executing '" + this.getName() + "' command with params : " + params);
     }
 }

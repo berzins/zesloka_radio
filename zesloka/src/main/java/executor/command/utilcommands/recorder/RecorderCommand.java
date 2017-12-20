@@ -4,6 +4,12 @@ import executor.command.Command;
 import executor.command.CommandRecorder;
 
 public class RecorderCommand extends Command {
+
+    protected static final String SESSION_ID = "session_id";
+    protected static final String CMD_NAME = "cmd_name";
+    protected static final String CMD_KEY = "cmd_key";
+
+
     /**
      * @param name Command string representation
      * @param key  Unique command identifier
@@ -12,10 +18,5 @@ public class RecorderCommand extends Command {
         super(name, key);
     }
 
-    protected String getSessionId(String params) {
-        //TODO: it would be nice to implement some solid logic how ids ar created and decoded
-        // for now this is just placeholder.
-        return params;
-    }
 
 }

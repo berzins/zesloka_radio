@@ -10,13 +10,14 @@ public class RecorderStore extends RecorderCommand {
      */
     public RecorderStore(String name, String key) {
         super(name, key);
+        this.initParamKeys(new String[]{SESSION_ID});
     }
 
     @Override
     public void execute() {
         super.execute();
         CommandRecorderManager.getInstance().
-                getRecorder(getSessionId(params), true).save();
+                getRecorder(params.getStringValue(this, SESSION_ID), true).save();
 
     }
 }

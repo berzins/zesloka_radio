@@ -27,7 +27,7 @@ public class Util {
             e.printStackTrace();
         }
         return copy;
-    }
+     }
 
 
     /**
@@ -60,6 +60,14 @@ public class Util {
             e.printStackTrace();
             return null;
         }
+    }
+
+
+    public interface Executable {
+        void execute();
+    }
+    public static final void executeInMainThread() {
+
     }
 
 

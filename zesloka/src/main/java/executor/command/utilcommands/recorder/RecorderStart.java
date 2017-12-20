@@ -12,6 +12,7 @@ public class RecorderStart extends RecorderCommand {
      */
     public RecorderStart(String name, String key) {
         super(name, key);
+        this.initParamKeys(new String[]{SESSION_ID});
     }
 
     /**
@@ -21,7 +22,7 @@ public class RecorderStart extends RecorderCommand {
     @Override
     public void execute() {
         super.execute();
-        CommandRecorderManager.getInstance().getRecorder(getSessionId(params), true).start();
+        CommandRecorderManager.getInstance().getRecorder(params.getStringValue(this, SESSION_ID), true).start();
     }
 
 }
