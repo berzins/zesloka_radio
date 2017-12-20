@@ -7,7 +7,6 @@ public class RecorderCommand extends Command {
 
     protected static final String SESSION_ID = "session_id";
 
-
     /**
      * @param name Command string representation
      * @param key  Unique command identifier

@@ -28,7 +28,6 @@ class DBConecton() {
     }
 
     lateinit var sqlConnection : Connection
-        public get
         private set
 
     class DBConnectionData(login: String, password:String, host : String, port : Int) : Properties() {

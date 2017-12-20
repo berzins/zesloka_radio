@@ -26,6 +26,13 @@ public class CommandParams implements Serializable {
         params = p != null ? p : new HashMap<>();
     }
 
+    public void addValue(String key, String value) {
+        if(params == null) {
+            params = new HashMap<>();
+        }
+        params.put(key, value);
+    }
+
     public Long getLongValue(Command cmd, String key) throws IllegalArgumentException {
         return Long.valueOf(getRawVal(cmd, key));
     }
@@ -38,6 +45,10 @@ public class CommandParams implements Serializable {
         return getRawVal(cmd, key);
     }
 
+    public Integer getIntegerValue(Command cmd, String key) {
+        return Integer.valueOf(getRawVal(cmd, key));
+    }
+
     private String getRawVal(Command cmd, String key) throws IllegalArgumentException{
         String paramKey = cmd.getKey() + CMD_PARAM_DIVIDER + key;
         String val = params.get(paramKey);
@@ -46,7 +57,7 @@ public class CommandParams implements Serializable {
     }
 
     public static String createParamKey(Command cmd, String key) {
-        return cmd.getKey() + CMD_PARAM_DIVIDER + key;
+        return cmd.getKey() + CMD_PARAM_DIVIDER +  key;
     }
 
 

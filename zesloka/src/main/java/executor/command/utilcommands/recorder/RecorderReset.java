@@ -11,7 +11,7 @@ public class RecorderReset extends RecorderCommand {
      */
     public RecorderReset(String name, String key) {
         super(name, key);
-        this.initParamKeys(new String[]{CommandParams.createParamKey(this, SESSION_ID)});
+        this.initParamKeys(new String[]{SESSION_ID});
     }
 
     @Override

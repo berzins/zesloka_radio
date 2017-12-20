@@ -8,12 +8,9 @@ import java.awt.*;
 
 public class RobotMouseMoveCommand extends RobotCommand {
 
-    public RobotMouseMoveCommand() {
-        super("mouse move", RobotCommand.ROBOT_CMD_MOUSE_MOVE, 0); // key identifier dummy value.. not needed for move command
-        initParamKeys(new String[] {
-                CommandParams.createParamKey(this, X),
-                CommandParams.createParamKey(this, Y)
-        });
+    public RobotMouseMoveCommand(String name, String key) {
+        super(name, key);
+        initParamKeys(new String[]{X, Y});
     }
 
     @Override
