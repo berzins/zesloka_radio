@@ -35,7 +35,7 @@ public class Util {
      */
     public static <T> boolean writeToFile(String fileName, T obj) {
         try {
-            ObjectOutputStream out = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(fileName)));
+            ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(fileName));
             out.writeObject(obj);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -52,7 +52,7 @@ public class Util {
      */
     public static <T> T readFromFile(String fileName) {
         try {
-            return (T) new ObjectInputStream(new BufferedInputStream(new FileInputStream(fileName))).readObject();
+            return (T) new ObjectInputStream(new FileInputStream(fileName)).readObject();
         } catch (IOException e) {
             e.printStackTrace();
             return null;

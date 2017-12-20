@@ -268,6 +268,15 @@ public abstract class Command implements Serializable {
         initCommand(new TestCommand("test command", "cmd_test"));
     }
 
+    public void initUserCommands() {
+        List<Command> cmds = Util.readFromFile(Storage.FILE_PATH_COMMANDS);
+        if(cmds != null) {
+            for(Command c : cmds) {
+                initCommand(c);
+            }
+        }
+    }
+
     public static Command getCommand(String key) {
         Command c = initializedCommands.get(key);
         return c != null? Util.serializedCopy(c) : new Command("none", CMD_NONE) {};
