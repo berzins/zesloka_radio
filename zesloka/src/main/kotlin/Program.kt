@@ -26,14 +26,15 @@ fun main(args: Array<String>) {
     while(true) {
         cmdProcessor.processCommand(readLine())
         println(TimeUtils.getCurrentTimeString())
-        Util.writeToFile(Storage.FILE_PATH_COMMANDS, Command.getCommand("cmd_test"))
-        val c:Command = Util.readFromFile(Storage.FILE_PATH_COMMANDS)
-        c.executeAsync()
+        //Util.writeToFile(Storage.FILE_PATH_COMMANDS, Command.getCommand("cmd_test"))
+        //val c:Command = Util.readFromFile(Storage.FILE_PATH_COMMANDS)
+        //c.executeAsync()
     }
 }
 
 fun getCommandProcessor() :  Command.CommandProcessor {
     Command.initDefaultCommands()
+    Command.initUserCommands()
     val processor = CommandProcessorManager.getInstance()
     processor.add(RemoteCommandExecutor.getInstance())
     return processor

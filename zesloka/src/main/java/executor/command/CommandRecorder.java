@@ -20,6 +20,7 @@ public class CommandRecorder  implements Command.CommandProcessor{
             Command c = Command.getCommand(Command.getRootCommand(cmd));
             c.setTimeout(getTimeout());
             c.setParams(new CommandParams(cmd));
+            c.setFinal(true);
             record.add(c);
         }
     }

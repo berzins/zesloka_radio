@@ -11,6 +11,7 @@ public class TestCommand extends Command {
      */
     public TestCommand(String name, String key) {
         super(name, key);
+        initParamKeys(new String[] {PARAM_TEXT});
     }
 
     @Override

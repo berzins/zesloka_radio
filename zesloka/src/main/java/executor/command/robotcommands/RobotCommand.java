@@ -13,19 +13,15 @@ public abstract class RobotCommand extends Command implements Serializable {
     public static String ROBOT_CMD_MOUSE_RELEASE = "robot_cmd_mouse_release";
 
 
-    protected static final String X = "x";
-    protected static final String Y = "y";
+    public static final String X = "x";
+    public static final String Y = "y";
+    public static final String KEY_EVENT = "key_event";
 
-    Integer event;
-
-
-    public RobotCommand(String name, String key, Integer event) {
+    /**
+     * @param name Command string representation
+     * @param key  Unique command identifier
+     */
+    public RobotCommand(String name, String key) {
         super(name, key);
-        this.event = event;
-    }
-
-    @Override
-    public void execute() {
-        super.execute();
     }
 }

@@ -1,7 +1,6 @@
 package executor.command.utilcommands.recorder;
 
 import executor.command.CommandRecorderManager;
-import executor.command.parameters.CommandParams;
 
 public class RecorderSet extends RecorderCommand {
 
@@ -12,9 +11,9 @@ public class RecorderSet extends RecorderCommand {
     public RecorderSet(String name, String key) {
         super(name, key);
         this.initParamKeys(new String[]{
-                CommandParams.createParamKey(this, SESSION_ID),
-                CommandParams.createParamKey(this, CMD_NAME),
-                CommandParams.createParamKey(this, CMD_KEY)});
+                SESSION_ID,
+                PARAM_CMD_NAME,
+                PARAM_CMD_KEY});
     }
 
     @Override
@@ -22,7 +21,7 @@ public class RecorderSet extends RecorderCommand {
         super.execute();
         CommandRecorderManager.getInstance()
                 .getRecorder(params.getStringValue(this, SESSION_ID), false)
-                .set(   params.getStringValue(this, CMD_NAME),
-                        params.getStringValue(this, CMD_KEY));
+                .set(   params.getStringValue(this, PARAM_CMD_NAME),
+                        params.getStringValue(this, PARAM_CMD_KEY));
     }
 }

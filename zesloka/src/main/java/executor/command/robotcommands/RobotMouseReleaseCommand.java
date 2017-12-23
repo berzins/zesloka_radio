@@ -5,13 +5,15 @@ import executor.RemoteCommandExecutor;
 public class RobotMouseReleaseCommand extends RobotCommand {
 
 
-    public RobotMouseReleaseCommand(Integer event) {
-        super("mouse release", RobotCommand.ROBOT_CMD_MOUSE_RELEASE, event);
+    public RobotMouseReleaseCommand(String name, String key) {
+        super(name, key);
+        initParamKeys(new String[]{KEY_EVENT});
     }
 
     @Override
     public void execute() {
         super.execute();
-        RemoteCommandExecutor.getInstance().getRobot().mouseRelease(this.event);
+        RemoteCommandExecutor.getInstance().getRobot()
+                .mouseRelease(params.getIntegerValue(this, KEY_EVENT));
     }
 }
