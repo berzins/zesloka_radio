@@ -16,5 +16,6 @@ public class MouseMove extends Command{
 
     @Override protected void init() {
         Command move = new RobotMouseMoveCommand("robot mouse move", RobotCommand.ROBOT_CMD_MOUSE_MOVE);
+        this.add(move);
     }
 }

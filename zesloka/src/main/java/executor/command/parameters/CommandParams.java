@@ -33,6 +33,15 @@ public class CommandParams implements Serializable {
         params.put(key, value);
     }
 
+    public void setValue(Command cmd, String key, Float value) {
+        if(params.get(createParamKey(cmd, key)) != null) {
+            params.replace(createParamKey(cmd,key), String.valueOf(value));
+        } else {
+            params.put(createParamKey(cmd, key), String.valueOf(value));
+        }
+    }
+
+
     public Long getLongValue(Command cmd, String key) throws IllegalArgumentException {
         return Long.valueOf(getRawVal(cmd, key));
     }
@@ -50,7 +59,7 @@ public class CommandParams implements Serializable {
     }
 
     private String getRawVal(Command cmd, String key) throws IllegalArgumentException{
-        String paramKey = cmd.getKey() + CMD_PARAM_DIVIDER + key;
+        String paramKey = createParamKey(cmd, key);
         String val = params.get(paramKey);
         if(val == null) throw new IllegalArgumentException("Arguments does not contain parameter '" + paramKey +"'");
         return val;

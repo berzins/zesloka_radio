@@ -16,13 +16,16 @@ public class MouseClick_3 extends MouseClick {
     }
 
     @Override protected void init() {
-        Command press = new RobotMousePressCommand("robot mouse press", RobotCommand.ROBOT_CMD_MOUSE_PRESS);
-        Command release = new RobotMouseReleaseCommand("robot mouse release", RobotCommand.ROBOT_CMD_MOUSE_RELEASE);
-        release.setTimeout(10L);
-        this.add(press);
-        this.add(release);
-        this.addParam(CommandParams.createParamKey(press, RobotCommand.KEY_EVENT), MOUSE_3_DOWN);
-        this.addParam(CommandParams.createParamKey(release, RobotCommand.KEY_EVENT), MOUSE_3_UP);
+        super.init();
+        this.addParam(CommandParams.createParamKey(
+                getSubCommand(RobotCommand.ROBOT_CMD_MOUSE_PRESS), RobotCommand.KEY_EVENT), MOUSE_3_DOWN);
+        this.addParam(CommandParams.createParamKey(
+                getSubCommand(RobotCommand.ROBOT_CMD_MOUSE_RELEASE), RobotCommand.KEY_EVENT), MOUSE_3_UP);
         this.setFinal(true);
+    }
+
+    @Override
+    public Command setParams(CommandParams params) {
+        return super.setParams(params);
     }
 }

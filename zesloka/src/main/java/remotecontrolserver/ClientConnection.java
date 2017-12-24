@@ -1,8 +1,8 @@
 package remotecontrolserver;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import executor.command.Command;
+
+import java.io.*;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +10,7 @@ import java.util.List;
 public class ClientConnection implements RemoteControlServer.ClientConnectionListener {
 
     BufferedReader input;
+    BufferedWriter output;
     Socket client;
     private List<MessageListener> msgListeners =  new ArrayList<>();
     private boolean isActive = true;
@@ -35,8 +36,8 @@ public class ClientConnection implements RemoteControlServer.ClientConnectionLis
     }
 
     @Override
-    public void onDisconnect() {
-        //TODO: implement this
+    public void onDisconnect() throws IOException {
+        this.close();
     }
 
     @Override
@@ -52,13 +53,25 @@ public class ClientConnection implements RemoteControlServer.ClientConnectionLis
                 String cmd = input.readLine();
                 if(isActive) {
                     for(MessageListener ml : msgListeners) {
-                        ml.onMessage(cmd);
+                        //add self identifier to message params and then call onMessage
+                        ml.onMessage(Command.addSourceIdToParams(cmd, this.hashCode()));
                     }
                 }
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void write(String msg) {
+            try {
+                if(output == null) {
+                    output = new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
+                }
+                output.write(msg);
+                output.flush();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
     }
 }

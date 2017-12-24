@@ -1,5 +1,7 @@
 package remotecontrolserver;
 
+import com.sun.security.ntlm.Client;
+
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -10,8 +12,12 @@ public class RemoteControlServer {
 
     public interface ClientConnectionListener {
         void onConnect(Socket client);
-        void onDisconnect();
+        void onDisconnect() throws IOException;
         void close() throws IOException;
+    }
+
+    public interface ClientOutputListener {
+        void write(String msg);
     }
 
     private List<ClientConnectionListener> clientConnectionListeners = new ArrayList<>();
@@ -48,7 +54,6 @@ public class RemoteControlServer {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     private void waitForConnection() {
@@ -69,5 +74,14 @@ public class RemoteControlServer {
                 e.printStackTrace();
             }
         }
+    }
+
+    public ClientConnectionListener getClient(int clientHash) {
+        for(ClientConnectionListener ccl : clientConnectionListeners) {
+            if(ccl.hashCode() == clientHash) {
+                return ccl;
+            }
+        }
+        return null;
     }
 }

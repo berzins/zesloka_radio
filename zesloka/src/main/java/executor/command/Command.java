@@ -4,10 +4,8 @@ import executor.command.parameters.CommandParams;
 import executor.command.robotcommands.*;
 import executor.command.testcommands.TestCommand;
 import executor.command.utilcommands.GetParamsCommand;
-import executor.command.utilcommands.mouse.MouseClick_1;
-import executor.command.utilcommands.mouse.MouseClick_2;
-import executor.command.utilcommands.mouse.MouseClick_3;
-import executor.command.utilcommands.mouse.MouseMove;
+import executor.command.utilcommands.database.GetSongLike;
+import executor.command.utilcommands.mouse.*;
 import executor.command.utilcommands.recorder.*;
 import org.w3c.dom.events.EventTarget;
 import utilities.Storage;
@@ -105,7 +103,7 @@ public abstract class Command implements Serializable {
     /**
      * Set Command operation parameters.. if not set.. default is empty
      */
-    public final Command setParams(CommandParams params) {
+    public Command setParams(CommandParams params) {
         if(this.isFinal()) return this;
         this.params =  params;
         if(this.nextCommand != null) {
@@ -138,23 +136,40 @@ public abstract class Command implements Serializable {
      */
     public List<String> getParamKeys() {
         List<String> pk;
-        if(this.nextCommand!=null) {
-            pk = this.nextCommand.getParamKeys();
-            if(!isFinal()) { // expose params only if they can take any effect.
-                pk.addAll(this.paramKeys);
+        if(!isFinal()) { // expose params only if they can take any effect.
+            if(this.nextCommand!=null) {
+                pk = this.nextCommand.getParamKeys();
+                    pk.addAll(this.paramKeys);
+            } else {
+                pk = this.paramKeys;
             }
-        } else {
-            pk = this.paramKeys;
-        }
+        } else {pk = new ArrayList<>();}
         return pk;
     }
 
+    /**
+     * Search for particular command in sub commands;
+     * @param key command key
+     * @return if match not found return is null
+     */
+    public Command getSubCommand(String key) {
+        if(nextCommand!= null) {
+            if(nextCommand.getKey().equals(key)) {
+                return nextCommand;
+            }
+            return nextCommand.getSubCommand(key);
+        }
+        return null;
+    }
 
     /**
-     * Determines if this command params can be changed
+     * Determines if this and all sub command params can be changed
      */
-    protected void setFinal(boolean b) {
-        this.finall = b;
+    public void setFinal(boolean b) {
+        finall = b;
+        if(nextCommand != null) {
+            nextCommand.setFinal(b);
+        }
     }
 
     /**
@@ -232,13 +247,14 @@ public abstract class Command implements Serializable {
         return ret;
     }
 
-
+    public static String addSourceIdToParams(String cmd,int hash) {
+        return cmd + "&source_id=" + hash;
+    }
 
 
     // ------------- DEFAULT INIT ---------------
 
     public static String CMD_NONE = "cmd_none";
-    public static String CMD_MOUSE_MOVE = "mouse_move";
     public static String CMD_RADIO_PLAY = "radio_play";
 
 
@@ -267,13 +283,6 @@ public abstract class Command implements Serializable {
     public static void initDefaultCommands() {
 
         initCommand(new Command("none", CMD_NONE) {});
-
-        initCommand(new Command("mouse move", CMD_MOUSE_MOVE) {
-            @Override protected void init() {
-                initParamKeys(new String[] {RobotCommand.X, RobotCommand.Y});
-                this.add(new RobotMouseMoveCommand("robot mouse move", RobotCommand.ROBOT_CMD_MOUSE_MOVE));
-            }
-        });
         initCommand(new Command("radio play", CMD_RADIO_PLAY) {
             @Override protected void init() {
                 initParamKeys(new String[] {RobotCommand.KEY_EVENT});
@@ -298,6 +307,8 @@ public abstract class Command implements Serializable {
         initCommand(new MouseClick_2("mouse click 2", "cmd_mouse_click_2"));
         initCommand(new MouseClick_3("mouse click 3", "cmd_mouse_click_3"));
         initCommand(new MouseMove("mouse move", "cmd_mouse_move"));
+        initCommand(new MouseMoveTo("mouse move to", "cmd_mouse_move_to"));
+        initCommand(new GetSongLike("get song like", "cmd_get_song_like"));
     }
 
     public static void initUserCommands() {
@@ -308,7 +319,6 @@ public abstract class Command implements Serializable {
             }
         }
     }
-
 
     public static Command getCommand(String key) {
         Command c = initializedCommands.get(key);

@@ -4,7 +4,6 @@ import executor.command.Command;
 
 public class GetParamsCommand extends Command {
 
-
     /**
      * @param name Command string representation
      * @param key  Unique command identifier

@@ -26,5 +26,13 @@ public abstract class MouseClick extends Command{
         super(name, key);
     }
 
-
+    @Override
+    protected void init() {
+        super.init();
+        Command press = new RobotMousePressCommand("robot mouse press", RobotCommand.ROBOT_CMD_MOUSE_PRESS);
+        Command release = new RobotMouseReleaseCommand("robot mouse release", RobotCommand.ROBOT_CMD_MOUSE_RELEASE);
+        release.setTimeout(50L);
+        this.add(press);
+        this.add(release);
+    }
 }
