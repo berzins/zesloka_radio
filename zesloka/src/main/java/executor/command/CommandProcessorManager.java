@@ -26,7 +26,7 @@ public class CommandProcessorManager implements Command.CommandProcessor {
     }
 
     @Override
-    public void processCommand(String cmd) {
+    public void processCommand(Command cmd) {
         for(Command.CommandProcessor cp : processors) {
             cp.processCommand(cmd);
         }

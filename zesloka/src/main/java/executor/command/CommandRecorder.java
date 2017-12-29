@@ -14,14 +14,14 @@ public class CommandRecorder  implements Command.CommandProcessor{
 
 
     @Override
-    public void processCommand(String cmd) {
-        if(cmd.contains("recorder")) return;
+    public void processCommand(Command cmd) {
+        CommandParams cp = cmd.getParams();
+        if(cp.contains("recorder")) return;
         if(isRecording) {
-            Command c = Command.getCommand(Command.getRootCommand(cmd));
-            c.setTimeout(getTimeout());
-            c.setParams(new CommandParams(cmd));
-            c.setFinal(true);
-            record.add(c);
+            cmd.setTimeout(getTimeout());
+            //cmd.setParams(cp);
+            cmd.setFinal(true);
+            record.add(cmd);
         }
     }
 

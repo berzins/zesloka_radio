@@ -1,7 +1,9 @@
 package executor;
 
 import executor.command.Command;
+import executor.command.RootCommandResolver;
 import executor.command.parameters.CommandParams;
+import utilities.JSONUtils;
 
 import java.awt.*;
 import java.util.HashMap;
@@ -37,9 +39,8 @@ public class RemoteCommandExecutor implements Command.CommandProcessor {
     // this is place where all magic happens
     // if you wonder how this works, this is place to start
     @Override
-    public void processCommand(String cmd) {
-        Command c = Command.getCommand(Command.getRootCommand(cmd));
-        c.setParams(new CommandParams(cmd)).executeAsync();
+    public void processCommand(Command cmd) {
+        cmd.executeAsync();
     }
 
 }

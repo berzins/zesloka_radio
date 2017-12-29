@@ -17,10 +17,12 @@ public class MouseClick_2 extends MouseClick {
 
     @Override protected void init() {
         super.init();
-        this.addParam(CommandParams.createParamKey(
-                getSubCommand(RobotCommand.ROBOT_CMD_MOUSE_PRESS), RobotCommand.KEY_EVENT), MOUSE_2_DOWN);
-        this.addParam(CommandParams.createParamKey(
-                getSubCommand(RobotCommand.ROBOT_CMD_MOUSE_RELEASE), RobotCommand.KEY_EVENT), MOUSE_2_UP);
+        this.addParam(
+                getSubCommand(RobotCommand.ROBOT_CMD_MOUSE_PRESS),
+                RobotCommand.KEY_EVENT, MOUSE_2_DOWN);
+        this.addParam(
+                getSubCommand(RobotCommand.ROBOT_CMD_MOUSE_RELEASE),
+                RobotCommand.KEY_EVENT, MOUSE_2_UP);
         this.setFinal(true);
     }
 }

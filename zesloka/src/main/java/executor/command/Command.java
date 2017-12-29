@@ -24,6 +24,11 @@ public abstract class Command implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    public static final String CMD_GLOBAL = "cmd_global";
+    public static final Command GLOBAL_PARAMS = new GlobalCommand("", Command.CMD_GLOBAL);
+    public static final String PARAM_GLOBAL_CLIENT_ID = "client_id";
+    public static final String PARAM_GLOBAL_SESSION_ID = "session_id";
+
     protected static final String PARAM_CMD_NAME = "cmd_name";
     protected static final String PARAM_CMD_KEY = "cmd_key";
     protected static final String PARAM_TEXT = "text";
@@ -123,9 +128,9 @@ public abstract class Command implements Serializable {
     /**
      * Add parameter value pair to current parameters
      */
-    public Command addParam(String key, String value) {
+    public Command addParam(Command cmd, String key, String value) {
         if(this.isFinal()) return this;
-        params.addValue(key, value);
+        params.addValue(cmd.getKey(), key, value);
         this.setParams(getParams());
         return this;
     }
@@ -185,7 +190,7 @@ public abstract class Command implements Serializable {
     protected void initParamKeys(String[] keys){
         if(keys != null) {
             for(String k : keys) {
-                this.paramKeys.add(CommandParams.createParamKey(this, k));
+                this.paramKeys.add(k);
             }
         }
     }
@@ -212,7 +217,7 @@ public abstract class Command implements Serializable {
      * Defines class what suppose to perform incoming command further processing
      */
     public interface CommandProcessor {
-        void processCommand(String cmd);
+        void processCommand(Command cmd);
     }
 
 
@@ -291,8 +296,8 @@ public abstract class Command implements Serializable {
                 release.setTimeout(10L);
                 this.add(press);
                 this.add(release);
-                this.addParam(CommandParams.createParamKey(press, RobotCommand.KEY_EVENT), String.valueOf(KeyEvent.VK_ESCAPE));
-                this.addParam(CommandParams.createParamKey(release, RobotCommand.KEY_EVENT), String.valueOf(KeyEvent.VK_ESCAPE));
+                this.addParam(press, RobotCommand.KEY_EVENT, String.valueOf(KeyEvent.VK_ESCAPE));
+                this.addParam(release, RobotCommand.KEY_EVENT, String.valueOf(KeyEvent.VK_ESCAPE));
                 this.setFinal(true);
             }
         });

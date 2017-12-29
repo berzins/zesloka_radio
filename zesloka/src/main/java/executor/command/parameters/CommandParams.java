@@ -2,6 +2,8 @@ package executor.command.parameters;
 
 
 import executor.command.Command;
+import executor.command.RootCommandResolver;
+import utilities.JSONUtils;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -9,38 +11,42 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class CommandParams implements Serializable {
+public class CommandParams implements Serializable, RootCommandResolver {
 
     private static final long serialVersionUID = 1L;
 
     public static final String CMD_PARAM_DIVIDER = "__";
 
-    private Map<String, String> params;
+    private CommandData commandData;
 
     public CommandParams(String cmd) {
         set(cmd);
     }
 
     public void set(String cmd) {
-        Map<String, String> p = Command.parseParams(cmd);
-        params = p != null ? p : new HashMap<>();
+        CommandData cd = JSONUtils.parseCommandData(cmd);
+        commandData = cd != null ? cd : CommandData.getEmpty();
     }
 
-    public void addValue(String key, String value) {
-        if(params == null) {
-            params = new HashMap<>();
+    public void addValue(String cmd_key, String key, String value) {
+
+        if(commandData == null) {
+            commandData = CommandData.getEmpty();
         }
-        params.put(key, value);
+        commandData.addParam(new Parameter(
+                cmd_key, key, Parameter.TYPE_DEFAULT, value
+        ));
     }
 
-    public void setValue(Command cmd, String key, Float value) {
-        if(params.get(createParamKey(cmd, key)) != null) {
-            params.replace(createParamKey(cmd,key), String.valueOf(value));
+    public void setValue(String cmd_key, String key, Float value) {
+        Parameter p = commandData.getParam(cmd_key, key);
+        if(p != null) {
+            p.setValue(String.valueOf(value));
         } else {
-            params.put(createParamKey(cmd, key), String.valueOf(value));
+            commandData.addParam(new Parameter(
+                    cmd_key, key, Parameter.TYPE_DEFAULT, String.valueOf(value)));
         }
     }
-
 
     public Long getLongValue(Command cmd, String key) throws IllegalArgumentException {
         return Long.valueOf(getRawVal(cmd, key));
@@ -59,15 +65,23 @@ public class CommandParams implements Serializable {
     }
 
     private String getRawVal(Command cmd, String key) throws IllegalArgumentException{
-        String paramKey = createParamKey(cmd, key);
-        String val = params.get(paramKey);
-        if(val == null) throw new IllegalArgumentException("Arguments does not contain parameter '" + paramKey +"'");
-        return val;
+        Parameter p = commandData.getParam(cmd.getKey(), key);
+        if(p == null) throw new IllegalArgumentException(
+                "Arguments does not contain parameter '" + cmd.getKey() + "." + key +"'");
+        return p.getValue();
     }
 
-    public static String createParamKey(Command cmd, String key) {
-        return cmd.getKey() + CMD_PARAM_DIVIDER +  key;
+    public boolean contains(String key) {
+        for(Parameter p : this.commandData.getParams()) {
+            if(p.getCmd_key().contains(key) || p.getParam_key().contains(key)) {
+                return  true;
+            }
+        }
+        return false;
     }
 
-
+    @Override
+    public Command getRootCommand() {
+        return Command.getCommand(this.commandData.getCmd_key());
+    }
 }

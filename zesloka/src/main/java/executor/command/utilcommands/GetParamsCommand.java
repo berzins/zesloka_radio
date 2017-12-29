@@ -17,7 +17,8 @@ public class GetParamsCommand extends Command {
     public void execute() {
         super.execute();
         String pk = "";
-        for(String p : Command.getCommand(params.getStringValue(this, PARAM_CMD_KEY)).getParamKeys()) {
+        for(String p : Command.getCommand(params.getStringValue(
+                this, PARAM_CMD_KEY)).getParamKeys()) {
             pk = pk + p + "  ";
         }
         System.out.println(pk);

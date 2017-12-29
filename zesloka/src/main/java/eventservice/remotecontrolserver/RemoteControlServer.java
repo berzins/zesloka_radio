@@ -1,6 +1,7 @@
-package remotecontrolserver;
+package eventservice.remotecontrolserver;
 
-import com.sun.security.ntlm.Client;
+import eventservice.IClientConnectionListener;
+import eventservice.EventServiceFacade;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -8,19 +9,11 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RemoteControlServer {
+/**
+ *
+ */
+public class RemoteControlServer extends EventServiceFacade {
 
-    public interface ClientConnectionListener {
-        void onConnect(Socket client);
-        void onDisconnect() throws IOException;
-        void close() throws IOException;
-    }
-
-    public interface ClientOutputListener {
-        void write(String msg);
-    }
-
-    private List<ClientConnectionListener> clientConnectionListeners = new ArrayList<>();
     private ServerSocket server;
     private List<Socket> clients = new ArrayList<>();
     private int port = 0;
@@ -30,10 +23,7 @@ public class RemoteControlServer {
         this.port = port;
     }
 
-    public void addClientConnectionListener(ClientConnectionListener ccl) {
-        this.clientConnectionListeners.add(ccl);
-    }
-
+    @Override
     public void start() {
         try{
             server = new ServerSocket(this.port);
@@ -41,14 +31,15 @@ public class RemoteControlServer {
             e.printStackTrace();
         }
         System.out.println("Server has started");
-        Thread thread = new Thread(() -> waitForConnection());
+        Thread thread = new Thread(this::waitForConnection);
         thread.start();
     }
 
+    @Override
     public void stop() {
         try {
-            for(ClientConnectionListener ccl : clientConnectionListeners) {
-                ccl.close();
+            for(IClientConnectionListener ccl : clientConnectionListeners) {
+                ccl.onDisconnect();
             }
             server.close();
         } catch (IOException e) {
@@ -66,22 +57,13 @@ public class RemoteControlServer {
                     synchronized (this.clients) {
                         this.clients.add(client);
                     }
-                    for(ClientConnectionListener ccl : clientConnectionListeners) {
-                        ccl.onConnect(client);
+                    for(IClientConnectionListener ccl : clientConnectionListeners) {
+                        ccl.onConnect(client.getInputStream(), client.getOutputStream());
                     }
                 }
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
-    }
-
-    public ClientConnectionListener getClient(int clientHash) {
-        for(ClientConnectionListener ccl : clientConnectionListeners) {
-            if(ccl.hashCode() == clientHash) {
-                return ccl;
-            }
-        }
-        return null;
     }
 }
