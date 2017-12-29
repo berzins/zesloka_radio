@@ -3,6 +3,7 @@ package executor.command.utilcommands.database;
 import db.DBConnection;
 import db.DataBase;
 import executor.command.Command;
+import executor.command.parameters.Parameter;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -22,7 +23,9 @@ public class GetSongLike extends Command {
     @Override
     protected void init() {
         super.init();
-        initParamKeys(new String[] { SONG_NAME });
+        initParamKeys(new Parameter[] {
+                new Parameter(this.getKey(), SONG_NAME, Parameter.TYPE_STRING, Parameter.VALUE_UNDEFINED)
+        });
     }
 
     @Override

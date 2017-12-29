@@ -3,8 +3,6 @@ package executor.command.utilcommands.mouse;
 import executor.command.Command;
 import executor.command.parameters.CommandParams;
 import executor.command.robotcommands.RobotCommand;
-import executor.command.robotcommands.RobotMousePressCommand;
-import executor.command.robotcommands.RobotMouseReleaseCommand;
 
 public class MouseClick_3 extends MouseClick {
     /**

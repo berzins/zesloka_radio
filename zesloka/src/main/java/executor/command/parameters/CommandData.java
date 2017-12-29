@@ -1,7 +1,5 @@
 package executor.command.parameters;
 
-import executor.command.Command;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;

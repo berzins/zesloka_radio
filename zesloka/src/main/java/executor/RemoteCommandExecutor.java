@@ -1,9 +1,6 @@
 package executor;
 
 import executor.command.Command;
-import executor.command.RootCommandResolver;
-import executor.command.parameters.CommandParams;
-import utilities.JSONUtils;
 
 import java.awt.*;
 import java.util.HashMap;

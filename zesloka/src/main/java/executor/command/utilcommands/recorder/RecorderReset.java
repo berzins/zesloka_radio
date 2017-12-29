@@ -1,7 +1,7 @@
 package executor.command.utilcommands.recorder;
 
 import executor.command.CommandRecorderManager;
-import executor.command.parameters.CommandParams;
+import executor.command.parameters.Parameter;
 
 public class RecorderReset extends RecorderCommand {
 
@@ -11,7 +11,9 @@ public class RecorderReset extends RecorderCommand {
      */
     public RecorderReset(String name, String key) {
         super(name, key);
-        this.initParamKeys(new String[]{SESSION_ID});
+        this.initParamKeys(new Parameter[]{
+                new Parameter(this.getKey(), SESSION_ID, Parameter.TYPE_DEFAULT, Parameter.VALUE_UNDEFINED)
+        });
     }
 
     @Override

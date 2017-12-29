@@ -1,7 +1,6 @@
 package utilities;
 
 import com.google.gson.Gson;
-import executor.command.Command;
 import executor.command.parameters.CommandData;
 
 public class JSONUtils {
@@ -19,9 +18,8 @@ public class JSONUtils {
         return Util.serializedCopy(lastParsedCommand);
     }
 
-    public static String createCommandDataJSON(CommandData data) {
+    public static <T> String createJSON(T data) {
         Gson gson = new Gson();
         return gson.toJson(data);
     }
-
 }

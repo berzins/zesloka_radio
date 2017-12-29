@@ -1,11 +1,9 @@
 package executor.command.utilcommands.mouse;
 
 import executor.command.Command;
-import executor.command.parameters.CommandParams;
 import executor.command.robotcommands.RobotCommand;
 import executor.command.robotcommands.RobotMousePressCommand;
 import executor.command.robotcommands.RobotMouseReleaseCommand;
-import jdk.internal.util.xml.impl.Input;
 
 import java.awt.event.InputEvent;
 

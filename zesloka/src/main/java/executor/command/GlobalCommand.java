@@ -1,6 +1,10 @@
 package executor.command;
 
+import executor.command.parameters.Parameter;
+
 public class GlobalCommand extends Command {
+
+    public static final String PARAM_CLIENT_ID = "client_id";
     /**
      * @param name Command string representation
      * @param key  Unique command identifier
@@ -12,8 +16,8 @@ public class GlobalCommand extends Command {
     @Override
     protected void init() {
         super.init();
-        initParamKeys(new String[] {
-                PARAM_GLOBAL_CLIENT_ID
+        initParamKeys(new Parameter[] {
+           new Parameter(this.getKey(), PARAM_CLIENT_ID, Parameter.TYPE_DEFAULT, "")
         });
     }
 }

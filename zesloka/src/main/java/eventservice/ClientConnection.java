@@ -2,6 +2,7 @@ package eventservice;
 
 import executor.command.Command;
 import executor.command.CommandProcessorManager;
+import executor.command.GlobalCommand;
 import executor.command.parameters.CommandParams;
 
 import java.io.BufferedReader;
@@ -50,7 +51,7 @@ public class ClientConnection implements IClientConnection {
                 if(isActive) {
                     CommandParams cp = new CommandParams(cmd);
                     cp.addValue(
-                            Command.CMD_GLOBAL, Command.PARAM_GLOBAL_CLIENT_ID,
+                            Command.CMD_GLOBAL, GlobalCommand.PARAM_CLIENT_ID,
                             String.valueOf(getId()));
                     CommandProcessorManager.getInstance().
                             processCommand(cp.getRootCommand().setParams(cp));

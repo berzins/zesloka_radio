@@ -7,71 +7,66 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7630b0e5-acbe-45bf-856e-ec70c071a28a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_code_gson_gson_2_8_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zesloka/src/main/java/eventservice/ClientConnection.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zesloka/src/main/java/eventservice/ClientConnectionManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zesloka/src/main/java/eventservice/EventServiceFacade.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zesloka/src/main/java/eventservice/IClientConnection.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zesloka/src/main/java/eventservice/IClientConnectionListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zesloka/src/main/java/eventservice/IEventService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zesloka/src/main/java/eventservice/IEventServiceConnection.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zesloka/src/main/java/eventservice/consoleclient/ConsoleClient.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/GlobalCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/RootCommandResolver.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/CommandData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/Parameter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zesloka/src/main/java/utilities/JSONUtils.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/ProgramKt$main$SuperDuperMsgListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/db/DBConecton$Companion.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/db/DBConecton$DBConnectionData$Companion.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/db/DBConecton$DBConnectionData.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/db/DBConecton.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/remotecontrolserver/ClientConnection$MessageListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/remotecontrolserver/ClientConnection.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/remotecontrolserver/RemoteControlServer$ClientConnectionListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/remotecontrolserver/RemoteControlServer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zesloka/src/main/java/remotecontrolserver/ClientConnection.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/zesloka/src/main/java/remotecontrolserver/RemoteControlServer.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/eventservice/remotecontrolserver/RemoteControlServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/META-INF/zesloka_main.kotlin_module" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/META-INF/zesloka_main.kotlin_module" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/ProgramKt.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/ProgramKt.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/db/DBConnection$Companion.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/db/DBConnection$Companion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/db/DBConnection$DBConnectionData$Companion.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/db/DBConnection$DBConnectionData$Companion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/db/DBConnection$DBConnectionData.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/db/DBConnection$DBConnectionData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/db/DBConnection.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/db/DBConnection.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/db/DataBase$Companion.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/db/DataBase$Companion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/db/DataBase.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/db/DataBase.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/eventservice/ClientConnection.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/eventservice/ClientConnection.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/eventservice/ClientConnectionManager.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/eventservice/ClientConnectionManager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/RemoteCommandExecutor.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/RemoteCommandExecutor.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/Command$1.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/Command$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/Command$2.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/Command$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/Command$3.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/Command$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/Command$CommandProcessor.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/Command$CommandProcessor.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/Command.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/Command.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/CommandProcessorManager.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/CommandProcessorManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/CommandRecorder.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/CommandRecorder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/GlobalCommand.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/GlobalCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/parameters/CommandData.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/parameters/CommandData.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/parameters/CommandParams.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/parameters/CommandParams.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/parameters/Parameter.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/parameters/Parameter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/robotcommands/RobotKeyPressCommand.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/robotcommands/RobotKeyPressCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/robotcommands/RobotKeyReleaseCommand.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/robotcommands/RobotKeyReleaseCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/robotcommands/RobotMouseMoveCommand.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/robotcommands/RobotMouseMoveCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/robotcommands/RobotMouseMoveToCommand.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/robotcommands/RobotMouseMoveToCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/robotcommands/RobotMousePressCommand.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/robotcommands/RobotMousePressCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/robotcommands/RobotMouseReleaseCommand.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/robotcommands/RobotMouseReleaseCommand.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/testcommands/TestCommand.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/testcommands/TestCommand.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/utilcommands/GetParamsCommand.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/utilcommands/GetParamsCommand.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/utilcommands/database/GetSongLike.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/utilcommands/database/GetSongLike.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/utilcommands/mouse/MouseClick.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/utilcommands/mouse/MouseClick.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/utilcommands/mouse/MouseClick_1.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/utilcommands/mouse/MouseClick_1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/utilcommands/mouse/MouseClick_2.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/utilcommands/mouse/MouseClick_2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/utilcommands/mouse/MouseClick_3.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/utilcommands/mouse/MouseClick_3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/zesloka.iml" afterPath="$PROJECT_DIR$/.idea/modules/zesloka.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/zesloka_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/zesloka_main.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/zesloka_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/zesloka_test.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/utilcommands/recorder/RecorderCommand.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/utilcommands/recorder/RecorderCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/utilcommands/recorder/RecorderReset.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/utilcommands/recorder/RecorderReset.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/utilcommands/recorder/RecorderSet.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/utilcommands/recorder/RecorderSet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/utilcommands/recorder/RecorderStart.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/utilcommands/recorder/RecorderStart.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/utilcommands/recorder/RecorderStop.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/utilcommands/recorder/RecorderStop.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/utilcommands/recorder/RecorderStore.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/utilcommands/recorder/RecorderStore.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/utilities/JSONUtils.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/utilities/JSONUtils.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/zesloka_radio.iml" afterPath="$PROJECT_DIR$/.idea/zesloka_radio.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/eventservice/ClientConnection.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/eventservice/ClientConnection.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/eventservice/ClientConnectionManager.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/eventservice/ClientConnectionManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/RemoteCommandExecutor.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/RemoteCommandExecutor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/Command.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/Command.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/CommandProcessorManager.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/CommandProcessorManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/CommandRecorder.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/CommandRecorder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/GlobalCommand.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/GlobalCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/CommandData.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/CommandData.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/CommandParams.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/CommandParams.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/Parameter.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/Parameter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotKeyPressCommand.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotKeyPressCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotKeyReleaseCommand.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotKeyReleaseCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotMouseMoveCommand.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotMouseMoveCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotMouseMoveToCommand.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotMouseMoveToCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotMousePressCommand.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotMousePressCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotMouseReleaseCommand.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotMouseReleaseCommand.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/testcommands/TestCommand.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/testcommands/TestCommand.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/GetParamsCommand.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/GetParamsCommand.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/database/GetSongLike.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/database/GetSongLike.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/mouse/MouseClick.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/mouse/MouseClick.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/mouse/MouseClick_1.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/mouse/MouseClick_1.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/mouse/MouseClick_2.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/mouse/MouseClick_2.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/mouse/MouseClick_3.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/mouse/MouseClick_3.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/kotlin/Program.kt" afterPath="$PROJECT_DIR$/zesloka/src/main/kotlin/Program.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderCommand.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderReset.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderReset.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderSet.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderSet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderStart.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderStart.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderStop.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderStop.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderStore.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderStore.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/utilities/JSONUtils.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/utilities/JSONUtils.java" />
     </list>
     <ignored path="$PROJECT_DIR$/zesloka/.gradle/" />
     <ignored path="$PROJECT_DIR$/zesloka/build/" />
@@ -91,55 +86,13 @@
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="Command.java" pinned="false" current-in-tab="false">
+            <file leaf-file-name="Command.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/Command.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="371">
-                    <caret line="32" column="60" lean-forward="true" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="60" />
+                  <state relative-caret-position="464">
+                    <caret line="285" column="5" lean-forward="true" selection-start-line="285" selection-start-column="5" selection-end-line="285" selection-end-column="5" />
                     <folding>
                       <element signature="imports" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="RemoteCommandExecutor.java" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/RemoteCommandExecutor.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="561">
-                    <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-                    <folding>
-                      <element signature="e#1099#1100#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="RemoteControlServer.java" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/eventservice/remotecontrolserver/RemoteControlServer.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="51">
-                    <caret line="21" column="42" lean-forward="true" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
-                    <folding>
-                      <element signature="imports" expanded="true" />
-                      <element signature="e#569#570#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="CommandParams.java" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/CommandParams.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="452">
-                    <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-                    <folding>
-                      <element signature="e#537#538#0" expanded="true" />
-                      <element signature="e#561#562#0" expanded="true" />
-                      <element signature="e#1864#1865#0" expanded="true" />
-                      <element signature="e#1923#1924#0" expanded="true" />
-                      <element signature="e#2575#2576#0" expanded="true" />
-                      <element signature="e#2647#2648#0" expanded="true" />
                     </folding>
                   </state>
                 </provider>
@@ -148,71 +101,56 @@
             <file leaf-file-name="Parameter.java" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/Parameter.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="102">
-                    <caret line="6" column="48" lean-forward="true" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
+                  <state relative-caret-position="272">
+                    <caret line="16" column="59" lean-forward="false" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
                     <folding>
-                      <element signature="imports" expanded="true" />
-                      <element signature="e#682#683#0" expanded="true" />
-                      <element signature="e#709#710#0" expanded="true" />
+                      <element signature="e#696#697#0" expanded="true" />
+                      <element signature="e#723#724#0" expanded="true" />
                     </folding>
                   </state>
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="TestCommand.java" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/testcommands/TestCommand.java">
+            <file leaf-file-name="GetParamsCommand.java" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/GetParamsCommand.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="136">
-                    <caret line="12" column="44" lean-forward="true" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+                  <state relative-caret-position="510">
+                    <caret line="30" column="29" lean-forward="true" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+                    <folding>
+                      <element signature="imports" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="CommandParams.java" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/CommandParams.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="299">
+                    <caret line="54" column="18" lean-forward="false" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
                     <folding />
                   </state>
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="ClientConnectionManager.java" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/eventservice/ClientConnectionManager.java">
+            <file leaf-file-name="GetSongLike.java" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/database/GetSongLike.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="595">
-                    <caret line="47" column="5" lean-forward="true" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
-                    <folding>
-                      <element signature="imports" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="JSONUtils.java" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/utilities/JSONUtils.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="323">
-                    <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-                    <folding>
-                      <element signature="imports" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="ClientConnection.java" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/eventservice/ClientConnection.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="442">
-                    <caret line="35" column="33" lean-forward="true" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
-                    <folding>
-                      <element signature="imports" expanded="true" />
-                      <element signature="e#1040#1041#0" expanded="true" />
-                      <element signature="e#1076#1077#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="IClientConnection.java" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/eventservice/IClientConnection.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="136">
-                    <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+                  <state relative-caret-position="340">
+                    <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
                     <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="RecorderStart.java" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderStart.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="153">
+                    <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+                    <folding>
+                      <element signature="imports" expanded="true" />
+                    </folding>
                   </state>
                 </provider>
               </entry>
@@ -240,7 +178,7 @@
         <entry file="file://$PROJECT_DIR$/zesloka/src/main/kotlin/Program.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="24" column="44" lean-forward="true" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+              <caret line="24" column="44" lean-forward="false" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
               <folding>
                 <element signature="e#0#268#0" expanded="true" />
               </folding>
@@ -248,14 +186,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GlobalCommand.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RecorderStore.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderStore.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="109" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GlobalCommand.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/GlobalCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+            <state relative-caret-position="272">
+              <caret line="16" column="27" lean-forward="false" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
               <folding>
-                <element signature="e#232#233#0" expanded="true" />
-                <element signature="e#264#265#0" expanded="true" />
+                <element signature="e#342#343#0" expanded="true" />
+                <element signature="e#374#375#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -265,18 +215,20 @@
         <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderCommand.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RecorderStart.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderStart.java">
+      <file leaf-file-name="RecorderReset.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderReset.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="306">
+              <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -301,31 +253,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RootCommandResolver.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/RootCommandResolver.java">
+      <file leaf-file-name="RobotKeyReleaseCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotKeyReleaseCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommandProcessorManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/CommandProcessorManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="30" column="14" lean-forward="false" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConsoleClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/eventservice/consoleclient/ConsoleClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+            <state relative-caret-position="115">
+              <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="11" selection-end-column="109" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -333,12 +265,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IEventServiceConnection.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/eventservice/IEventServiceConnection.java">
+      <file leaf-file-name="RobotMousePressCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotMousePressCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="115">
+              <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -766,37 +700,22 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/mouse/MouseMove.java" />
-        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotMouseMoveCommand.java" />
-        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotCommand.java" />
-        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/mouse/MouseSet.java" />
-        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotMouseMoveToCommand.java" />
-        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/mouse/MouseClick.java" />
-        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/mouse/MouseMoveTo.java" />
-        <option value="$PROJECT_DIR$/zesloka/src/main/kotlin/db/DBConnecton.kt" />
-        <option value="$PROJECT_DIR$/zesloka/src/main/kotlin/db/RadioDataBaseImpl.kt" />
-        <option value="$PROJECT_DIR$/zesloka/src/main/kotlin/db/RadioDataBase.kt" />
         <option value="$PROJECT_DIR$/zesloka/src/main/kotlin/db/DataBase.kt" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/database/GetSongsLike.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/kotlin/db/DBConnection.kt" />
-        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/database/GetSongLike.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/CommandData.java" />
-        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/Parameter.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/CommandDataResolver.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/RootCommandResolver.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/mouse/MouseClick_1.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/mouse/MouseClick_2.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/mouse/MouseClick_3.java" />
-        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/GetParamsCommand.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/remotecontrolserver/ConsoleClientConnection.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/remotecontrolserver/RemoteClientConnection.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/remotecontrolserver/ClientConnection.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/CommandProcessorManager.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/CommandRecorder.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/RemoteCommandExecutor.java" />
-        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/CommandParams.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/remotecontrolserver/RemoteControlServer.java" />
-        <option value="$PROJECT_DIR$/zesloka/src/main/java/utilities/JSONUtils.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/remotecontrolserver/ConsoleClient.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/eventservice/ConsoleClient.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/eventservice/EventService.java" />
@@ -813,10 +732,25 @@
         <option value="$PROJECT_DIR$/zesloka/src/main/java/eventservice/ClientConnectionListener.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/kotlin/Program.kt" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/eventservice/ClientConnectionManager.java" />
+        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/CommandParams.java" />
+        <option value="$PROJECT_DIR$/zesloka/src/main/java/utilities/JSONUtils.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/GlobalCommand.java" />
-        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/testcommands/TestCommand.java" />
-        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/Command.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/eventservice/ClientConnection.java" />
+        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/Parameter.java" />
+        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/testcommands/TestCommand.java" />
+        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderStop.java" />
+        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotMouseMoveCommand.java" />
+        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotKeyReleaseCommand.java" />
+        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotMousePressCommand.java" />
+        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotKeyPressCommand.java" />
+        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotMouseReleaseCommand.java" />
+        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderSet.java" />
+        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderStore.java" />
+        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/GetParamsCommand.java" />
+        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/Command.java" />
+        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/database/GetSongLike.java" />
+        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderStart.java" />
+        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderReset.java" />
       </list>
     </option>
   </component>
@@ -888,62 +822,6 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="zesloka_radio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zesloka_radio" type="462c0819:PsiDirectoryNode" />
-              <item name="zesloka" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="eventservice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zesloka_radio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zesloka_radio" type="462c0819:PsiDirectoryNode" />
-              <item name="zesloka" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="eventservice" type="462c0819:PsiDirectoryNode" />
-              <item name="consoleclient" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zesloka_radio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zesloka_radio" type="462c0819:PsiDirectoryNode" />
-              <item name="zesloka" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="eventservice" type="462c0819:PsiDirectoryNode" />
-              <item name="remotecontrolserver" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zesloka_radio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zesloka_radio" type="462c0819:PsiDirectoryNode" />
-              <item name="zesloka" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="executor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zesloka_radio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zesloka_radio" type="462c0819:PsiDirectoryNode" />
-              <item name="zesloka" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="executor" type="462c0819:PsiDirectoryNode" />
-              <item name="command" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zesloka_radio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zesloka_radio" type="462c0819:PsiDirectoryNode" />
-              <item name="zesloka" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -964,7 +842,8 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/zesloka/src/test/java" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Groovy JUnit" />
-    <property name="SearchEverywhereHistoryKey" value="Clien&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/eventservice/ClientConnection.java&#10;Cli&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/eventservice/ClientConnection.java&#10;Command&#9;PSI&#9;JAVA://executor.command.Command&#10;test&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/command/testcommands/TestCommand.java&#10;ClientConn&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/eventservice/ClientConnection.java&#10;clientC&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/eventservice/ClientConnection.java&#10;ClientCon&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/eventservice/ClientConnection.java&#10;EventSer&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/eventservice/EventServiceFacade.java&#10;Cl&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/remotecontrolserver/ClientConnection.java&#10;cmd_global&#9;PSI&#9;JAVA://executor.command.Command#CMD_GLOBAL&#10;json&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/utilities/JSONUtils.java&#10;commandpro&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/command/CommandProcessorManager.java&#10;Client&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/remotecontrolserver/ClientConnection.java&#10;commandPar&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/command/parameters/CommandParams.java&#10;command&#9;PSI&#9;JAVA://executor.command.Command&#10;remote&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/remotecontrolserver/RemoteClientConnection.java&#10;remoteC&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/remotecontrolserver/RemoteClientConnection.java&#10;console&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/remotecontrolserver/ConsoleClientConnection.java&#10;ClientConnectionListener&#9;PSI&#9;JAVA://remotecontrolserver.RemoteControlServer#addClientConnectionListener&#10;get&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/command/utilcommands/GetParamsCommand.java&#10;commandDa&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/command/parameters/CommandData.java&#10;commandpar&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/command/parameters/CommandParams.java&#10;parame&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_151/jre/lib/rt.jar!/java/lang/reflect/Parameter.class&#10;Parameter&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_151/jre/lib/rt.jar!/java/lang/reflect/Parameter.class&#10;command exe&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/RemoteCommandExecutor.java&#10;dbc&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/kotlin/db/DBConnection.kt&#10;Data&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/kotlin/db/DataBase.kt&#10;robot&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/executor/command/robotcommands/RobotMouseMoveToCommand.java&#10;mouse&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/executor/command/utilcommands/mouse/MouseClick_3.java&#10;com&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/executor/command/Command.java&#10;storage&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/utilities/Storage.java&#10;sto&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/utilities/Storage.java" />
+    <property name="SearchEverywhereHistoryKey" value="Command&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/command/Command.java&#10;command&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/command/Command.java&#10;Test&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/command/testcommands/TestCommand.java&#10;Clien&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/eventservice/ClientConnection.java&#10;Cli&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/eventservice/ClientConnection.java&#10;test&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/command/testcommands/TestCommand.java&#10;ClientConn&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/eventservice/ClientConnection.java&#10;clientC&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/eventservice/ClientConnection.java&#10;ClientCon&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/eventservice/ClientConnection.java&#10;EventSer&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/eventservice/EventServiceFacade.java&#10;Cl&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/remotecontrolserver/ClientConnection.java&#10;cmd_global&#9;PSI&#9;JAVA://executor.command.Command#CMD_GLOBAL&#10;json&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/utilities/JSONUtils.java&#10;commandpro&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/command/CommandProcessorManager.java&#10;Client&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/remotecontrolserver/ClientConnection.java&#10;commandPar&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/command/parameters/CommandParams.java&#10;remote&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/remotecontrolserver/RemoteClientConnection.java&#10;remoteC&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/remotecontrolserver/RemoteClientConnection.java&#10;console&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/remotecontrolserver/ConsoleClientConnection.java&#10;ClientConnectionListener&#9;PSI&#9;JAVA://remotecontrolserver.RemoteControlServer#addClientConnectionListener&#10;get&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/command/utilcommands/GetParamsCommand.java&#10;commandDa&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/command/parameters/CommandData.java&#10;commandpar&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/command/parameters/CommandParams.java&#10;parame&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_151/jre/lib/rt.jar!/java/lang/reflect/Parameter.class&#10;Parameter&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_151/jre/lib/rt.jar!/java/lang/reflect/Parameter.class&#10;command exe&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/RemoteCommandExecutor.java&#10;dbc&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/kotlin/db/DBConnection.kt&#10;Data&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/kotlin/db/DataBase.kt&#10;robot&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/executor/command/robotcommands/RobotMouseMoveToCommand.java&#10;mouse&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/executor/command/utilcommands/mouse/MouseClick_3.java&#10;com&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/executor/command/Command.java&#10;storage&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/utilities/Storage.java&#10;sto&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/utilities/Storage.java" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -1209,11 +1088,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3270525" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1615074" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14670256" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1225,6 +1103,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20951156" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839838" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1297,14 +1176,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/testcommands/TestCommand.java</url>
-          <line>27</line>
-          <properties />
-          <option name="timeStamp" value="76" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="77" />
     </breakpoint-manager>
     <watches-manager />
@@ -1314,87 +1185,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotMouseReleaseCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotKeyPressCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotKeyReleaseCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="10" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotMouseMoveCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotMousePressCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="18" column="1" lean-forward="false" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/mouse/MouseMove.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="10" column="44" lean-forward="true" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/mouse/MouseClick.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.1.4-3/3f64b358bd71a3b615c8cb90f35c3152492d4b27/kotlin-stdlib-1.1.4-3-sources.jar!/generated/_Arrays.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="9699" column="0" lean-forward="false" selection-start-line="9699" selection-start-column="0" selection-end-line="9699" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotMouseMoveToCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="41" lean-forward="false" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zesloka/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zesloka/src/main/kotlin/db/RadioDataBaseImpl.kt" />
     <entry file="file://$PROJECT_DIR$/zesloka/src/main/kotlin/db/RadioDataBase.kt" />
     <entry file="file://$PROJECT_DIR$/zesloka/src/main/kotlin/db/DataBase.kt">
@@ -1426,18 +1216,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/database/GetSongLike.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="41" column="104" lean-forward="false" selection-start-line="41" selection-start-column="104" selection-end-line="41" selection-end-column="104" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#444#445#0" expanded="false" />
-            <element signature="e#476#477#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zesloka/src/main/kotlin/db/DBConnection.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1454,33 +1232,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/CommandData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#548#549#0" expanded="true" />
-            <element signature="e#578#579#0" expanded="true" />
-            <element signature="e#624#625#0" expanded="true" />
-            <element signature="e#662#663#0" expanded="true" />
-            <element signature="e#704#705#0" expanded="true" />
-            <element signature="e#733#734#0" expanded="true" />
-            <element signature="e#786#787#0" expanded="true" />
-            <element signature="e#822#823#0" expanded="true" />
-            <element signature="e#867#868#0" expanded="true" />
-            <element signature="e#905#906#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/mouse/MouseClick_3.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="23" column="68" lean-forward="true" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
           <folding>
-            <element signature="e#1000#1001#0" expanded="false" />
-            <element signature="e#1046#1047#0" expanded="false" />
+            <element signature="e#874#875#0" expanded="false" />
+            <element signature="e#920#921#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1546,9 +1304,9 @@
         <state relative-caret-position="193">
           <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#461#462#0" expanded="true" />
-            <element signature="e#516#517#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#461#462#0" expanded="false" />
+            <element signature="e#516#517#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1564,7 +1322,7 @@
     <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/eventservice/IEventServiceConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1572,15 +1330,7 @@
     <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/RootCommandResolver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/GetParamsCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1604,21 +1354,9 @@
     <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/eventservice/consoleclient/ConsoleClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+          <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/Parameter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="48" lean-forward="true" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#682#683#0" expanded="true" />
-            <element signature="e#709#710#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1626,26 +1364,10 @@
     <entry file="file://$PROJECT_DIR$/zesloka/src/main/kotlin/Program.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="24" column="44" lean-forward="true" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+          <caret line="24" column="44" lean-forward="false" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
           <folding>
             <element signature="e#0#268#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderStart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1665,24 +1387,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/RemoteCommandExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="e#976#977#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/eventservice/remotecontrolserver/RemoteControlServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
+        <state relative-caret-position="285">
           <caret line="21" column="42" lean-forward="true" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#569#570#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#569#570#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/utilities/JSONUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="110" column="19" lean-forward="false" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/GlobalCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        <state relative-caret-position="272">
+          <caret line="16" column="27" lean-forward="false" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
           <folding>
-            <element signature="e#232#233#0" expanded="true" />
-            <element signature="e#264#265#0" expanded="true" />
+            <element signature="e#342#343#0" expanded="true" />
+            <element signature="e#374#375#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderStop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotMouseMoveCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="13" column="95" lean-forward="false" selection-start-line="13" selection-start-column="95" selection-end-line="13" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/CommandData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1695,55 +1473,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/utilities/JSONUtils.java">
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/eventservice/ClientConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        <state relative-caret-position="639">
+          <caret line="57" column="17" lean-forward="true" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1079#1080#0" expanded="true" />
+            <element signature="e#1115#1116#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/eventservice/ClientConnectionManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="47" column="5" lean-forward="true" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/RemoteCommandExecutor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding>
-            <element signature="e#1099#1100#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/CommandParams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding>
-            <element signature="e#537#538#0" expanded="true" />
-            <element signature="e#561#562#0" expanded="true" />
-            <element signature="e#1864#1865#0" expanded="true" />
-            <element signature="e#1923#1924#0" expanded="true" />
-            <element signature="e#2575#2576#0" expanded="true" />
-            <element signature="e#2647#2648#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/Command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="32" column="60" lean-forward="true" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="60" />
+        <state relative-caret-position="340">
+          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1752,20 +1497,143 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/testcommands/TestCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" column="44" lean-forward="true" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+        <state relative-caret-position="374">
+          <caret line="28" column="3" lean-forward="true" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/eventservice/ClientConnection.java">
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotKeyReleaseCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="35" column="33" lean-forward="true" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
+        <state relative-caret-position="115">
+          <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="11" selection-end-column="109" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1040#1041#0" expanded="true" />
-            <element signature="e#1076#1077#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotMousePressCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotKeyPressCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="10" column="109" lean-forward="false" selection-start-line="10" selection-start-column="109" selection-end-line="10" selection-end-column="109" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotMouseReleaseCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="11" column="109" lean-forward="false" selection-start-line="11" selection-start-column="109" selection-end-line="11" selection-end-column="109" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="107" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/Parameter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="59" lean-forward="false" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
+          <folding>
+            <element signature="e#696#697#0" expanded="true" />
+            <element signature="e#723#724#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="109" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/CommandParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="54" column="18" lean-forward="false" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/database/GetSongLike.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderReset.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderStart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/GetParamsCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="29" lean-forward="true" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="285" column="5" lean-forward="true" selection-start-line="285" selection-start-column="5" selection-end-line="285" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

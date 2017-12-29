@@ -1,9 +1,11 @@
 package executor.command.testcommands;
 
-import eventservice.ClientConnection;
 import eventservice.ClientConnectionManager;
 import eventservice.IClientConnection;
 import executor.command.Command;
+import executor.command.GlobalCommand;
+import executor.command.parameters.Parameter;
+import utilities.JSONUtils;
 import utilities.TimeUtils;
 
 public class TestCommand extends Command {
@@ -14,7 +16,8 @@ public class TestCommand extends Command {
      */
     public TestCommand(String name, String key) {
         super(name, key);
-        initParamKeys(new String[] {PARAM_TEXT});
+        initParamKeys(new Parameter[] {
+                new Parameter(this.getKey(), PARAM_TEXT, Parameter.TYPE_STRING, Parameter.VALUE_UNDEFINED)});
     }
 
     @Override
@@ -23,13 +26,13 @@ public class TestCommand extends Command {
         IClientConnection cc = ClientConnectionManager
                 .getInstance()
                 .getClientConnection(Integer.valueOf(params.getStringValue(
-                        GLOBAL_PARAMS, PARAM_GLOBAL_CLIENT_ID
+                        GLOBAL_PARAMS, GlobalCommand.PARAM_CLIENT_ID
                 )));
         if(cc != null) {
             cc.write(TimeUtils.getCurrentTimeString() +
                     ": executing '" + this.getName() + "' command with params : " +
                     this.params.getStringValue(this, PARAM_TEXT));
+            cc.write(JSONUtils.createJSON(params.getCommandData()));
         }
-
     }
 }

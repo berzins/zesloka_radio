@@ -1,12 +1,8 @@
 package eventservice;
 
-import executor.command.Command;
-
 import java.io.*;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class ClientConnectionManager implements IClientConnectionListener {
 
@@ -22,11 +18,6 @@ public class ClientConnectionManager implements IClientConnectionListener {
         return instance;
     }
 
-    /**
-     * Initialize input and output stream readers and writers
-     * @param in client input stream.
-     * @param out client output stream.
-     */
     @Override
     public void onConnect(InputStream in, OutputStream out) {
         IClientConnection cc = new ClientConnection(

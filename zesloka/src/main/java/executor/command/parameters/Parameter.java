@@ -1,8 +1,7 @@
 package executor.command.parameters;
 
-import com.sun.deploy.security.ValidationState;
-
 import java.io.Serializable;
+
 
 public class Parameter implements Serializable {
 
@@ -15,6 +14,7 @@ public class Parameter implements Serializable {
     public static final String TYPE_LONG = "long";
     public static final String TYPE_BOOLEAN = "bool";
     public static final String TYPE_DEFAULT = TYPE_STRING;
+    public static final String VALUE_UNDEFINED = "UNDEFINED";
 
 
     private String cmd_key;

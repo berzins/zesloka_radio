@@ -1,7 +1,6 @@
 package executor.command.utilcommands.recorder;
 
 import executor.command.Command;
-import executor.command.CommandRecorder;
 
 public class RecorderCommand extends Command {
 

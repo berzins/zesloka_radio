@@ -2,8 +2,6 @@ package executor.command.robotcommands;
 
 import executor.RemoteCommandExecutor;
 
-import java.awt.*;
-
 public class RobotMouseMoveToCommand extends RobotMouseMoveCommand {
 
     public RobotMouseMoveToCommand(String name, String key) {

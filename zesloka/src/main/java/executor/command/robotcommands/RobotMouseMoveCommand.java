@@ -1,8 +1,7 @@
 package executor.command.robotcommands;
 
 import executor.RemoteCommandExecutor;
-import executor.command.Command;
-import executor.command.parameters.CommandParams;
+import executor.command.parameters.Parameter;
 
 import java.awt.*;
 
@@ -10,7 +9,9 @@ public class RobotMouseMoveCommand extends RobotCommand {
 
     public RobotMouseMoveCommand(String name, String key) {
         super(name, key);
-        initParamKeys(new String[]{X, Y});
+        initParamKeys(new Parameter[]{
+                new Parameter(this.getKey(), X, Parameter.TYPE_FLOAT, Parameter.VALUE_UNDEFINED),
+                new Parameter(this.getKey(), Y, Parameter.TYPE_FLOAT, Parameter.VALUE_UNDEFINED)});
     }
 
     @Override

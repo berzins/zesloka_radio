@@ -1,18 +1,18 @@
 package executor.command;
 
+import executor.command.parameters.CommandData;
 import executor.command.parameters.CommandParams;
+import executor.command.parameters.Parameter;
 import executor.command.robotcommands.*;
 import executor.command.testcommands.TestCommand;
 import executor.command.utilcommands.GetParamsCommand;
 import executor.command.utilcommands.database.GetSongLike;
 import executor.command.utilcommands.mouse.*;
 import executor.command.utilcommands.recorder.*;
-import org.w3c.dom.events.EventTarget;
 import utilities.Storage;
 import utilities.TimeUtils;
 import utilities.Util;
 
-import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 import java.io.Serializable;
 import java.util.*;
@@ -26,7 +26,6 @@ public abstract class Command implements Serializable {
 
     public static final String CMD_GLOBAL = "cmd_global";
     public static final Command GLOBAL_PARAMS = new GlobalCommand("", Command.CMD_GLOBAL);
-    public static final String PARAM_GLOBAL_CLIENT_ID = "client_id";
     public static final String PARAM_GLOBAL_SESSION_ID = "session_id";
 
     protected static final String PARAM_CMD_NAME = "cmd_name";
@@ -35,7 +34,7 @@ public abstract class Command implements Serializable {
 
     protected String key;
     protected String name;
-    protected final List<String> paramKeys;
+    protected final List<Parameter> paramKeys;
     protected CommandParams params;
     private Long timeout = 0L;
     private Command nextCommand;
@@ -137,19 +136,20 @@ public abstract class Command implements Serializable {
 
 
     /**
-     * Collects all sub command parameter keys
+     * Collects registered parameter keys of all sub commands
      */
-    public List<String> getParamKeys() {
-        List<String> pk;
-        if(!isFinal()) { // expose params only if they can take any effect.
-            if(this.nextCommand!=null) {
-                pk = this.nextCommand.getParamKeys();
-                    pk.addAll(this.paramKeys);
+    public CommandData getRequiredParameters() {
+        CommandData cd = CommandData.getEmpty();
+        if(!isFinal()) {
+            if(nextCommand != null) {
+                cd = this.nextCommand.getRequiredParameters();
+                cd.getParams().addAll(this.paramKeys);
             } else {
-                pk = this.paramKeys;
+                cd.getParams().addAll(this.paramKeys);
             }
-        } else {pk = new ArrayList<>();}
-        return pk;
+        }
+        cd.setCmd_key(this.getKey());
+        return cd;
     }
 
     /**
@@ -186,10 +186,11 @@ public abstract class Command implements Serializable {
 
     /**
      * Init parameter keys what are used to get parameter values out of current Params.
+     * @param keys
      */
-    protected void initParamKeys(String[] keys){
+    protected void initParamKeys(Parameter[] keys){
         if(keys != null) {
-            for(String k : keys) {
+            for(Parameter k : keys) {
                 this.paramKeys.add(k);
             }
         }
@@ -218,42 +219,6 @@ public abstract class Command implements Serializable {
      */
     public interface CommandProcessor {
         void processCommand(Command cmd);
-    }
-
-
-    // ------------- HELPER METHODS -------------
-
-    /**
-     * Extracts command identifier from incoming command string.
-     */
-    public static String getRootCommand(String cmd) {
-        if(cmd.contains("?")) {
-            String[] c = cmd.split("\\?");
-            return c[0];
-        }
-        return cmd;
-    }
-
-    /**
-     * Extracts command parameters from incoming command string.
-     */
-    public static Map<String,String> parseParams(String cmd) {
-        Map<String,String> ret = null;
-        if(cmd.contains("?")) {
-            ret = new HashMap<>();
-            String paramStr = cmd.split("\\?")[1];
-            String[] params = paramStr.split("\\&");
-
-            for(String p :  params) {
-                String[] pair = p.split("\\=");
-                ret.put(pair[0], pair[1]);
-            }
-        }
-        return ret;
-    }
-
-    public static String addSourceIdToParams(String cmd,int hash) {
-        return cmd + "&source_id=" + hash;
     }
 
 
@@ -290,7 +255,11 @@ public abstract class Command implements Serializable {
         initCommand(new Command("none", CMD_NONE) {});
         initCommand(new Command("radio play", CMD_RADIO_PLAY) {
             @Override protected void init() {
-                initParamKeys(new String[] {RobotCommand.KEY_EVENT});
+                initParamKeys(new Parameter[] {new Parameter(
+                        this.getKey(),
+                        RobotCommand.KEY_EVENT,
+                        Parameter.TYPE_INTEGER,
+                        "")});
                 Command press = new RobotKeyPressCommand("robot key press", RobotCommand.ROBOT_CMD_KEY_PRESS);
                 Command release = new RobotKeyPressCommand("robot key release", RobotCommand.ROBOT_CMD_KEY_RELEASE);
                 release.setTimeout(10L);

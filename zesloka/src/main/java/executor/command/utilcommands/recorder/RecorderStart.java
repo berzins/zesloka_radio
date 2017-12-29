@@ -1,6 +1,7 @@
 package executor.command.utilcommands.recorder;
 
 import executor.command.CommandRecorderManager;
+import executor.command.parameters.Parameter;
 
 public class RecorderStart extends RecorderCommand {
     /**
@@ -9,7 +10,9 @@ public class RecorderStart extends RecorderCommand {
      */
     public RecorderStart(String name, String key) {
         super(name, key);
-        this.initParamKeys(new String[]{SESSION_ID});
+        this.initParamKeys(new Parameter[]{
+                new Parameter(this.getKey(), SESSION_ID, Parameter.TYPE_DEFAULT, Parameter.VALUE_UNDEFINED)
+        });
     }
 
     /**

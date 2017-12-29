@@ -6,10 +6,6 @@ import executor.command.RootCommandResolver;
 import utilities.JSONUtils;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public class CommandParams implements Serializable, RootCommandResolver {
 
@@ -69,6 +65,10 @@ public class CommandParams implements Serializable, RootCommandResolver {
         if(p == null) throw new IllegalArgumentException(
                 "Arguments does not contain parameter '" + cmd.getKey() + "." + key +"'");
         return p.getValue();
+    }
+
+    public CommandData getCommandData() {
+        return this.commandData;
     }
 
     public boolean contains(String key) {
