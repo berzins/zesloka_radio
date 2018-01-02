@@ -1,7 +1,8 @@
-import db.DataBase
 import eventservice.ClientConnectionManager
-import eventservice.consoleclient.ConsoleClient
-import eventservice.remotecontrolserver.RemoteControlServer
+import eventservice.EventServiceFacade
+import eventservice.client.ConsoleClient
+import eventservice.client.RemoteControlServer
+import eventservice.client.TestCaseClient
 import executor.*
 import executor.command.Command
 import executor.command.CommandProcessorManager
@@ -18,12 +19,17 @@ fun main(args: Array<String>) {
     val cmdProcessor = getCommandProcessor()
     //val dbConnection = DataBase.getConnection()
     val ccl = ClientConnectionManager.getInstance()
-    val server = RemoteControlServer(8743)
-    server.addClientConnectionListener(ccl)
-    server.start()
-    val console = ConsoleClient();
-    console.addClientConnectionListener(ccl)
-    console.start();
+
+    val clients = arrayOf(
+            RemoteControlServer(8743),
+            ConsoleClient(),
+            TestCaseClient()
+    )
+
+    for((i, value) in clients.withIndex()) {
+        value.addClientConnectionListener(ccl)
+        value.start()
+    }
 }
 
 fun getCommandProcessor() :  Command.CommandProcessor {

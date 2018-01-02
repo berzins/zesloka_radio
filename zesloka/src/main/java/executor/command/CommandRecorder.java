@@ -13,6 +13,10 @@ public class CommandRecorder  implements Command.CommandProcessor{
     boolean isRecording = false;
 
 
+    public String getRecordKey() {
+        return  this.record.getKey();
+    }
+
     @Override
     public void processCommand(Command cmd) {
         CommandParams cp = cmd.getParams();
@@ -54,10 +58,13 @@ public class CommandRecorder  implements Command.CommandProcessor{
         }
     }
 
+    /**
+     * Store command in user defined commands..
+     * @return on success value is stored command, otherwise null
+     */
     public Command save() {
         synchronized (this) {
-            Command.saveCommand(record);
-            return record;
+            return Command.saveCommand(record) ? record : null;
         }
     }
 

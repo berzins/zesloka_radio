@@ -1,4 +1,4 @@
-package eventservice.remotecontrolserver;
+package eventservice.client;
 
 import eventservice.IClientConnectionListener;
 import eventservice.EventServiceFacade;

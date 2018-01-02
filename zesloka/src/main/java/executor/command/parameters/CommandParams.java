@@ -39,7 +39,7 @@ public class CommandParams implements Serializable, RootCommandResolver {
         ));
     }
 
-    public void setValue(String cmd_key, String key, Float value) {
+    public void setValue(String cmd_key, String key, String value) {
         Parameter p = commandData.getParam(cmd_key, key);
         if(p != null) {
             p.setValue(String.valueOf(value));

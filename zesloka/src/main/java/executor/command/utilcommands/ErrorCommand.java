@@ -3,7 +3,9 @@ package executor.command.utilcommands;
 import eventservice.ClientConnectionManager;
 import eventservice.IClientConnection;
 import executor.command.Command;
+import executor.command.CommandProcessorManager;
 import executor.command.GlobalCommand;
+import executor.command.parameters.CommandParams;
 import executor.command.parameters.Parameter;
 
 
@@ -35,5 +37,12 @@ public class ErrorCommand extends Command {
         IClientConnection cc = ClientConnectionManager.getInstance().getClientConnection(
                 getParams().getIntegerValue(GLOBAL_PARAMS, GlobalCommand.PARAM_CLIENT_ID));
         cc.write("SYNTAX ERROR: " + this.getParams().getStringValue(this, PARAM_ERROR));
+    }
+
+    public static void riseError(String errorMsg, CommandParams params) {
+        Command c = Command.getCommand("cmd_error");
+        CommandParams cp = new CommandParams();
+        cp.setValue(c.getKey(), ErrorCommand.PARAM_ERROR, errorMsg);
+        CommandProcessorManager.getInstance().processCommand(c);
     }
 }

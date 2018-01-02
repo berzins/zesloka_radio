@@ -3,10 +3,11 @@ package eventservice;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class ClientConnectionManager implements IClientConnectionListener {
 
-    protected List<IClientConnection> clientConnections = new ArrayList<>();
+    protected final List<IClientConnection> clientConnections = new ArrayList<>();
     protected static ClientConnectionManager instance;
 
     private ClientConnectionManager(){}
@@ -25,7 +26,7 @@ public class ClientConnectionManager implements IClientConnectionListener {
                 new BufferedWriter(new OutputStreamWriter(out))
         );
         this.clientConnections.add(cc);
-        Thread thread = new Thread(() -> ((ClientConnection)cc).waitForMsg());
+        Thread thread = new Thread(((ClientConnection) cc)::waitForMsg);
         thread.start();
     }
 
@@ -41,13 +42,11 @@ public class ClientConnectionManager implements IClientConnectionListener {
     public IClientConnection getClientConnection(Integer id) {
         synchronized (clientConnections) {
             for(IClientConnection cc : clientConnections) {
-                if(cc.getId() == id) {
+                if(Objects.equals(cc.getId(), id)) {
                     return cc;
                 }
             }
         }
         return null;
     }
-
-
 }

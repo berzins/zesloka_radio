@@ -18,6 +18,12 @@ public class ClientConnection implements IClientConnection {
     protected BufferedWriter output;
     private Integer uniqueId;
 
+
+    /**
+     * Direct Client/Server Connection for bidirectional data transfer
+     * @param in Input for reading data from client.
+     * @param out Output stream wor writing to client.
+     */
     public ClientConnection(BufferedReader in, BufferedWriter out) {
         this.input = in;
         this.output = out;
@@ -63,9 +69,13 @@ public class ClientConnection implements IClientConnection {
                     } catch (JsonSyntaxException e) {
                         Command errcmd = Command.getCommand(ErrorCommand.CAD_ERROR);
                         cp = new CommandParams();
-                        cp.addValue(errcmd.getKey(), ErrorCommand.PARAM_ERROR, e.getMessage());
                         cp.addValue(
-                                Command.CMD_GLOBAL, GlobalCommand.PARAM_CLIENT_ID,
+                                errcmd.getKey(),
+                                ErrorCommand.PARAM_ERROR,
+                                e.getMessage());
+                        cp.addValue(
+                                Command.CMD_GLOBAL,
+                                GlobalCommand.PARAM_CLIENT_ID,
                                 String.valueOf(getId()));
                         CommandProcessorManager.getInstance().processCommand(errcmd.setParams(cp));
                     }

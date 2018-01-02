@@ -235,6 +235,9 @@ public abstract class Command implements Serializable {
     }
 
     public static boolean saveCommand(Command cmd) {
+        if(initializedCommands.get(cmd.getKey()) != null) {
+            return false;
+        }
         initCommand(cmd);
         return saveCommandOnFile(cmd);
     }

@@ -3,7 +3,9 @@ package eventservice;
 /**
  *
  */
-public interface IEventServiceConnection {
+public interface IEventServiceConnection
+{
     void addClientConnectionListener(IClientConnectionListener listener);
+
     IClientConnectionListener getClient(int clientHash);
 }

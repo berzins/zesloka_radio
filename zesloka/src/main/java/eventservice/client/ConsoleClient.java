@@ -1,4 +1,4 @@
-package eventservice.consoleclient;
+package eventservice.client;
 
 import eventservice.EventServiceFacade;
 import eventservice.IClientConnectionListener;
@@ -24,6 +24,5 @@ public class ConsoleClient extends EventServiceFacade {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 }
