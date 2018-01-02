@@ -5,6 +5,7 @@ import executor.command.parameters.CommandParams;
 import executor.command.parameters.Parameter;
 import executor.command.robotcommands.*;
 import executor.command.testcommands.TestCommand;
+import executor.command.utilcommands.ErrorCommand;
 import executor.command.utilcommands.GetParamsCommand;
 import executor.command.utilcommands.database.GetSongLike;
 import executor.command.utilcommands.mouse.*;
@@ -48,7 +49,7 @@ public abstract class Command implements Serializable {
         this.key = key;
         this.name = name;
         this.paramKeys = new ArrayList<>();
-        this.params = new CommandParams("");
+        this.params = new CommandParams();
         init();
     }
 
@@ -283,6 +284,7 @@ public abstract class Command implements Serializable {
         initCommand(new MouseMove("mouse move", "cmd_mouse_move"));
         initCommand(new MouseMoveTo("mouse move to", "cmd_mouse_move_to"));
         initCommand(new GetSongLike("get song like", "cmd_get_song_like"));
+        initCommand(new ErrorCommand("error handling command", "cmd_error"));
     }
 
     public static void initUserCommands() {

@@ -16,7 +16,7 @@ val y2 = 600f
 
 fun main(args: Array<String>) {
     val cmdProcessor = getCommandProcessor()
-    val dbConnection = DataBase.getConnection()
+    //val dbConnection = DataBase.getConnection()
     val ccl = ClientConnectionManager.getInstance()
     val server = RemoteControlServer(8743)
     server.addClientConnectionListener(ccl)

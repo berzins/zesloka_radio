@@ -1,9 +1,11 @@
 package eventservice;
 
+import com.google.gson.JsonSyntaxException;
 import executor.command.Command;
 import executor.command.CommandProcessorManager;
 import executor.command.GlobalCommand;
 import executor.command.parameters.CommandParams;
+import executor.command.utilcommands.ErrorCommand;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -49,12 +51,24 @@ public class ClientConnection implements IClientConnection {
             while(true) {
                 String cmd = input.readLine();
                 if(isActive) {
-                    CommandParams cp = new CommandParams(cmd);
-                    cp.addValue(
-                            Command.CMD_GLOBAL, GlobalCommand.PARAM_CLIENT_ID,
-                            String.valueOf(getId()));
-                    CommandProcessorManager.getInstance().
-                            processCommand(cp.getRootCommand().setParams(cp));
+                    CommandParams cp;
+
+                    try {
+                        cp = new CommandParams(cmd);
+                        cp.addValue(
+                                Command.CMD_GLOBAL, GlobalCommand.PARAM_CLIENT_ID,
+                                String.valueOf(getId()));
+                        CommandProcessorManager.getInstance().
+                                processCommand(cp.getRootCommand().setParams(cp));
+                    } catch (JsonSyntaxException e) {
+                        Command errcmd = Command.getCommand(ErrorCommand.CAD_ERROR);
+                        cp = new CommandParams();
+                        cp.addValue(errcmd.getKey(), ErrorCommand.PARAM_ERROR, e.getMessage());
+                        cp.addValue(
+                                Command.CMD_GLOBAL, GlobalCommand.PARAM_CLIENT_ID,
+                                String.valueOf(getId()));
+                        CommandProcessorManager.getInstance().processCommand(errcmd.setParams(cp));
+                    }
                 }
             }
         } catch (IOException e) {

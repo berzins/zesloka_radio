@@ -1,6 +1,7 @@
 package executor.command.parameters;
 
 
+import com.google.gson.JsonSyntaxException;
 import executor.command.Command;
 import executor.command.RootCommandResolver;
 import utilities.JSONUtils;
@@ -15,11 +16,15 @@ public class CommandParams implements Serializable, RootCommandResolver {
 
     private CommandData commandData;
 
-    public CommandParams(String cmd) {
+    public CommandParams() {
+        commandData = CommandData.getEmpty();
+    }
+
+    public CommandParams(String cmd) throws JsonSyntaxException {
         set(cmd);
     }
 
-    public void set(String cmd) {
+    public void set(String cmd) throws JsonSyntaxException {
         CommandData cd = JSONUtils.parseCommandData(cmd);
         commandData = cd != null ? cd : CommandData.getEmpty();
     }

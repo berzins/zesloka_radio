@@ -11,6 +11,11 @@ public class CommandData implements Serializable {
     private String cmd_key;
     private List<Parameter> params;
 
+    public CommandData() {
+        this.setCmd_key(Parameter.VALUE_UNDEFINED);
+        this.setParams(new ArrayList<>());
+    }
+
     public static CommandData getEmpty() {
         CommandData cd = new CommandData();
         cd.cmd_key = "cmd_data_empty";
