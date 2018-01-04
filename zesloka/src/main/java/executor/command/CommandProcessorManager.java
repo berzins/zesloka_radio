@@ -18,17 +18,23 @@ public class CommandProcessorManager implements Command.CommandProcessor {
     }
 
     public void add(Command.CommandProcessor processor) {
-        processors.add(processor);
+        synchronized (processors) {
+            processors.add(processor);
+        }
     }
 
     public Command.CommandProcessor remove(Command.CommandProcessor processor) {
-        return  processors.remove(processors.indexOf(processor));
+        synchronized (processors) {
+            return processors.remove(processors.indexOf(processor));
+        }
     }
 
     @Override
     public void processCommand(Command cmd) {
-        for(Command.CommandProcessor cp : processors) {
-            cp.processCommand(cmd);
+        synchronized (processors) {
+            for(Command.CommandProcessor cp : processors) {
+                cp.processCommand(cmd);
+            }
         }
     }
 }

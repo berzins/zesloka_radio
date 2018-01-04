@@ -9,6 +9,8 @@ import utilities.JSONUtils;
 
 public class GetParamsCommand extends Command {
 
+    public static final String CMD_GET_PARAMS = "cmd_get_params";
+
     /**
      * @param name Command string representation
      * @param key  Unique command identifier
@@ -17,6 +19,7 @@ public class GetParamsCommand extends Command {
         super(name, key);
         initParamKeys(new Parameter[] {
                 new Parameter(this.getKey(), PARAM_CMD_KEY, Parameter.TYPE_STRING, Parameter.VALUE_UNDEFINED)});
+        setRecordable(false);
     }
 
     @Override

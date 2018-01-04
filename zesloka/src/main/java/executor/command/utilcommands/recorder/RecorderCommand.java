@@ -14,5 +14,10 @@ public class RecorderCommand extends Command {
         super(name, key);
     }
 
+    @Override
+    protected void init() {
+        super.init();
+        setRecordable(false);
+    }
 
 }

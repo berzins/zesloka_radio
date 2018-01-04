@@ -1,6 +1,7 @@
 package eventservice;
 
 import java.io.*;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,8 @@ public class ClientConnectionManager implements IClientConnectionListener {
 
     @Override
     public void onConnect(InputStream in, OutputStream out) {
-        IClientConnection cc = new ClientConnection(
+        IClientConnection cc = null;
+        cc = new ClientConnection(
                 new BufferedReader(new InputStreamReader(in)),
                 new BufferedWriter(new OutputStreamWriter(out))
         );

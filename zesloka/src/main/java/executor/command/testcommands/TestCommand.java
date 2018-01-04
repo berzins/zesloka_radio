@@ -62,7 +62,7 @@ public class TestCommand extends Command {
             cc.write(TimeUtils.getCurrentTimeString() +
                     ": executing '" + this.getName() + "' command with params : " +
                     this.params.getStringValue(this, PARAM_TEXT));
-            cc.write(JSONUtils.createJSON(params.getCommandData()));
+            //cc.write(JSONUtils.createJSON(params.getCommandData()));
         }
 
 //        for(Command c : cmds) {

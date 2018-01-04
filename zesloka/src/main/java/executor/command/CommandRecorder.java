@@ -1,6 +1,7 @@
 package executor.command;
 
 import executor.command.parameters.CommandParams;
+import utilities.Util;
 
 import java.time.Duration;
 import java.time.Instant;
@@ -19,13 +20,18 @@ public class CommandRecorder  implements Command.CommandProcessor{
 
     @Override
     public void processCommand(Command cmd) {
-        CommandParams cp = cmd.getParams();
-        if(cp.contains("recorder")) return;
+        //TODO: Replace this if statement with better solution
+        // where recorder and command don't know about recordable state.
+        // The way to go could be use command processor manager to redirect
+        // recordable commands to recorder
+        if(!cmd.isRecordable()) return;
+        // end of to do.
         if(isRecording) {
-            cmd.setTimeout(getTimeout());
+            Command c = Util.serializedCopy(cmd); // don't mess with other cmd processors
+            c.setTimeout(getTimeout());
             //cmd.setParams(cp);
-            cmd.setFinal(true);
-            record.add(cmd);
+            c.setFinal(true);
+            record.add(c);
         }
     }
 

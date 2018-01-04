@@ -22,8 +22,7 @@ fun main(args: Array<String>) {
 
     val clients = arrayOf(
             RemoteControlServer(8743),
-            ConsoleClient(),
-            TestCaseClient()
+            ConsoleClient()
     )
 
     for((i, value) in clients.withIndex()) {

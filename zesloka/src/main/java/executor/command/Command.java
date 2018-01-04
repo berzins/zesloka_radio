@@ -4,8 +4,10 @@ import executor.command.parameters.CommandData;
 import executor.command.parameters.CommandParams;
 import executor.command.parameters.Parameter;
 import executor.command.robotcommands.*;
+import executor.command.testcommands.TestCaseCommand;
 import executor.command.testcommands.TestCommand;
 import executor.command.utilcommands.ErrorCommand;
+import executor.command.utilcommands.GetAllCommandParams;
 import executor.command.utilcommands.GetParamsCommand;
 import executor.command.utilcommands.database.GetSongLike;
 import executor.command.utilcommands.mouse.*;
@@ -29,9 +31,9 @@ public abstract class Command implements Serializable {
     public static final Command GLOBAL_PARAMS = new GlobalCommand("", Command.CMD_GLOBAL);
     public static final String PARAM_GLOBAL_SESSION_ID = "session_id";
 
-    protected static final String PARAM_CMD_NAME = "cmd_name";
-    protected static final String PARAM_CMD_KEY = "cmd_key";
-    protected static final String PARAM_TEXT = "text";
+    public static final String PARAM_CMD_NAME = "cmd_name";
+    public static final String PARAM_CMD_KEY = "cmd_key";
+    public static final String PARAM_TEXT = "text";
 
     protected String key;
     protected String name;
@@ -40,6 +42,7 @@ public abstract class Command implements Serializable {
     private Long timeout = 0L;
     private Command nextCommand;
     private boolean finall;
+    private boolean isRecordable = true;
 
     /**
      * @param name Command string representation
@@ -124,6 +127,20 @@ public abstract class Command implements Serializable {
         return (this.params);
     }
 
+    /**
+     * Determines if this command will be recorded by CommandRecorder
+     */
+    public boolean isRecordable() {
+        return isRecordable;
+    }
+
+    /**
+     * Determines if this command will be recorded by CommandRecorder
+     * @param recordable
+     */
+    public void setRecordable(boolean recordable) {
+        isRecordable = recordable;
+    }
 
     /**
      * Add parameter value pair to current parameters
@@ -280,7 +297,8 @@ public abstract class Command implements Serializable {
         initCommand(new RecorderStop("recorder stop", "cmd_recorder_stop"));
         initCommand(new RecorderStore("recorder store", "cmd_recorder_store"));
         initCommand(new TestCommand("test command", "cmd_test"));
-        initCommand(new GetParamsCommand("get parameters", "cmd_get_param_key"));
+        initCommand(new GetParamsCommand("get parameters", GetParamsCommand.CMD_GET_PARAMS));
+        initCommand(new GetAllCommandParams("get all command parameters", GetAllCommandParams.CMD_GET_ALL_COMMAND_PARAMS));
         initCommand(new MouseClick_1("mouse click 1", "cmd_mouse_click_1"));
         initCommand(new MouseClick_2("mouse click 2", "cmd_mouse_click_2"));
         initCommand(new MouseClick_3("mouse click 3", "cmd_mouse_click_3"));
@@ -288,6 +306,8 @@ public abstract class Command implements Serializable {
         initCommand(new MouseMoveTo("mouse move to", "cmd_mouse_move_to"));
         initCommand(new GetSongLike("get song like", "cmd_get_song_like"));
         initCommand(new ErrorCommand("error handling command", "cmd_error"));
+        initCommand(new TestCaseCommand("test case command", "cmd_test_case"));
+
     }
 
     public static void initUserCommands() {
@@ -302,6 +322,10 @@ public abstract class Command implements Serializable {
     public static Command getCommand(String key) {
         Command c = initializedCommands.get(key);
         return c != null? Util.serializedCopy(c) : new Command("none", CMD_NONE) {};
+    }
+
+    public static List<Command> getInitializedCommands() {
+        return new ArrayList<Command>(initializedCommands.values());
     }
 }
 

@@ -7,6 +7,7 @@ import executor.command.CommandProcessorManager;
 import executor.command.GlobalCommand;
 import executor.command.parameters.CommandParams;
 import executor.command.parameters.Parameter;
+import utilities.Util;
 
 
 public class ErrorCommand extends Command {
@@ -28,6 +29,7 @@ public class ErrorCommand extends Command {
         initParamKeys(new Parameter[] {
                 new Parameter(this.getKey(), PARAM_ERROR, Parameter.TYPE_STRING, Parameter.VALUE_UNDEFINED)
         });
+        setRecordable(false);
     }
 
     @Override
@@ -41,8 +43,15 @@ public class ErrorCommand extends Command {
 
     public static void riseError(String errorMsg, CommandParams params) {
         Command c = Command.getCommand("cmd_error");
-        CommandParams cp = new CommandParams();
+        CommandParams cp = Util.serializedCopy(params);
         cp.setValue(c.getKey(), ErrorCommand.PARAM_ERROR, errorMsg);
+        c.setParams(cp);
         CommandProcessorManager.getInstance().processCommand(c);
+    }
+
+    public static void riseError(String errorMsg, String connectionId) {
+        CommandParams cp = new CommandParams();
+        cp.addValue(CMD_GLOBAL, GlobalCommand.PARAM_CLIENT_ID, connectionId);
+        riseError(errorMsg, cp);
     }
 }
