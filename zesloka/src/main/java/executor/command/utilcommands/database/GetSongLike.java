@@ -2,11 +2,18 @@ package executor.command.utilcommands.database;
 
 import db.DBConnection;
 import db.DataBase;
+import eventservice.ClientConnectionManager;
+import eventservice.IClientConnection;
 import executor.command.Command;
+import executor.command.GlobalCommand;
 import executor.command.parameters.Parameter;
+import executor.command.parameters.complexvalue.Song;
+import utilities.JSONUtils;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class GetSongLike extends Command {
 
@@ -33,18 +40,22 @@ public class GetSongLike extends Command {
         super.execute();
         DBConnection conn = DataBase.Companion.getConnection();
         ResultSet res = conn.findSongsWhatIsLike(params.getStringValue(this, SONG_NAME));
+
+        List<Song> songs = new ArrayList<>();
         try {
             while(res.next()) {
-                String line =
-                        "ID: " + res.getInt("id") + ", " +
-                        "Artist: " + res.getString("artist") + ", " +
-                        "Title: " + res.getString("title");
-                System.out.println(line);
-
-                //TODO: implement system how to replay to client with found results. !!!!!!!!!!!!!!!!!!!
+                Song song = new Song();
+                song.setId(res.getInt("id"));
+                song.setArtist(res.getString("artist"));
+                song.setTile(res.getString("title"));
+                songs.add(song);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+        IClientConnection cc = ClientConnectionManager.getInstance().getClientConnection(
+                getParams().getIntegerValue(GLOBAL_PARAMS, GlobalCommand.PARAM_CLIENT_ID));
+        cc.write(JSONUtils.createJSON(songs));
     }
 }

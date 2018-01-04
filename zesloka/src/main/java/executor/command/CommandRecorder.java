@@ -20,16 +20,10 @@ public class CommandRecorder  implements Command.CommandProcessor{
 
     @Override
     public void processCommand(Command cmd) {
-        //TODO: Replace this if statement with better solution
-        // where recorder and command don't know about recordable state.
-        // The way to go could be use command processor manager to redirect
-        // recordable commands to recorder
         if(!cmd.isRecordable()) return;
-        // end of to do.
         if(isRecording) {
             Command c = Util.serializedCopy(cmd); // don't mess with other cmd processors
             c.setTimeout(getTimeout());
-            //cmd.setParams(cp);
             c.setFinal(true);
             record.add(c);
         }

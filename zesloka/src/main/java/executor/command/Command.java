@@ -29,7 +29,6 @@ public abstract class Command implements Serializable {
 
     public static final String CMD_GLOBAL = "cmd_global";
     public static final Command GLOBAL_PARAMS = new GlobalCommand("", Command.CMD_GLOBAL);
-    public static final String PARAM_GLOBAL_SESSION_ID = "session_id";
 
     public static final String PARAM_CMD_NAME = "cmd_name";
     public static final String PARAM_CMD_KEY = "cmd_key";
@@ -187,6 +186,8 @@ public abstract class Command implements Serializable {
 
     /**
      * Determines if this and all sub command params can be changed
+     * This should be used when all params has been set and no
+     * further modifications required
      */
     public void setFinal(boolean b) {
         finall = b;
@@ -203,8 +204,9 @@ public abstract class Command implements Serializable {
     }
 
     /**
-     * Init parameter keys what are used to get parameter values out of current Params.
-     * @param keys
+     * Initialize required parameters
+     * These params could be requested later by any client to know
+     * what parameters it should provide to execute command properly.
      */
     protected void initParamKeys(Parameter[] keys){
         if(keys != null) {

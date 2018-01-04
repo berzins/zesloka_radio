@@ -12,8 +12,6 @@ public class CommandParams implements Serializable, RootCommandResolver {
 
     private static final long serialVersionUID = 1L;
 
-    public static final String CMD_PARAM_DIVIDER = "__";
-
     private CommandData commandData;
 
     public CommandParams() {

@@ -7,47 +7,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7630b0e5-acbe-45bf-856e-ec70c071a28a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/testcommands/TestCaseCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/GetAllCommandParams.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/complexvalue/Song.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/META-INF/zesloka_main.kotlin_module" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/META-INF/zesloka_main.kotlin_module" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/ProgramKt.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/ProgramKt.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/db/DBConnection$Companion.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/db/DBConnection$Companion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/db/DBConnection$DBConnectionData$Companion.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/db/DBConnection$DBConnectionData$Companion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/db/DBConnection$DBConnectionData.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/db/DBConnection$DBConnectionData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/db/DBConnection.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/db/DBConnection.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/db/DataBase$Companion.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/db/DataBase$Companion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/db/DataBase.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/db/DataBase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/eventservice/ClientConnection.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/eventservice/ClientConnection.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/eventservice/ClientConnectionManager.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/eventservice/ClientConnectionManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/eventservice/client/TestCaseClient.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/eventservice/client/TestCaseClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/Command$1.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/Command$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/Command$2.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/Command$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/Command$3.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/Command$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/Command.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/Command.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/CommandProcessorManager.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/CommandProcessorManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/CommandRecorder.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/CommandRecorder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/testcommands/TestCommand$1.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/testcommands/TestCommand$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/testcommands/TestCommand$2.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/testcommands/TestCommand$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/testcommands/TestCommand$3.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/testcommands/TestCommand$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/testcommands/TestCommand$4.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/testcommands/TestCommand$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/testcommands/TestCommand.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/testcommands/TestCommand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/utilcommands/ErrorCommand.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/utilcommands/ErrorCommand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/utilcommands/GetParamsCommand.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/utilcommands/GetParamsCommand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/utilcommands/recorder/RecorderCommand.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/executor/command/utilcommands/recorder/RecorderCommand.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/out/production/classes/utilities/Storage.class" afterPath="$PROJECT_DIR$/zesloka/out/production/classes/utilities/Storage.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/eventservice/ClientConnection.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/eventservice/ClientConnection.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/eventservice/ClientConnectionManager.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/eventservice/ClientConnectionManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/eventservice/client/TestCaseClient.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/eventservice/client/TestCaseClient.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/Command.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/Command.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/CommandProcessorManager.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/CommandProcessorManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/CommandRecorder.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/CommandRecorder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/testcommands/TestCommand.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/testcommands/TestCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/ErrorCommand.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/ErrorCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/GetParamsCommand.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/GetParamsCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderCommand.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/CommandParams.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/CommandParams.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/database/GetSongLike.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/database/GetSongLike.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/java/utilities/Storage.java" afterPath="$PROJECT_DIR$/zesloka/src/main/java/utilities/Storage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zesloka/src/main/kotlin/Program.kt" afterPath="$PROJECT_DIR$/zesloka/src/main/kotlin/Program.kt" />
     </list>
     <ignored path="$PROJECT_DIR$/zesloka/.gradle/" />
     <ignored path="$PROJECT_DIR$/zesloka/build/" />
@@ -70,35 +46,42 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <projects_view />
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="zesloka" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Command.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/Command.java">
+      <file leaf-file-name="ClientConnectionManager.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/eventservice/ClientConnectionManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="293" column="13" lean-forward="true" selection-start-line="293" selection-start-column="13" selection-end-line="293" selection-end-column="13" />
+            <state relative-caret-position="256">
+              <caret line="16" column="53" lean-forward="true" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
               <folding>
-                <element signature="e#2687#2688#0" expanded="true" />
-                <element signature="e#2751#2752#0" expanded="true" />
-                <element signature="e#3897#3898#0" expanded="true" />
-                <element signature="e#3932#3933#0" expanded="true" />
-                <element signature="e#4096#4097#0" expanded="true" />
-                <element signature="e#4137#4138#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GetParamsCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/GetParamsCommand.java">
+      <file leaf-file-name="TestCaseClient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/eventservice/client/TestCaseClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="448">
+              <caret line="28" column="17" lean-forward="false" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -106,74 +89,66 @@
       <file leaf-file-name="RecorderStore.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderStore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="29" column="34" lean-forward="false" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ErrorCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/ErrorCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="53" column="32" lean-forward="false" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClientConnection.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/eventservice/ClientConnection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="79" column="42" lean-forward="false" selection-start-line="79" selection-start-column="42" selection-end-line="79" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GetAllCommandParams.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/GetAllCommandParams.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="37" column="40" lean-forward="false" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#667#668#0" expanded="true" />
-                <element signature="e#699#700#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommandProcessorManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/CommandProcessorManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RecorderCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="288">
-              <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RecorderReset.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderReset.java">
+      <file leaf-file-name="Program.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zesloka/src/main/kotlin/Program.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="368">
+              <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+              <folding>
+                <marker date="1515066594327" expanded="true" signature="422:794" ph="{...}" />
+                <marker date="1515066594327" expanded="true" signature="716:792" ph="{...}" />
+                <marker date="1515066594327" expanded="true" signature="850:1052" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/testcommands/TestCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="976">
+              <caret line="73" column="15" lean-forward="false" selection-start-line="73" selection-start-column="15" selection-end-line="73" selection-end-column="15" />
+              <folding>
+                <marker date="1515066594265" expanded="true" signature="2409:2676" ph="//..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JSONUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/utilities/JSONUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommandParams.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/CommandParams.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-48">
+              <caret line="46" column="9" lean-forward="true" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommandRecorder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/CommandRecorder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="21" column="45" lean-forward="true" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -605,7 +580,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/RemoteCommandExecutor.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/remotecontrolserver/RemoteControlServer.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/remotecontrolserver/ConsoleClient.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/eventservice/ConsoleClient.java" />
@@ -626,13 +600,11 @@
         <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotKeyPressCommand.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotMouseReleaseCommand.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderSet.java" />
-        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/database/GetSongLike.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderStart.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderReset.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/utilities/JSONUtils.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/CommandData.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/robotcommands/RobotMouseMoveToCommand.java" />
-        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/CommandParams.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/eventservice/IClientConnectionListener.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/eventservice/IEventServiceConnection.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderStore.java" />
@@ -640,22 +612,25 @@
         <option value="$PROJECT_DIR$/zesloka/src/main/java/eventservice/EventServiceFacade.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/eventservice/client/RemoteControlServer.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/eventservice/client/ConsoleClient.java" />
-        <option value="$PROJECT_DIR$/zesloka/src/main/java/utilities/Storage.java" />
         <option value="C:/Program Files/Java/jdk1.8.0_144/jre/lib/rt.jar!/sun/misc/JarIndex.class" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/testcommands/TestCommand.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/kotlin/Program.kt" />
-        <option value="$PROJECT_DIR$/zesloka/src/main/java/eventservice/ClientConnectionManager.java" />
-        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/CommandRecorder.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/eventservice/client/TestCaseClient.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/CommandProcessorManager.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/testcommands/TestCaseCommand.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderCommand.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/GetParamsCommand.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/ErrorCommand.java" />
-        <option value="$PROJECT_DIR$/zesloka/src/main/java/eventservice/ClientConnection.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/GetParamsAllCommand.java" />
-        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/Command.java" />
         <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/GetAllCommandParams.java" />
+        <option value="$PROJECT_DIR$/zesloka/src/main/java/utilities/Storage.java" />
+        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/complexvalue/Song.java" />
+        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/database/GetSongLike.java" />
+        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/CommandRecorder.java" />
+        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/Command.java" />
+        <option value="$PROJECT_DIR$/zesloka/src/main/java/eventservice/ClientConnection.java" />
+        <option value="$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/CommandParams.java" />
+        <option value="$PROJECT_DIR$/zesloka/src/main/java/eventservice/ClientConnectionManager.java" />
       </list>
     </option>
   </component>
@@ -666,10 +641,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="96" />
-    <option name="y" value="8" />
-    <option name="width" value="1400" />
-    <option name="height" value="990" />
+    <option name="x" value="2256" />
+    <option name="y" value="354" />
+    <option name="width" value="782" />
+    <option name="height" value="565" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -687,9 +662,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -735,6 +709,25 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="eventservice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zesloka_radio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zesloka_radio" type="462c0819:PsiDirectoryNode" />
+              <item name="zesloka" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="eventservice" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zesloka_radio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zesloka_radio" type="462c0819:PsiDirectoryNode" />
+              <item name="zesloka" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="executor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -746,6 +739,51 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="executor" type="462c0819:PsiDirectoryNode" />
               <item name="command" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zesloka_radio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zesloka_radio" type="462c0819:PsiDirectoryNode" />
+              <item name="zesloka" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="executor" type="462c0819:PsiDirectoryNode" />
+              <item name="command" type="462c0819:PsiDirectoryNode" />
+              <item name="parameters" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zesloka_radio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zesloka_radio" type="462c0819:PsiDirectoryNode" />
+              <item name="zesloka" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="executor" type="462c0819:PsiDirectoryNode" />
+              <item name="command" type="462c0819:PsiDirectoryNode" />
+              <item name="parameters" type="462c0819:PsiDirectoryNode" />
+              <item name="complexvalue" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zesloka_radio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zesloka_radio" type="462c0819:PsiDirectoryNode" />
+              <item name="zesloka" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="executor" type="462c0819:PsiDirectoryNode" />
+              <item name="command" type="462c0819:PsiDirectoryNode" />
+              <item name="robotcommands" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zesloka_radio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zesloka_radio" type="462c0819:PsiDirectoryNode" />
+              <item name="zesloka" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="executor" type="462c0819:PsiDirectoryNode" />
+              <item name="command" type="462c0819:PsiDirectoryNode" />
+              <item name="testcommands" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zesloka_radio" type="b2602c69:ProjectViewProjectNode" />
@@ -764,7 +802,32 @@
               <item name="zesloka" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="executor" type="462c0819:PsiDirectoryNode" />
+              <item name="command" type="462c0819:PsiDirectoryNode" />
+              <item name="utilcommands" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zesloka_radio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zesloka_radio" type="462c0819:PsiDirectoryNode" />
+              <item name="zesloka" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="executor" type="462c0819:PsiDirectoryNode" />
+              <item name="command" type="462c0819:PsiDirectoryNode" />
+              <item name="utilcommands" type="462c0819:PsiDirectoryNode" />
+              <item name="mouse" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zesloka_radio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zesloka_radio" type="462c0819:PsiDirectoryNode" />
+              <item name="zesloka" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="utilities" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zesloka_radio" type="b2602c69:ProjectViewProjectNode" />
@@ -773,12 +836,20 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zesloka_radio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zesloka_radio" type="462c0819:PsiDirectoryNode" />
+              <item name="zesloka" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -794,7 +865,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/zesloka/src/test/java" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Groovy JUnit" />
-    <property name="SearchEverywhereHistoryKey" value="Command&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/executor/command/Command.java&#10;command&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/executor/command/Command.java&#10;par&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/executor/command/utilcommands/GetParamsCommand.java&#10;RecorderSt&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderStore.java&#10;error&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/executor/command/utilcommands/ErrorCommand.java&#10;recorderStart&#9;PSI&#9;JAVA://executor.command.utilcommands.recorder.RecorderStart&#10;commandREco&#9;PSI&#9;JAVA://executor.command.CommandRecorder&#10;tes&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/eventservice/client/TestCaseClient.java&#10;Comm&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/executor/command/Command.java&#10;test&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/executor/command/testcommands/TestCommand.java&#10;BufferedRe&#9;PSI&#9;JAVA://java.io.BufferedReader&#10;Stor&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/utilities/Storage.java&#10;ErrorCom&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/command/utilcommands/ErrorCommand.java&#10;Store&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderStore.java&#10;cmd_none&#9;PSI&#9;JAVA://executor.command.Command#CMD_NONE&#10;command\&#9;PSI&#9;JAVA://executor.command.Command&#10;Sommand&#9;null&#9;null&#10;Test&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/command/testcommands/TestCommand.java&#10;Clien&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/eventservice/ClientConnection.java&#10;Cli&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/eventservice/ClientConnection.java&#10;ClientConn&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/eventservice/ClientConnection.java&#10;clientC&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/eventservice/ClientConnection.java&#10;ClientCon&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/eventservice/ClientConnection.java&#10;EventSer&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/eventservice/EventServiceFacade.java&#10;Cl&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/remotecontrolserver/ClientConnection.java&#10;cmd_global&#9;PSI&#9;JAVA://executor.command.Command#CMD_GLOBAL&#10;json&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/utilities/JSONUtils.java&#10;commandpro&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/command/CommandProcessorManager.java&#10;Client&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/remotecontrolserver/ClientConnection.java&#10;commandPar&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/command/parameters/CommandParams.java&#10;remote&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/remotecontrolserver/RemoteClientConnection.java&#10;remoteC&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/remotecontrolserver/RemoteClientConnection.java&#10;console&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/remotecontrolserver/ConsoleClientConnection.java&#10;ClientConnectionListener&#9;PSI&#9;JAVA://remotecontrolserver.RemoteControlServer#addClientConnectionListener&#10;get&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/command/utilcommands/GetParamsCommand.java&#10;commandDa&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/command/parameters/CommandData.java&#10;commandpar&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/command/parameters/CommandParams.java&#10;parame&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_151/jre/lib/rt.jar!/java/lang/reflect/Parameter.class&#10;Parameter&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_151/jre/lib/rt.jar!/java/lang/reflect/Parameter.class&#10;command exe&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/RemoteCommandExecutor.java&#10;dbc&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/kotlin/db/DBConnection.kt&#10;Data&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/kotlin/db/DataBase.kt&#10;robot&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/executor/command/robotcommands/RobotMouseMoveToCommand.java&#10;mouse&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/executor/command/utilcommands/mouse/MouseClick_3.java&#10;com&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/executor/command/Command.java&#10;storage&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/utilities/Storage.java&#10;sto&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/utilities/Storage.java" />
+    <property name="SearchEverywhereHistoryKey" value="storage&#9;PSI&#9;JAVA://utilities.Storage&#10;Command&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/executor/command/Command.java&#10;command&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/executor/command/Command.java&#10;par&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/executor/command/utilcommands/GetParamsCommand.java&#10;RecorderSt&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderStore.java&#10;error&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/executor/command/utilcommands/ErrorCommand.java&#10;recorderStart&#9;PSI&#9;JAVA://executor.command.utilcommands.recorder.RecorderStart&#10;commandREco&#9;PSI&#9;JAVA://executor.command.CommandRecorder&#10;tes&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/eventservice/client/TestCaseClient.java&#10;Comm&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/executor/command/Command.java&#10;test&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/executor/command/testcommands/TestCommand.java&#10;BufferedRe&#9;PSI&#9;JAVA://java.io.BufferedReader&#10;Stor&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/utilities/Storage.java&#10;ErrorCom&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/command/utilcommands/ErrorCommand.java&#10;Store&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderStore.java&#10;cmd_none&#9;PSI&#9;JAVA://executor.command.Command#CMD_NONE&#10;command\&#9;PSI&#9;JAVA://executor.command.Command&#10;Sommand&#9;null&#9;null&#10;Test&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/command/testcommands/TestCommand.java&#10;Clien&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/eventservice/ClientConnection.java&#10;Cli&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/eventservice/ClientConnection.java&#10;ClientConn&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/eventservice/ClientConnection.java&#10;clientC&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/eventservice/ClientConnection.java&#10;ClientCon&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/eventservice/ClientConnection.java&#10;EventSer&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/eventservice/EventServiceFacade.java&#10;Cl&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/remotecontrolserver/ClientConnection.java&#10;cmd_global&#9;PSI&#9;JAVA://executor.command.Command#CMD_GLOBAL&#10;json&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/utilities/JSONUtils.java&#10;commandpro&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/command/CommandProcessorManager.java&#10;Client&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/remotecontrolserver/ClientConnection.java&#10;commandPar&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/command/parameters/CommandParams.java&#10;remote&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/remotecontrolserver/RemoteClientConnection.java&#10;remoteC&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/remotecontrolserver/RemoteClientConnection.java&#10;console&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/remotecontrolserver/ConsoleClientConnection.java&#10;ClientConnectionListener&#9;PSI&#9;JAVA://remotecontrolserver.RemoteControlServer#addClientConnectionListener&#10;get&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/command/utilcommands/GetParamsCommand.java&#10;commandDa&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/command/parameters/CommandData.java&#10;commandpar&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/command/parameters/CommandParams.java&#10;parame&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_151/jre/lib/rt.jar!/java/lang/reflect/Parameter.class&#10;Parameter&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_151/jre/lib/rt.jar!/java/lang/reflect/Parameter.class&#10;command exe&#9;FILE&#9;file://C:/Users/guntars.berzins/IdeaProjects/zesloka_radio/zesloka/src/main/java/executor/RemoteCommandExecutor.java&#10;dbc&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/kotlin/db/DBConnection.kt&#10;Data&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/kotlin/db/DataBase.kt&#10;robot&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/executor/command/robotcommands/RobotMouseMoveToCommand.java&#10;mouse&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/executor/command/utilcommands/mouse/MouseClick_3.java&#10;com&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/executor/command/Command.java&#10;sto&#9;FILE&#9;file://C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/java/utilities/Storage.java" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
@@ -1039,30 +1110,32 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3270525" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31014824" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3261105" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3109426" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.327252" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32687926" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18906605" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21267454" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32801822" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3270525" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1971831" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2238806" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22968581" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2489339" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30558723" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45612136" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1079,6 +1152,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36332574" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31014824" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1087,6 +1161,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32801822" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32687926" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28410313" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -1128,26 +1203,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint type="java-method">
-          <url>file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/CommandParams.java</url>
-          <line>67</line>
-          <properties class="executor.command.parameters.CommandParams" method="getRawVal">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="129" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/zesloka/src/main/java/eventservice/ClientConnection.java</url>
-          <line>93</line>
-          <properties />
-          <option name="timeStamp" value="135" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="157" />
+      <option name="time" value="159" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1156,289 +1215,61 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/net/Socket.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/invoke/MethodHandle.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/invoke/MemberName.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/invoke/MethodHandleNatives.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/Thread.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/System.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/jre/lib/rt.jar!/sun/misc/PostVMInitHook.class" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/jre/lib/rt.jar!/sun/instrument/InstrumentationImpl.class" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/jre/lib/rt.jar!/sun/launcher/LauncherHelper.class" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/jre/lib/rt.jar!/sun/misc/MetaIndex.class" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/jre/lib/rt.jar!/sun/misc/Launcher.class" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/ServiceLoader.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/ResourceBundle.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/awt/Toolkit.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/jre/lib/rt.jar!/sun/awt/SunToolkit.class" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/jre/lib/rt.jar!/sun/awt/Win32GraphicsEnvironment.class" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/Class.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/awt/GraphicsEnvironment.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/awt/Robot.java" />
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/testcommands/TestCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="1730" column="0" lean-forward="true" selection-start-line="1730" selection-start-column="0" selection-end-line="1730" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/io/Reader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="156" column="24" lean-forward="false" selection-start-line="156" selection-start-column="24" selection-end-line="156" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderStop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/jre/lib/rt.jar!/sun/misc/JarIndex.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/jre/lib/rt.jar!/sun/misc/URLClassPath.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="172" column="0" lean-forward="false" selection-start-line="172" selection-start-column="0" selection-end-line="172" selection-end-column="0" />
+        <state relative-caret-position="976">
+          <caret line="73" column="15" lean-forward="false" selection-start-line="73" selection-start-column="15" selection-end-line="73" selection-end-column="15" />
           <folding>
-            <element signature="e#13287#13908#0" expanded="true" />
-            <element signature="e#13907#13908#0" expanded="true" />
-            <element signature="e#21517#23030#0" expanded="true" />
-            <element signature="e#23029#23030#0" expanded="true" />
+            <marker date="1515066594265" expanded="true" signature="2409:2676" ph="//..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/net/URLClassLoader.java">
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/utilities/JSONUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="367" column="0" lean-forward="false" selection-start-line="367" selection-start-column="0" selection-end-line="367" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/invoke/MethodHandle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="1454" column="0" lean-forward="false" selection-start-line="1454" selection-start-column="0" selection-end-line="1454" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/invoke/MemberName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/invoke/MethodHandleNatives.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="278" column="0" lean-forward="false" selection-start-line="278" selection-start-column="0" selection-end-line="278" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="535" column="0" lean-forward="false" selection-start-line="535" selection-start-column="0" selection-end-line="535" selection-end-column="0" />
-          <folding>
-            <element signature="e#18578#18579#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/System.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="719" column="0" lean-forward="false" selection-start-line="719" selection-start-column="0" selection-end-line="719" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/jre/lib/rt.jar!/sun/misc/PostVMInitHook.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="e#266#267#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/jre/lib/rt.jar!/sun/instrument/InstrumentationImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="268" column="0" lean-forward="false" selection-start-line="268" selection-start-column="0" selection-end-line="268" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/jre/lib/rt.jar!/sun/launcher/LauncherHelper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="385" column="0" lean-forward="false" selection-start-line="385" selection-start-column="0" selection-end-line="385" selection-end-column="0" />
-          <folding>
-            <element signature="e#13066#13067#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/jre/lib/rt.jar!/sun/misc/MetaIndex.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/jre/lib/rt.jar!/sun/misc/Launcher.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding>
-            <element signature="e#2950#2951#0" expanded="true" />
-            <element signature="e#7734#8546#0" expanded="true" />
-            <element signature="e#8545#8546#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/ServiceLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="473" column="0" lean-forward="false" selection-start-line="473" selection-start-column="0" selection-end-line="473" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/ResourceBundle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="814" column="0" lean-forward="false" selection-start-line="814" selection-start-column="0" selection-end-line="814" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/awt/Toolkit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="1672" column="0" lean-forward="false" selection-start-line="1672" selection-start-column="0" selection-end-line="1672" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/jre/lib/rt.jar!/sun/awt/SunToolkit.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="1432" column="0" lean-forward="false" selection-start-line="1432" selection-start-column="0" selection-end-line="1432" selection-end-column="0" />
+        <state relative-caret-position="192">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/jre/lib/rt.jar!/sun/awt/Win32GraphicsEnvironment.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="162" column="0" lean-forward="false" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="263" column="0" lean-forward="false" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/awt/GraphicsEnvironment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/awt/Robot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/testcommands/TestCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="59" column="20" lean-forward="true" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/utilities/JSONUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zesloka/src/main/kotlin/Program.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="368">
+          <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
           <folding>
-            <element signature="e#0#310#0" expanded="false" />
+            <marker date="1515066594327" expanded="true" signature="422:794" ph="{...}" />
+            <marker date="1515066594327" expanded="true" signature="716:792" ph="{...}" />
+            <marker date="1515066594327" expanded="true" signature="850:1052" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/jre/lib/rt.jar!/sun/awt/windows/WToolkit.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="238" column="24" lean-forward="false" selection-start-line="238" selection-start-column="24" selection-end-line="238" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/io/BufferedReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="160" column="0" lean-forward="false" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/io/InputStreamReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="183" column="0" lean-forward="false" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/jre/lib/rt.jar!/sun/nio/cs/StreamDecoder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="232" column="0" lean-forward="false" selection-start-line="232" selection-start-column="0" selection-end-line="232" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/io/InputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="178" column="0" lean-forward="false" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/eventservice/ClientConnectionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="30" column="27" lean-forward="true" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/jre/lib/rt.jar!/sun/awt/windows/WToolkit.class" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/io/BufferedReader.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/io/InputStreamReader.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/jre/lib/rt.jar!/sun/nio/cs/StreamDecoder.class" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/io/InputStream.java" />
     <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/CommandData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
@@ -1455,7 +1286,6 @@
           <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding>
             <element signature="e#942#943#0" expanded="true" />
-            <marker date="1514553453670" expanded="true" signature="955:977" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1476,21 +1306,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/CommandRecorder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="37" column="26" lean-forward="true" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/eventservice/client/TestCaseClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+        <state relative-caret-position="448">
+          <caret line="28" column="17" lean-forward="false" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#426#427#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1509,7 +1330,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1523,20 +1343,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/recorder/RecorderStore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="29" column="34" lean-forward="false" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="34" />
+        <state relative-caret-position="288">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/CommandParams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="41" column="16" lean-forward="false" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
-          <folding>
-            <element signature="e#2739#2740#0" expanded="true" />
-            <element signature="e#2811#2812#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1556,16 +1365,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/eventservice/ClientConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="79" column="42" lean-forward="false" selection-start-line="79" selection-start-column="42" selection-end-line="79" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/GetParamsCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="281">
@@ -1574,29 +1373,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/io/FileInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="137" column="0" lean-forward="false" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/Command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="293" column="13" lean-forward="true" selection-start-line="293" selection-start-column="13" selection-end-line="293" selection-end-column="13" />
-          <folding>
-            <element signature="e#2687#2688#0" expanded="true" />
-            <element signature="e#2751#2752#0" expanded="true" />
-            <element signature="e#3897#3898#0" expanded="true" />
-            <element signature="e#3932#3933#0" expanded="true" />
-            <element signature="e#4096#4097#0" expanded="true" />
-            <element signature="e#4137#4138#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/io/FileInputStream.java" />
     <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/GetAllCommandParams.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="431">
@@ -1605,6 +1382,113 @@
             <element signature="imports" expanded="true" />
             <element signature="e#667#668#0" expanded="true" />
             <element signature="e#699#700#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/eventservice/IClientConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/utilities/Storage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/eventservice/client/RemoteControlServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/complexvalue/Song.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <element signature="e#211#212#0" expanded="true" />
+            <element signature="e#236#237#0" expanded="true" />
+            <element signature="e#273#274#0" expanded="true" />
+            <element signature="e#301#302#0" expanded="true" />
+            <element signature="e#332#333#0" expanded="true" />
+            <element signature="e#359#360#0" expanded="true" />
+            <element signature="e#399#400#0" expanded="true" />
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#464#465#0" expanded="true" />
+            <element signature="e#493#494#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
+            <element signature="e#573#574#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/utilcommands/database/GetSongLike.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="592">
+          <caret line="52" column="34" lean-forward="true" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/CommandRecorder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="21" column="45" lean-forward="true" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/eventservice/ClientConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1424">
+          <caret line="89" column="48" lean-forward="true" selection-start-line="89" selection-start-column="48" selection-end-line="89" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1425#1426#0" expanded="true" />
+            <element signature="e#1461#1462#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/eventservice/IEventServiceConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/parameters/CommandParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-48">
+          <caret line="46" column="9" lean-forward="true" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/executor/command/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zesloka/src/main/java/eventservice/ClientConnectionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="16" column="53" lean-forward="true" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
