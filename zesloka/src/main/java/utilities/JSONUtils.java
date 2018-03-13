@@ -3,6 +3,7 @@ package utilities;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import executor.command.parameters.CommandData;
+import utilities.youtube.SongList;
 
 public class JSONUtils {
 
@@ -23,8 +24,28 @@ public class JSONUtils {
         return Util.serializedCopy(lastParsedCommand);
     }
 
+    public static GlobalSettings.Settings parseSettings(String json) {
+        Gson gson = new Gson();
+        GlobalSettings.Settings ret =gson.fromJson(json, GlobalSettings.Settings.class);
+        return ret;
+    }
+
     public static <T> String createJSON(T data) {
         Gson gson = new Gson();
         return gson.toJson(data);
     }
+
+    public static SongList parsePlaylistResponse(String json) {
+        SongList songs = null;
+        Gson gson = new Gson();
+
+        try {
+            songs = gson.fromJson(json, SongList.class);
+        } catch (JsonSyntaxException e) {
+            throw e;
+        }
+        return songs;
+    }
+
+
 }

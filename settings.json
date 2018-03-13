@@ -1,0 +1,17 @@
+{"items" : [
+	{
+		"key" 	: "yt_download_file_path", 
+		"value" : "C:/Users/guntt/Desktop/uber/"
+	},
+	{
+		"key" 	: "yt_download_script_path",
+		"value" : "C:/Users/guntt/Desktop/youtube_downloads/test.py"
+	},
+	{
+		"key" 	: "yt_client_secret_path",
+		"value" : "C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/resources/client_secret.json"
+	}
+
+	
+]
+}

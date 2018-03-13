@@ -64,9 +64,9 @@ public class ClientConnection implements IClientConnection {
      * provided outputStream for this connection.
      *
      * As this method could block while reading input
-     * it is must to execute it in a separate thread.
+     * it is must to execute it in separate thread.
      */
-    void waitForMsg() {
+    void waitForMsg() { //TODO: this is getting huge.. its time to refactor.
         try {
             while(true) {
                 String cmd = input.readLine();
@@ -77,13 +77,11 @@ public class ClientConnection implements IClientConnection {
                         addGlobalParams(cp);
                         processCommand(cp.getRootCommand(), cp);
                     } catch (JsonSyntaxException e) {
-                        // try to find command without parsing
-                        Command c = Command.getCommand(cmd);
-                        if(c.getKey() == Command.CMD_NONE) {
-                            // command does not exists, initialize to error
+                        System.out.println("error occurred");
+                        Command c = Command.getCommand(cmd); // try to find command without parsing
+                        if(c.getKey() == Command.CMD_NONE) { // command does not exists, initialize to error
                             ErrorCommand.riseError(e.getMessage(), String.valueOf(getId()));
-                        } else {
-                            // command exists so we can execute 'get params' command for this key
+                        } else { // command found so we can create params command for this command
                             c = Command.getCommand(GetParamsCommand.CMD_GET_PARAMS);
                             cp = new CommandParams();
                             cp.addValue(c.getKey(), Command.PARAM_CMD_KEY , cmd);

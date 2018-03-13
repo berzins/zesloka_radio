@@ -59,6 +59,7 @@ public class CommandParams implements Serializable, RootCommandResolver {
         return getRawVal(cmd, key);
     }
 
+
     public Integer getIntegerValue(Command cmd, String key) {
         return Integer.valueOf(getRawVal(cmd, key));
     }

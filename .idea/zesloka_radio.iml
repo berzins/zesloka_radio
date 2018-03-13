@@ -5,7 +5,8 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="mysql:mysql-connector-java:5.1.45" level="project" />
     <orderEntry type="library" name="com.google.code.gson:gson:2.8.2" level="project" />
+    <orderEntry type="library" name="google-api-services-youtube-v3-rev189-1.23.0" level="project" />
+    <orderEntry type="library" name="mysql-connector-java-5.1.45" level="project" />
   </component>
 </module>

@@ -1,3 +1,4 @@
+import db.DataBase
 import eventservice.ClientConnectionManager
 import eventservice.EventServiceFacade
 import eventservice.client.ConsoleClient
@@ -17,7 +18,7 @@ val y2 = 600f
 
 fun main(args: Array<String>) {
     val cmdProcessor = getCommandProcessor()
-    //val dbConnection = DataBase.getConnection()
+    val dbConnection = DataBase.getConnection()
     val ccl = ClientConnectionManager.getInstance()
 
     val clients = arrayOf(
@@ -33,7 +34,7 @@ fun main(args: Array<String>) {
 
 fun getCommandProcessor() :  Command.CommandProcessor {
     Command.initDefaultCommands()
-    Command.initUserCommands()
+    //Command.initUserCommands()
     val processor = CommandProcessorManager.getInstance()
     processor.add(RemoteCommandExecutor.getInstance())
     return processor

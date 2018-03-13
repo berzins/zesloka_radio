@@ -51,20 +51,20 @@ open class DBConnection() {
         }
 
         val login : String
-            get() = this[db.DBConnection.DBConnectionData.KEY_LOGIN] as String
+            get() = this[KEY_LOGIN] as String
         val password : String
-            get() = this[db.DBConnection.DBConnectionData.KEY_PASSWORD] as String
+            get() = this[KEY_PASSWORD] as String
         private val host : String
-            get() = this[db.DBConnection.DBConnectionData.KEY_HOST] as String
+            get() = this[KEY_HOST] as String
         private val port : Int
-            get() = this[db.DBConnection.DBConnectionData.KEY_PORT] as Int
+            get() = this[KEY_PORT] as Int
         val url : String
         get() = "jdbc:mysql://$host:$port/"
     }
 
     open fun executeStatement(sql: String) : ResultSet {
         val stmt = sqlConnection.createStatement()
-        return stmt.executeQuery(sql);
+        return stmt.executeQuery(sql)
     }
 
     fun selectDatabase(name: String) {
@@ -77,6 +77,10 @@ open class DBConnection() {
                 "title like '%$name%' or " +
                 "album like '%$name%'"
         return executeStatement(sql)
+    }
+
+    fun close() {
+        if(this.sqlConnection != null) { this.sqlConnection.close() }
     }
 }
 

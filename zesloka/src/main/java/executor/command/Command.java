@@ -9,9 +9,11 @@ import executor.command.testcommands.TestCommand;
 import executor.command.utilcommands.ErrorCommand;
 import executor.command.utilcommands.GetAllCommandParams;
 import executor.command.utilcommands.GetParamsCommand;
-import executor.command.utilcommands.database.GetSongLike;
+import executor.command.utilcommands.database.StartHttpRadioDatabaseAPIServer;
+import executor.command.utilcommands.database.StopHttpRadioDatabaseAPIServer;
 import executor.command.utilcommands.mouse.*;
 import executor.command.utilcommands.recorder.*;
+import executor.command.utilcommands.youtube.DownloadYoutubeAudio;
 import utilities.Storage;
 import utilities.TimeUtils;
 import utilities.Util;
@@ -306,10 +308,11 @@ public abstract class Command implements Serializable {
         initCommand(new MouseClick_3("mouse click 3", "cmd_mouse_click_3"));
         initCommand(new MouseMove("mouse move", "cmd_mouse_move"));
         initCommand(new MouseMoveTo("mouse move to", "cmd_mouse_move_to"));
-        initCommand(new GetSongLike("get song like", "cmd_get_song_like"));
+        initCommand(new StartHttpRadioDatabaseAPIServer("start radio database fetch api service", "cmd_start_radio_db_api"));
+        initCommand(new StopHttpRadioDatabaseAPIServer("stop radio database fetch api service", "cmd_stop_radio_db_api"));
         initCommand(new ErrorCommand("error handling command", "cmd_error"));
         initCommand(new TestCaseCommand("test case command", "cmd_test_case"));
-
+//        initCommand(new DownloadYoutubeAudio("channel videos", "cmd_youtube_download"));
     }
 
     public static void initUserCommands() {

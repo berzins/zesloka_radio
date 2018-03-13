@@ -1,9 +1,9 @@
 { "stupidity" : [
-        {"cmd_key":"cmd_test","params":[{"cmd_key":"cmd_test","param_key":"text","type":"string","value":"this is a wonderful text"}]}
-        {"cmd_key":"cmd_get_param_key","params":[{"cmd_key":"cmd_get_param_key","param_key":"cmd_key","type":"string","value":"cmd_user_1"}]}
-        {"cmd_key":"cmd_recorder_set","params":[{"cmd_key":"cmd_recorder_set","param_key":"session_id","type":"string","value":"123"},{"cmd_key":"cmd_recorder_set","param_key":"cmd_name","type":"string","value":"costum user command"},{"cmd_key":"cmd_recorder_set","param_key":"cmd_key","type":"string","value":"cmd_user_1"}]}
-        {"cmd_key":"cmd_recorder_start","params":[{"cmd_key":"cmd_recorder_start","param_key":"session_id","type":"string","value":"123"}]}
-        {"cmd_key":"cmd_recorder_stop","params":[{"cmd_key":"cmd_recorder_stop","param_key":"session_id","type":"string","value":"123"}]}
+        {"cmd_key":"cmd_test","params":[{"cmd_key":"cmd_test","param_key":"text","type":"string","value":"this is a wonderful text"}]},
+        {"cmd_key":"cmd_get_param_key","params":[{"cmd_key":"cmd_get_param_key","param_key":"cmd_key","type":"string","value":"cmd_user_1"}]},
+        {"cmd_key":"cmd_recorder_set","params":[{"cmd_key":"cmd_recorder_set","param_key":"session_id","type":"string","value":"123"},{"cmd_key":"cmd_recorder_set","param_key":"cmd_name","type":"string","value":"costum user command"},{"cmd_key":"cmd_recorder_set","param_key":"cmd_key","type":"string","value":"cmd_user_1"}]},
+        {"cmd_key":"cmd_recorder_start","params":[{"cmd_key":"cmd_recorder_start","param_key":"session_id","type":"string","value":"123"}]},
+        {"cmd_key":"cmd_recorder_stop","params":[{"cmd_key":"cmd_recorder_stop","param_key":"session_id","type":"string","value":"123"}]},
         {"cmd_key":"cmd_recorder_store","params":[{"cmd_key":"cmd_recorder_store","param_key":"session_id","type":"string","value":"123"}]}
     ]
 }

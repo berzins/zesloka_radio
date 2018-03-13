@@ -62,6 +62,18 @@ public class Util {
         }
     }
 
+    public static InputStream getResourceAsInputStream(String filename) {
+        try {
+            File file = new File(filename);
+            if(file.exists() && !file.isDirectory()) {
+                return new FileInputStream(file);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 
     public interface Executable {
         void execute();
