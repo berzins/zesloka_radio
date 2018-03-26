@@ -5,13 +5,23 @@
 	},
 	{
 		"key" 	: "yt_download_script_path",
-		"value" : "C:/Users/guntt/Desktop/youtube_downloads/test.py"
+		"value" : "resources/test.py"
 	},
 	{
 		"key" 	: "yt_client_secret_path",
-		"value" : "C:/Users/guntt/KotlinProjects/zesloka_radio/zesloka/src/main/resources/client_secret.json"
+		"value" : "resources/client_secret.json"
+	},
+	{
+		"key"	: "python_path",
+		"value" : "C:/Users/guntt/AppData/Local/Programs/Python/Python36/python.exe"
+	},
+	{
+		"key"	: "radiodj_rest_server_url",
+		"value" : "http://zesloka.tk:8745/"
+	},
+	{
+		"key"	: "radiodj_rest_server_pswd",
+		"value" : "parolee"
 	}
-
-	
 ]
 }

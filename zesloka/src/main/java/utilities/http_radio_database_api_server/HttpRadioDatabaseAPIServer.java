@@ -3,17 +3,14 @@ package utilities.http_radio_database_api_server;
 import com.sun.net.httpserver.HttpServer;
 import db.DBConnection;
 import db.DataBase;
-import utilities.JSONUtils;
+import utilities.http_radio_database_api_server.request_handlers.*;
+import utilities.http_radio_database_api_server.request_handlers.radiodj_rest_api_wrapper.opt.RadiodjAutoDjStatus;
+import utilities.http_radio_database_api_server.request_handlers.radiodj_rest_api_wrapper.opt.RadiodjClearPlaylist;
+import utilities.http_radio_database_api_server.request_handlers.radiodj_rest_api_wrapper.opt.RadiodjPlay;
+import utilities.http_radio_database_api_server.request_handlers.radiodj_rest_api_wrapper.opt.RadiodjStop;
 
 import java.io.IOException;
-import java.io.OutputStream;
 import java.net.InetSocketAddress;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public class HttpRadioDatabaseAPIServer {
 
@@ -34,11 +31,22 @@ public class HttpRadioDatabaseAPIServer {
         return instance;
     }
 
-
     public void start() {
         try {
             server = HttpServer.create(new InetSocketAddress(port), 0);
-            server.createContext("/songslike", new SongLikeHandler());
+            server.createContext("/songslike", new SongsLikeHandler());
+            server.createContext("/songsByIndex", new SongsByIndexHandler());
+            server.createContext("/songCount" , new SongCountHandler());
+            server.createContext("/songThumbnails", new SongThumbnailsHandler());
+            server.createContext("/requestSong", new RequestSongHandler());
+            server.createContext("/updatePlaylist", new UpdatePlaylistHandler());
+            server.createContext("/loadSong", new LoadSongHandler());
+            server.createContext("/moveSongTo", new MoveSongToHandler());
+            server.createContext("/play", new RadiodjNoArgHandler(new RadiodjPlay()));
+            server.createContext("/stop", new RadiodjNoArgHandler(new RadiodjStop()));
+            server.createContext("/clearPlaylist", new RadiodjNoArgHandler(new RadiodjClearPlaylist()));
+            server.createContext("/toggleAutoDj", new ToggleAutoDj());
+            server.createContext("/getAutoDjState", new GetAutoDjStateHandler());
             server.setExecutor(null);
             server.start();
             if(dbConnection != null) {
@@ -53,57 +61,5 @@ public class HttpRadioDatabaseAPIServer {
     public void stop() {
         server.stop(0);
         dbConnection.close();
-    }
-
-
-    private class SongLikeHandler implements com.sun.net.httpserver.HttpHandler {
-
-        @Override
-        public void handle(com.sun.net.httpserver.HttpExchange t) throws IOException {
-            // process query and get out text value
-            String query = t.getRequestURI().getQuery();
-            Map<String, String> map = this.queryToMap(query);
-
-            // fetch database for results
-            ResultSet res = dbConnection.findSongsWhatIsLike(map.get("value"));
-
-            //process database results
-            try {
-                List<Song> songs = new ArrayList<>();
-                while(res.next()) {
-                    Song s = new Song();
-                    s.setId(res.getInt("id"));
-                    s.setArtist(res.getString("artist"));
-                    s.setTitle(res.getString("title"));
-                    songs.add(s);
-                }
-                String output = songs.size() > 0 ? JSONUtils.createJSON(songs) : "[]";
-
-                // Send response
-                byte b[] = output.getBytes();
-                t.getResponseHeaders().add("Access-Control-Allow-Origin", "*");
-                t.getResponseHeaders().add("Content-Type:" ,"application/json; charset=UTF-8");
-                t.sendResponseHeaders(200, b.length);
-                OutputStream out = t.getResponseBody();
-                out.write(b);
-                out.close();
-                res.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-
-        private Map<String, String> queryToMap(String query) {
-            Map<String, String> map = new HashMap();
-            for(String param : query.split("&" )) {
-                String pair[] = param.split("=");
-                if(pair.length > 1) {
-                    map.put(pair[0], pair[1]);
-                } else {
-                    map.put(pair[0], "");
-                }
-            }
-            return map;
-        }
     }
 }

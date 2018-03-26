@@ -2,13 +2,13 @@ package executor.command.testcommands;
 
 
 import eventservice.ClientConnectionManager;
-import eventservice.client.TestCaseClient;
+import eventservice.client.DefaultCommandLauncher;
 import executor.command.Command;
 
 public class TestCaseCommand extends Command {
 
 
-    private static final TestCaseClient  testClient = new TestCaseClient();
+    private static final DefaultCommandLauncher testClient = new DefaultCommandLauncher();
     private static boolean initialized = false;
     /**
      * @param name Command string representation

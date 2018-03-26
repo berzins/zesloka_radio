@@ -82,5 +82,11 @@ public class Util {
 
     }
 
+    public static String getCurrentTraceInfo() {
+        return Thread.currentThread().getStackTrace()[2].getClassName() + " at line: " +
+                Thread.currentThread().getStackTrace()[2].getLineNumber();
+    }
+
+
 
 }

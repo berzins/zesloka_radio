@@ -59,6 +59,7 @@
     <orderEntry type="library" name="Gradle: commons-logging:commons-logging:1.1.1" level="project" />
     <orderEntry type="library" name="Gradle: commons-codec:commons-codec:1.3" level="project" />
     <orderEntry type="library" name="mysql-connector-java-5.1.45" level="project" />
+    <orderEntry type="library" name="org.jsoup:jsoup:1.11.2" level="project" />
   </component>
   <component name="TestModuleProperties" production-module="zesloka_main" />
 </module>

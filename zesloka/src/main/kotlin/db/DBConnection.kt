@@ -1,9 +1,6 @@
 package db
 
-import java.sql.Connection
-import java.sql.DriverManager
-import java.sql.ResultSet
-import java.sql.SQLException
+import java.sql.*
 import java.util.*
 
 open class DBConnection() {
@@ -12,6 +9,9 @@ open class DBConnection() {
             var dbCon : DBConnection? =  null
             try {
                 Class.forName("com.mysql.jdbc.Driver").newInstance()
+
+                val url = "mysql://localhost"
+
                 val con = DriverManager.getConnection(dbConProp.url, dbConProp.login, dbConProp.password)
                 dbCon =  DBConnection(con)
             } catch (ex: SQLException) {
@@ -32,6 +32,16 @@ open class DBConnection() {
 
     lateinit var sqlConnection : Connection
         private set
+
+    fun isClosed() : Boolean {
+        this.sqlConnection
+        if(this.sqlConnection.isClosed()) {
+            return true
+        }
+        return false
+    }
+
+
 
     class DBConnectionData(login: String, password:String, host : String, port : Int) : Properties() {
 
@@ -59,7 +69,7 @@ open class DBConnection() {
         private val port : Int
             get() = this[KEY_PORT] as Int
         val url : String
-        get() = "jdbc:mysql://$host:$port/"
+        get() = "jdbc:mysql://$host:$port/?autoReconnect=true&useUnicode=yes"
     }
 
     open fun executeStatement(sql: String) : ResultSet {
@@ -67,15 +77,48 @@ open class DBConnection() {
         return stmt.executeQuery(sql)
     }
 
+    open fun getPreparedStatement(sql:String) : PreparedStatement {
+        return sqlConnection.prepareStatement(sql)
+    }
+
     fun selectDatabase(name: String) {
         executeStatement("use $name")
     }
 
-    fun findSongsWhatIsLike(name: String) : ResultSet {
+    fun getRowCountOfTable(tableName:String) : ResultSet {
+        val sql = "select count(*) from $tableName"
+        return executeStatement(sql)
+    }
+
+    fun getSongsByIndecies(indecies: Array<Int> ) : ResultSet {
+
+        var ids: String = ""
+        var index = 1
+
+        // generate ids sequence
+        for(i: Int in indecies) {
+            var end:String
+            if(index != indecies.size) end = "," else end = ""
+            ids = "$ids$i$end"
+            index++
+        }
+
+        // create sql statement
         val sql = "select * from songs where " +
-                "artist like '%$name%' or " +
-                "title like '%$name%' or " +
-                "album like '%$name%'"
+                "id in ($ids)"
+
+        return executeStatement(sql)
+    }
+
+    fun findSongs(value: String, cols: Array<String>) : ResultSet {
+        var sql = "select * from songs where"
+        var index = 1
+        for(col: String in cols) {
+            var end:String
+            if(index != cols.size) end = " or" else end = ""
+            sql = "$sql $col like '%$value%'$end"
+            index++
+        }
         return executeStatement(sql)
     }
 

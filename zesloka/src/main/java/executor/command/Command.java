@@ -1,5 +1,7 @@
 package executor.command;
 
+import eventservice.ClientConnectionManager;
+import eventservice.IClientConnection;
 import executor.command.parameters.CommandData;
 import executor.command.parameters.CommandParams;
 import executor.command.parameters.Parameter;
@@ -205,6 +207,12 @@ public abstract class Command implements Serializable {
         return this.finall;
     }
 
+    protected IClientConnection getIO() {
+        Integer id = getParams().getIntegerValue(
+                GLOBAL_PARAMS, GlobalCommand.PARAM_CLIENT_ID);
+        return ClientConnectionManager.getInstance().getClientConnection(id);
+    }
+
     /**
      * Initialize required parameters
      * These params could be requested later by any client to know
@@ -312,7 +320,7 @@ public abstract class Command implements Serializable {
         initCommand(new StopHttpRadioDatabaseAPIServer("stop radio database fetch api service", "cmd_stop_radio_db_api"));
         initCommand(new ErrorCommand("error handling command", "cmd_error"));
         initCommand(new TestCaseCommand("test case command", "cmd_test_case"));
-//        initCommand(new DownloadYoutubeAudio("channel videos", "cmd_youtube_download"));
+        initCommand(new DownloadYoutubeAudio("channel videos", "cmd_youtube_download"));
     }
 
     public static void initUserCommands() {

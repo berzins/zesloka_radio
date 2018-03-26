@@ -14,15 +14,18 @@ import com.google.api.client.util.store.FileDataStoreFactory;
 import com.google.api.services.youtube.YouTube;
 import com.google.api.services.youtube.YouTubeScopes;
 import com.google.api.services.youtube.model.*;
+import eventservice.IClientConnection;
 import executor.command.Command;
 import executor.command.parameters.Parameter;
 import utilities.GlobalSettings;
 import utilities.JSONUtils;
 import utilities.Util;
 import utilities.youtube.SongList;
+import utilities.youtube.YoutubeService;
 
 import java.io.*;
 import java.util.*;
+import java.util.concurrent.ConcurrentLinkedDeque;
 
 public class DownloadYoutubeAudio extends Command {
 
@@ -30,83 +33,7 @@ public class DownloadYoutubeAudio extends Command {
 
     static private String filePath = "";
     static private String scriptPath = "";
-    static private String clientSecretPath = "";
     private GlobalSettings.Settings settings;
-
-
-    // ----------------------------------------------------
-
-    private static final String APPLICATION_NAME = "Ze Sloka";
-
-    /** Directory to store user credentials for this application. */
-    private static final java.io.File DATA_STORE_DIR = new java.io.File(
-            System.getProperty("user.home"), ".credentials/youtube");
-
-    private static FileDataStoreFactory DATA_STORE_FACTORY;
-
-    private static final JsonFactory JSON_FACTORY =
-            JacksonFactory.getDefaultInstance();
-
-    private static HttpTransport HTTP_TRANSPORT;
-
-    /** Global instance of the scopes required by this quickstart.
-     *
-     * If modifying these scopes, delete your previously saved credentials
-     * at ~/.credentials/drive-java-quickstart
-     */
-    private static final List<String> SCOPES =
-            Arrays.asList(YouTubeScopes.YOUTUBE_READONLY);
-
-    static {
-        try {
-            HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
-            DATA_STORE_FACTORY = new FileDataStoreFactory(DATA_STORE_DIR);
-        } catch (Throwable t) {
-            t.printStackTrace();
-            System.exit(1);
-        }
-    }
-
-    /**
-     * Create an authorized Credential object.
-     * @return an authorized Credential object.
-     * @throws IOException
-     */
-    public static Credential authorize() throws IOException {
-        // Load client secrets.
-        InputStream in =
-                Util.getResourceAsInputStream(clientSecretPath);
-        GoogleClientSecrets clientSecrets =
-                GoogleClientSecrets.load(JSON_FACTORY, new InputStreamReader(in));
-
-        // Build flow and trigger user authorization request.
-        GoogleAuthorizationCodeFlow flow =
-                new GoogleAuthorizationCodeFlow.Builder(
-                        HTTP_TRANSPORT, JSON_FACTORY, clientSecrets, SCOPES)
-                        .setDataStoreFactory(DATA_STORE_FACTORY)
-                        .setAccessType("offline")
-                        .build();
-        Credential credential = new AuthorizationCodeInstalledApp(
-                flow, new LocalServerReceiver()).authorize("user");
-        return credential;
-    }
-
-    /**
-     * Build and return an authorized API client service, such as a YouTube
-     * Data API client service.
-     * @return an authorized API client service
-     * @throws IOException
-     */
-    public static YouTube getYouTubeService() throws IOException {
-        Credential credential = authorize();
-        return new YouTube.Builder(HTTP_TRANSPORT, JSON_FACTORY, credential)
-                .setApplicationName(APPLICATION_NAME)
-                .build();
-    }
-
-
-    ////////////////////////////////////////////////////////
-
 
     /**
      * @param name Command string representation
@@ -125,8 +52,6 @@ public class DownloadYoutubeAudio extends Command {
         this.settings = GlobalSettings.getInstance().getSettings();
         filePath = settings.getValue("yt_download_file_path");
         scriptPath = settings.getValue("yt_download_script_path");
-        clientSecretPath = settings.getValue("yt_client_secret_path");
-
     }
 
     @Override
@@ -139,7 +64,7 @@ public class DownloadYoutubeAudio extends Command {
 
         YouTube youtube = null;
         try {
-            youtube = getYouTubeService();
+            youtube = YoutubeService.getYouTubeService();
             int totalResults = 0;
             List<SongData> songDataList = new ArrayList<>();
             String nextPage = null;
@@ -176,29 +101,40 @@ public class DownloadYoutubeAudio extends Command {
                     //Get all files from path
                     File dir = new File(filePath);
                     File[] files = dir.listFiles();
-                    for(File f : files) {
-                        // Check if file is mp4
-                        try {
-                            if(!f.getCanonicalPath().contains(".mp4")) {
-                                continue;
+
+                    // Create Handler what starts downloading manage threads when files has been downloaded
+                    IAudioFileConvertedHandler fc = new IAudioFileConvertedHandler() {
+
+                        private int threads = 3;
+                        private Queue<File> fileQueue = new ConcurrentLinkedDeque(Arrays.asList(files));
+
+                        @Override
+                        public void run() {
+                            for(int i = 0; i < threads; i++) {
+                                //poll file from list
+                                File f = fileQueue.poll();
+                                if(f == null) {break;}
+                                Thread t = new Thread(new AudioFileConverter(this, f));
+                                t.start();
                             }
-                        } catch (IOException e) {
-                            e.printStackTrace();
                         }
 
-                        // Convert to mp3
-                        Thread t = new Thread(() -> {
-                            try {
-                                String cmd = "ffmpeg -i \"" + f.getCanonicalPath() + "\" " +
-                                        "-acodec libmp3lame \"" +
-                                        f.getCanonicalPath().replace(".mp4", ".mp3") + "\"";
-                                executeConsoleCommand(cmd, "ffmpeg", false);
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            }
-                        });
-                        t.start();
-                    }
+                        @Override
+                        public void onReady(File f) {
+                            getIO().write(fileQueue.size() + " files remaining");
+                            File file = fileQueue.poll();
+                            if(file == null) return;
+                            Thread t = new Thread(new AudioFileConverter(this, file));
+                            t.start();
+                        }
+
+                        @Override
+                        public void onFail(File f) {
+                            fileQueue.add(f);
+                        }
+                    };
+                    fc.run();
+
                 }
 
                 @Override
@@ -225,6 +161,7 @@ public class DownloadYoutubeAudio extends Command {
                 }
             };
 
+
             for(SongData sd : songDataList) {
                 // TODO: check if song has been downloaded before.
                 synchronized (vdh) {
@@ -245,25 +182,84 @@ public class DownloadYoutubeAudio extends Command {
     }
 
 
-    public void downloadSong(SongData song) {
-
-    }
-
     public String getSongName(SongData song) {
         return song.getTitle();
     }
 
-    public void executeConsoleCommand(String command, String commandName, boolean waitResponse) throws IOException {
+    public boolean executeConsoleCommand(String command, boolean waitResponse) throws IOException {
         Process p = Runtime.getRuntime().exec(command);
-        InputStream is = p.getErrorStream();
+        BufferedReader error = new BufferedReader(new InputStreamReader(p.getErrorStream()));
         BufferedReader retReader = new BufferedReader(new InputStreamReader(p.getInputStream()));
-        while (is.read() != -1) {
 
-        }
         if(waitResponse) {
-            String ret;
-            while((ret = retReader.readLine()) != null && ret.length() != 0) {
-                System.out.println(commandName + " return = " + ret);
+            StringBuilder sb = new StringBuilder();
+            String line;
+            while((line = retReader.readLine()) != null) {
+                sb.append(line);
+            }
+            IClientConnection cc = this.getIO();
+            cc.write(sb.toString());
+            sb = new StringBuilder();
+            while((line = error.readLine()) != null) {
+                sb.append(line);
+            }
+            if(sb.toString().length() > 0) {
+                cc.write(sb.toString());
+            }
+//            cc.close();
+        }
+        return false;
+    }
+
+    private interface IAudioFileConvertedHandler {
+        void onReady(File f);
+        void onFail(File f);
+        void run();
+    }
+
+    private class AudioFileConverter implements Runnable {
+        private IAudioFileConvertedHandler afch;
+        private File f;
+
+        public AudioFileConverter(IAudioFileConvertedHandler afch, File f){
+            this.afch = afch;
+            this.f = f;
+        }
+
+        @Override
+        public void run() {
+            IClientConnection cc = DownloadYoutubeAudio.this.getIO();
+            Process p = null;
+            try {
+                // Check if file is mp4
+                try {
+                    if(!f.getCanonicalPath().contains(".mp4")) {
+                        this.afch.onReady(f);
+                        return;
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    this.afch.onFail(f);
+                    return;
+                }
+                String cmd = "ffmpeg -i \"" + f.getCanonicalPath() + "\" " +
+                        "-acodec libmp3lame \"" +
+                        f.getCanonicalPath().replace(".mp4", ".mp3") + "\"";
+                p = Runtime.getRuntime().exec(cmd);
+                BufferedReader retReader = new BufferedReader(new InputStreamReader(p.getInputStream()));
+
+                // Without this nonsense ffmpeg command stops and crushes in the middle of execution.
+                InputStream is = p.getErrorStream();
+                int c;
+                while((c = is.read()) != -1) {
+                    System.out.print((char) c);
+                }
+                cc.write(f.getCanonicalPath() + " converted");
+                this.afch.onReady(f);
+            } catch (IOException e) {
+                e.printStackTrace();
+                cc.write(f.getName() + "failed with error " + e.getMessage());
+                this.afch.onFail(f);
             }
         }
     }
@@ -292,8 +288,10 @@ public class DownloadYoutubeAudio extends Command {
             try {
                 System.out.println("Donloading " + song.getTitle() + " ... ");
                 String videoUrl = YTUBE_BASE_URL + song.getId();
-                String command = "python " + scriptPath + " "  + videoUrl + " " + filePath;
-                executeConsoleCommand(command, "python", true);
+                GlobalSettings.Settings settings = GlobalSettings.getInstance().getSettings();
+                String py = settings.getValue("python_path");
+                String command = py + " " + scriptPath + " "  + videoUrl + " " + filePath;
+                executeConsoleCommand(command, true);
                 synchronized (this.vdh) {
                     this.vdh.onReady(song.getId());
                 }

@@ -8,5 +8,6 @@
     <orderEntry type="library" name="com.google.code.gson:gson:2.8.2" level="project" />
     <orderEntry type="library" name="google-api-services-youtube-v3-rev189-1.23.0" level="project" />
     <orderEntry type="library" name="mysql-connector-java-5.1.45" level="project" />
+    <orderEntry type="library" name="org.jsoup:jsoup:1.11.2" level="project" />
   </component>
 </module>

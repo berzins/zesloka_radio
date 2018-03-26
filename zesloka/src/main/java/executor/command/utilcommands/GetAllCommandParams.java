@@ -30,13 +30,9 @@ public class GetAllCommandParams extends Command {
         for(Command c : cmds) {
             params.add(c.getParams().getCommandData());
         }
-        Integer id = getParams().getIntegerValue(
-                GLOBAL_PARAMS, GlobalCommand.PARAM_CLIENT_ID);
-        IClientConnection cc = ClientConnectionManager.getInstance()
-                .getClientConnection(id);
+        IClientConnection cc = this.getIO();
         for(Command c : cmds) {
             cc.write(c.getKey() + " <:> " + c.getName());
         }
-//        cc.write(JSONUtils.createJSON(params));
     }
 }
