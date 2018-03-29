@@ -1,5 +1,7 @@
 # Ze Sloka control/automation server
 
+*Related projects: ([Web client](https://github.com/berzins/zesloka_radio_client))*
+
 Application jumble together necessary functionality to remotely control and automate Ze Sloka radio station. 
 Each functionality exists as a separate entity (Command).  If necessary, communication between commands happens through application internal or remote dispatch service. In normal conditions, Commands should never try to communicate directly.
 
