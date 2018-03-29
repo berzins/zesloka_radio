@@ -21,7 +21,7 @@ download_youtube_pl
 
 This will return command signature what should look like this:
 
-```
+```JSON
 {"cmd_key":"download_youtube_pl",
   "params":[{
     "cmd_key":"download_youtube_pl",
