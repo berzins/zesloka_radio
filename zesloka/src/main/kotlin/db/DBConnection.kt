@@ -35,7 +35,7 @@ open class DBConnection() {
 
     fun isClosed() : Boolean {
         this.sqlConnection
-        if(this.sqlConnection.isClosed()) {
+        if(this.sqlConnection.isClosed) {
             return true
         }
         return false

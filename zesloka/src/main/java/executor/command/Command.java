@@ -303,11 +303,11 @@ public abstract class Command implements Serializable {
                 this.setFinal(true);
             }
         });
-        initCommand(new RecorderReset("recorder reset", "cmd_recorder_reset"));
-        initCommand(new RecorderSet("recorder set", "cmd_recorder_set"));
-        initCommand(new RecorderStart("recorder start", "cmd_recorder_start"));
-        initCommand(new RecorderStop("recorder stop", "cmd_recorder_stop"));
-        initCommand(new RecorderStore("recorder store", "cmd_recorder_store"));
+        initCommand(new RecorderReset("recorder reset", "recorder_reset"));
+        initCommand(new RecorderSet("recorder set", "recorder_set"));
+        initCommand(new RecorderStart("recorder start", "recorder_start"));
+        initCommand(new RecorderStop("recorder stop", "recorder_stop"));
+        initCommand(new RecorderStore("recorder store", "recorder_store"));
         initCommand(new TestCommand("test command", "cmd_test"));
         initCommand(new GetParamsCommand("get parameters", GetParamsCommand.CMD_GET_PARAMS));
         initCommand(new GetAllCommandParams("get all command parameters", GetAllCommandParams.CMD_GET_ALL_COMMAND_PARAMS));
@@ -316,11 +316,11 @@ public abstract class Command implements Serializable {
         initCommand(new MouseClick_3("mouse click 3", "cmd_mouse_click_3"));
         initCommand(new MouseMove("mouse move", "cmd_mouse_move"));
         initCommand(new MouseMoveTo("mouse move to", "cmd_mouse_move_to"));
-        initCommand(new StartHttpRadioDatabaseAPIServer("start radio database fetch api service", "cmd_start_radio_db_api"));
+        initCommand(new StartHttpRadioDatabaseAPIServer("start radio database fetch api service", "cmd_start_http_api"));
         initCommand(new StopHttpRadioDatabaseAPIServer("stop radio database fetch api service", "cmd_stop_radio_db_api"));
         initCommand(new ErrorCommand("error handling command", "cmd_error"));
         initCommand(new TestCaseCommand("test case command", "cmd_test_case"));
-        initCommand(new DownloadYoutubeAudio("channel videos", "cmd_youtube_download"));
+        initCommand(new DownloadYoutubeAudio("channel videos", "download_youtube_pl"));
     }
 
     public static void initUserCommands() {

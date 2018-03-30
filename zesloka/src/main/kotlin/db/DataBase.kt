@@ -7,14 +7,14 @@ class DataBase  {
         var conn : DBConnection? =  null
 
         fun getConnection() : DBConnection? {
-            if(conn == null) {
+            if(conn == null || conn!!.isClosed()) {
                 val conData = DBConnection.DBConnectionData(
                         "user",
                         "parolee",
                         "zesloka.tk",
                         3306
                 )
-                    conn = DBConnection.newInstance(conData)
+                conn = DBConnection.newInstance(conData)
             }
             return conn
         }
